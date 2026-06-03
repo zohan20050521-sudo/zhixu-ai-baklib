@@ -366,23 +366,29 @@
                       <!-- slider -->
                       <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 align-center">
                         <div class="relative">
-                          <div id="thumbnail-slider" class="carousel nav-inset-button nav-light-dots nav-primary-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'>
-                            <div class="carousel-cell text-center w-full px-2">
+                          <div class="nav-inset-button nav-light-dots nav-primary-button" data-controller="swiper" data-swiper-options-value='{"loop":true,"autoHeight":true,"allowTouchMove":false,"navigation":true,"slidesPerView":"auto","spaceBetween":24}'>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+                            <div class="swiper-slide carousel-cell text-center w-full px-2">
                               <a href="#">
                                 <img alt="title" class="w-full max-w-full h-auto rounded" src="{{ 'images/img-min/content-agency.jpg' | asset_url }}">
                               </a>
                             </div>
-                            <div class="carousel-cell text-center w-full px-2">
+                            <div class="swiper-slide carousel-cell text-center w-full px-2">
                               <a href="#">
                                 <img alt="title" class="w-full max-w-full h-auto rounded" src="{{ 'images/img-min/hero-agency.jpg' | asset_url }}">
                               </a>
                             </div>
-                            <div class="carousel-cell text-center w-full px-2">
+                            <div class="swiper-slide carousel-cell text-center w-full px-2">
                               <a href="#">
                                 <img alt="title" class="w-full max-w-full h-auto rounded" src="{{ 'images/img-min/advertising.jpg' | asset_url }}">
                               </a>
                             </div>
-                          </div>
+                              </div>
+    <button type="button" class="swiper-button-prev" aria-label="Previous slide"></button>
+    <button type="button" class="swiper-button-next" aria-label="Next slide"></button>
+  </div>
+</div>
                         </div>
                       </div><!-- end slider -->
                     </div>
@@ -417,7 +423,7 @@
                           &lt;!-- slider --&gt;
                           &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 align-center"&gt;
                             &lt;div class="relative"&gt;
-                              &lt;div id="thumbnail-slider" class="carousel nav-inset-button nav-light-dots nav-primary-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "draggable": false, "adaptiveHeight": true, "prevNextButtons": true , "imagesLoaded": true }'&gt;
+                              &lt;div id="thumbnail-slider" class="carousel nav-inset-button nav-light-dots nav-primary-button" data-controller="swiper" data-swiper-options-value='{"loop":true,"autoHeight":true,"allowTouchMove":false,"navigation":true,"slidesPerView":"auto","spaceBetween":24}'&gt;
                                 &lt;div class="carousel-cell text-center w-full px-2"&gt;
                                   &lt;a href="#"&gt;
                                     &lt;img alt="title" class="w-full max-w-full h-auto rounded" src="{{ 'images/img-min/content-agency.jpg' | asset_url }}"&gt;

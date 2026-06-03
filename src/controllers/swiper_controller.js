@@ -1,39 +1,57 @@
-// app/javascript/controllers/swiper_controller.js
-import { Controller } from '@hotwired/stimulus';
-import Swiper from 'swiper/bundle';
+import { Controller } from "@hotwired/stimulus";
+import Swiper from "swiper/bundle";
+
+const DEFAULT_OPTIONS = {
+  watchOverflow: true,
+};
 
 export default class extends Controller {
-  connect() {
-    this.swiper = new Swiper('.swiper-container', {
-        centeredSlides:!0,
-        loop:!0,
-        hashNavigation:{watchState:!0},
-        pagination:{
-          el:".swiper-pagination",
-          clickable:!0
-        },
-        autoplay:{
-          delay:5500,
-          disableOnInteraction:!1
-        }
-      });
+  static values = {
+    options: { type: Object, default: {} },
+  };
 
-      const carouselEl = document.querySelectorAll('.carousel');
-      if (carouselEl.length > 0) {
-        const carousel = new Swiper('.carousel', {
-          slidesPerView: 'auto',
-          grabCursor: true,
-          loop: false,
-          centeredSlides: false,
-          initialSlide: 0,
-          spaceBetween: 24,
-          watchSlidesProgress: true,
-          navigation: {
-            nextEl: '.carousel-next',
-            prevEl: '.carousel-prev',
-          },
-        });
+  connect() {
+    const root = this.element.querySelector(".swiper");
+    if (!root) return;
+
+    const config = this.#resolveElements({
+      ...DEFAULT_OPTIONS,
+      ...this.optionsValue,
+    });
+    this.swiper = new Swiper(root, config);
+  }
+
+  disconnect() {
+    this.swiper?.destroy(true, true);
+    this.swiper = null;
+  }
+
+  #resolveElements(config) {
+    const options = { ...config };
+
+    if (options.pagination !== false) {
+      const el = this.element.querySelector(".swiper-pagination");
+      if (el) {
+        const extra =
+          typeof options.pagination === "object" ? options.pagination : {};
+        options.pagination = { el, clickable: true, ...extra };
+      } else {
+        delete options.pagination;
       }
-    
+    } else {
+      delete options.pagination;
+    }
+
+    if (options.navigation === true || options.navigation) {
+      const next = this.element.querySelector(".swiper-button-next");
+      const prev = this.element.querySelector(".swiper-button-prev");
+      if (next && prev) {
+        options.navigation = { nextEl: next, prevEl: prev };
+      } else {
+        delete options.navigation;
+      }
+    }
+
+    return options;
   }
 }

@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import "aos/dist/aos.css";
+@import "swiper/swiper-bundle.css";
+@import "jarallax/dist/jarallax.min.css";
+@import "./custom.css";
+
+/**
+ * daisyUI theme strategy: themes: false
+ * - All daisyUI color variables (--color-*) are injected at runtime via
+ *   snippets/theme_runtime_colors.liquid in layout/theme.liquid <head>.
+ * - This file only keeps non-customizable brand static tokens
+ *   (radius, size, border, depth, noise) and theme-level component layers.
+ */
+@plugin "daisyui" {
+  themes: false;
+  exclude: scrollbar, rootcolor;
+  logs: false;
+}
+
+@plugin "@tailwindcss/typography";
+
+:root {
+  --radius-selector: 2rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 2px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@source "../../layout/**/*.liquid";
+@source "../../snippets/**/*.liquid";
+@source "../../statics/**/*.liquid";
+@source "../../templates/**/*.liquid";
+@source "../javascripts/**/*.js";
+@source "../controllers/**/*.js";
+
+@config "../../tailwind.config.js";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@layer components {
+  .search-highlight-block b {
+    @apply text-secondary;
+  }
+
+  .ProseMirror {
+    [data-block-column] {
+      @apply rounded bg-slate-100 p-2 hover:bg-slate-200 dark:bg-slate-600;
+    }
+
+    [data-block-column-width="flex-1"] {
+      @apply flex-1;
+    }
+  }
+}

@@ -4,10 +4,10 @@
     <!-- widget -->
     <aside id="categories" class="widget mb-4">
       {% form_tag 'search', class: "w-full" %}
-          <div class="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none bg-gray-100 px-2 py-4 rounded-md">
+          <div class="flex flex-col sm:flex-row justify-center max-w-xs mx-auto sm:max-w-md lg:max-w-none bg-base-200 px-2 py-4 rounded-md">
               <input type="text" name="{{form.keywords_field_name}}" value="{{ search.keywords | escape_once }}"
-              class="px-2 py-1 text-black w-full rounded-full mb-2 sm:mb-0 sm:mr-2" placeholder="输入搜索关键词" aria-label="输入搜索关键词" />
-              <button type="submit" class="px-3 py-1 rounded-full text-white !bg-primary hover:!bg-secondary shrink-0">全站搜索</button>
+              class="px-2 py-1 text-base-content w-full rounded-full mb-2 sm:mb-0 sm:mr-2" placeholder="输入搜索关键词" aria-label="输入搜索关键词" />
+              <button type="submit" class="px-3 py-1 rounded-full text-neutral-content !bg-primary hover:!bg-secondary shrink-0">全站搜索</button>
           </div>
       {% endform_tag %}
     </aside>

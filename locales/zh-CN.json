@@ -1,6 +1,6 @@
 {
-  "theme_label": "CMS Tailpro",
-  "theme_description": "多用途模板可用于构建广告、品牌、创意、数字、图形、营销等公司网站",
+  "theme_label": "WWW",
+  "theme_description": "企业品牌官网、CMS 门户、企业营销与独立店铺模板",
   "generic": {
     "search": "👋 搜索",
     "search_from": "搜索结果：",
@@ -21,7 +21,49 @@
     "prev_page": "上一页",
     "page": "页",
     "copyright": "版权所有",
-    "current_version": "当前版本"
+    "current_version": "当前版本",
+    "close": "关闭",
+    "feedback": "这篇文章有帮助吗?",
+    "feedbacked": "已经提交反馈！",
+    "feedback_created_at": "上次反馈于",
+    "breadcrumb_nav": "面包屑导航"
+  },
+  "snippets": {
+    "feedback_form": {
+      "title": "提交反馈",
+      "message_label": "留言",
+      "message_placeholder": "请输入反馈内容",
+      "message_required": "反馈内容不能为空",
+      "submit": "提交",
+      "cancel": "取消"
+    },
+    "feedback_btn": {
+      "more_questions": "还有更多问题？",
+      "submit_request": "提交请求"
+    },
+    "page_tools": {
+      "copy_page_label": "Copy",
+      "copy_page_description": "将页面以 Markdown 格式复制给 LLMs",
+      "ask_ai_label": "Ask",
+      "open_in_chatgpt": "在 ChatGPT 中打开",
+      "open_in_claude": "在 Claude 中打开",
+      "open_in_doubao": "在豆包中打开",
+      "open_in_deepseek": "在 DeepSeek 中打开",
+      "ask_about_page": "询问有关此页面的问题",
+      "copy_mcp_label": "复制 MCP 安装命令",
+      "copy_mcp_description": "复制 npx 命令以安装 MCP 服务器",
+      "connect_to_cursor": "连接到 Cursor",
+      "connect_to_cursor_description": "在 Cursor 中安装 MCP Server",
+      "connect_to_vscode": "连接到 VS Code",
+      "connect_to_vscode_description": "在 VS Code 中安装 MCP Server"
+    }
+  },
+  "templates": {
+    "page": {
+      "llm_prompt_template": "读取 %{url} 的内容，以便我可以询问关于它的问题。",
+      "llm_copying": "复制中...",
+      "llm_copied": "已复制"
+    }
   },
   "placeholders": {
     "search": "站内搜索",
@@ -36,5 +78,25 @@
   },
   "prompts": {
     "page_restricted": "本页面需要认证才可以被访问"
+  },
+  "recommendations": {
+    "baklib": {
+      "name": "Baklib 品牌"
+    },
+    "fashion": {
+      "name": "时尚"
+    },
+    "old_school": {
+      "name": "复古"
+    }
+  },
+  "settings_schema": {
+    "brand_guidelines": {
+      "name": "品牌规范",
+      "header": "品牌色与 DaisyUI 语义色",
+      "paragraph": "本站主题通过站点后台「主题色」实时注入，模板仅使用 DaisyUI 语义类（如 bg-primary、text-base-content），勿在模板中写死 gray/slate 色阶或 Hex。",
+      "tokens": "默认色板「Baklib 品牌」对齐 statics/brand.liquid：主色 Teal #0F766E、辅色 Orange #C2410C、强调 Slate #0F172A；表面色 base-100 为暖白 #F7F5F3。",
+      "usage": "主按钮用 bg-primary + text-primary-content；卡片与页面底用 bg-base-100；弱化文案用 text-base-content/70；边框用 border-base-300；状态色用 info/success/warning/error。"
+    }
   }
 }

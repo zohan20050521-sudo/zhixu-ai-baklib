@@ -12,7 +12,7 @@
         <!-- content -->
         <div class="max-w-full w-full lg:w-7/12 px-4">
           <div class="mt-0 pt-6 text-center">
-            <h1 class="text-2xl md:text-3xl leading-normal font-semibold text-white"># {{ tag.name }}</h1>    
+            <h1 class="text-2xl md:text-3xl leading-normal font-semibold text-neutral-content"># {{ tag.name }}</h1>    
             <hr class="block w-12 h-0.5 mx-auto my-3 bg-secondary border-secondary">
           </div>          
         </div><!-- end content -->
@@ -23,7 +23,7 @@
   <!-- article start -->
   <div class="relative pb-16">
     <div class="container xl:max-w-6xl mx-auto px-4">
-      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg py-10 md:py-6 lg:py-12 px-12 -mt-24">
+      <div class="bg-base-100 rounded-lg shadow-lg py-10 md:py-6 lg:py-12 px-12 -mt-24">
         <div class="flex flex-wrap flex-row -mx-4 md:mt-2">
           <div class="flex-shrink w-full max-w-full lg:w-8/12">
             {% paginate_tag tag.pages, as: 'pages' %}
@@ -32,24 +32,24 @@
                 {% for item in pages %}
                   <div class="flex-shrink w-full max-w-full px-4 lg:px-6">
                     <!-- Card -->
-                    <div class="flex flex-col md:flex-row bg-white dark:bg-gray-800 mb-12 rounded overflow-hidden">
+                    <div class="flex flex-col md:flex-row bg-base-100 mb-12 rounded overflow-hidden">
                       <div class="relative overflow-hidden md:flex-shrink md:w-1/3 rounded">
                         <a href="{{ item.path }}" class="block group">
-                          <div class="absolute inset-0 hover:bg-black opacity-0 transition duration-700 hover:opacity-20"></div>
+                          <div class="absolute inset-0 hover:bg-neutral opacity-0 transition duration-700 hover:opacity-20"></div>
                           <img class="max-w-full h-auto" src="{{ item.settings.thumb_image_url | default: site.settings.default_thumb_url }}" alt="{{ item.link_text }}"/>
                         </a>
                       </div>
                       <div class="pt-6 flex-1 md:flex-shrink md:w-2/3 md:ps-8 md:pt-0">
                         <div class="mb-2">
-                          <h3 class="text-xl leading-normal mb-4 font-semibold text-gray-800 dark:text-gray-200"><a href="{{ item.path }}" class="hover:text-primary-700 dark:hover:text-gray-100">{{ item.link_text }}</a></h3>
-                          <div class="text-gray-500">
+                          <h3 class="text-xl leading-normal mb-4 font-semibold text-base-content text-base-content"><a href="{{ item.path }}" class="hover:text-primary hover:text-base-content">{{ item.link_text }}</a></h3>
+                          <div class="text-base-content/70">
                             <svg class="bi bi-calendar me-2 inline-block" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" d="M14 0H2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V2a2 2 0 00-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" clip-rule="evenodd"></path>
                                 <path fill-rule="evenodd" d="M6.5 7a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm-9 3a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2zm3 0a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                               </svg><span>{{ item.published_at | date: "%Y-%m-%d" }}</span>
                           </div>
                         </div>
-                        <p class="text-gray-500">{{ item.settings.description | default: item.settings.content | strip_html | truncate: 100 }}</p>
+                        <p class="text-base-content/70">{{ item.settings.description | default: item.settings.content | strip_html | truncate: 100 }}</p>
                       </div>
                     </div><!-- End card -->
                   </div>

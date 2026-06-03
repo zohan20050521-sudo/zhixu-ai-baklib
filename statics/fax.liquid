@@ -6,21 +6,21 @@
       <!-- background parallax -->
       <img class="jarallax-img" src="{{ 'images/img-min/bg-planet.jpg' | asset_url }}" alt="title">
       <!-- background overlay -->
-      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary" style="z-index:-1;"></div>
 
       <div class="container xl:max-w-6xl mx-auto px-4">
         <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
           <!-- content -->
           <div class="max-w-full w-full lg:w-7/12 px-4">
             <div class="mt-0 pt-4 text-center">
-              <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-white">How can we help?</h1>    
-              <hr class="block w-12 h-0.5 mx-auto my-5 bg-yellow-300 border-yellow-300">
+              <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-neutral-content">How can we help?</h1>    
+              <hr class="block w-12 h-0.5 mx-auto my-5 bg-warning border-warning">
               <form id="subscribe" class="relative w-full max-w-full mx-auto mb-4" action="#">
                 <!-- input group -->
                 <div class="flex flex-wrap items-stretch w-full relative">
-                  <input type="text" class="flex-shrink flex-grow max-w-full leading-5 w-px flex-1 relative py-3 px-5 rounded-s-md text-gray-800 bg-white border border-gray-50 overflow-x-auto focus:outline-none focus:border-gray-50 focus:ring-0 dark:text-gray-400 dark:bg-gray-700 dark:border-gray-700" name="search" required="" placeholder="Type your questions..." aria-label="Type your questions...">
+                  <input type="text" class="flex-shrink flex-grow max-w-full leading-5 w-px flex-1 relative py-3 px-5 rounded-s-md text-base-content bg-base-100 border border-base-300 overflow-x-auto focus:outline-none focus:border-base-300 focus:ring-0" name="search" required="" placeholder="Type your questions..." aria-label="Type your questions...">
                   <div class="flex -me-px">
-                    <button class="flex items-center py-3 px-5 -ms-1 rounded-e-md leading-5 text-gray-800 bg-yellow-300 border border-yellow-300 hover:text-gray-900 hover:bg-yellow-400 hover:ring-0 hover:border-yellow-400 focus:bg-yellow-400 focus:border-yellow-400 focus:outline-none focus:ring-0" type="submit">
+                    <button class="flex items-center py-3 px-5 -ms-1 rounded-e-md leading-5 text-base-content bg-warning border border-warning hover:text-base-content hover:bg-warning hover:ring-0 hover:border-warning focus:bg-warning focus:border-warning focus:outline-none focus:ring-0" type="submit">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search inline-block" viewBox="0 0 16 16">
                       <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
                     </svg>
@@ -28,7 +28,7 @@
                   </div>
                 </div>
               </form>
-              <p class="text-gray-100 mb-6">Find what you are looking for.</p>
+              <p class="text-primary-content mb-6">Find what you are looking for.</p>
             </div>
           </div><!-- end content -->
         </div>
@@ -36,21 +36,21 @@
     </div><!-- End hero -->
     
     <!-- =========={ FAQ }==========  -->
-    <div id="faq" class="relative py-20 md:py-24 bg-white dark:bg-gray-800">
+    <div id="faq" class="relative py-20 md:py-24 bg-base-100">
       <div class="container xl:max-w-6xl mx-auto px-4">
         <!-- section header -->
         <header class="text-center mx-auto mb-12">
-          <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100">Questions</h2>
-          <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
-          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Most Popular Question from New Client!</p>
+          <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-base-content">Questions</h2>
+          <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary border-primary">
+          <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2">Most Popular Question from New Client!</p>
         </header><!-- end section header -->
 
         <div class="flex flex-wrap flex-row -mx-4 justify-center">
           <div class="max-w-full w-full sm:w-11/12 lg:w-8/12 px-4">
             <div id="Accordione" x-data="{selected:0}">
               <!-- faq list -->
-              <div class="relative flex flex-wrap flex-col shadow mb-4 bg-white dark:bg-gray-800 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
-                <div class="py-2.5 px-5 border-b border-gray-200 mb-0 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-700" id="HeadingOnee">
+              <div class="relative flex flex-wrap flex-col shadow mb-4 bg-base-100 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                <div class="py-2.5 px-5 border-b border-base-300 mb-0 bg-base-200" id="HeadingOnee">
                   <div class="d-grid mb-0">
                     <button class="py-3 px-0 w-full rounded-md leading-5 font-medium flex justify-between focus:outline-none focus:ring-0"  @click="selected !== 0 ? selected = 0 : selected = null">
                       How is the SEO services system at TailPro?
@@ -64,14 +64,14 @@
                 </div>
                 <div id="CollapseOnee" x-show="selected == 0">
                   <div class="flex-1 p-5">
-                    <p class="text-gray-500">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    <p class="text-base-content/70">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
                   </div>
                 </div>
               </div>
 
               <!-- faq list -->
-              <div class="relative flex flex-wrap flex-col shadow mb-4 bg-white dark:bg-gray-800 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                <div class="py-2.5 px-5 border-b border-gray-200 mb-0 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-700" id="HeadingTwoe">
+              <div class="relative flex flex-wrap flex-col shadow mb-4 bg-base-100 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
+                <div class="py-2.5 px-5 border-b border-base-300 mb-0 bg-base-200" id="HeadingTwoe">
                   <div class="d-grid mb-0">
                     <button class="py-3 px-0 w-full rounded-md leading-5 font-medium flex justify-between focus:outline-none focus:ring-0" @click="selected !== 1 ? selected = 1 : selected = null">
                       How many keywords are optimized?
@@ -85,14 +85,14 @@
                 </div>
                 <div id="CollapseTwoe" x-show="selected == 1">
                   <div class="flex-1 p-5">
-                    <p class="text-gray-500">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    <p class="text-base-content/70">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
                   </div>
                 </div>
               </div>
 
               <!-- faq list -->
-              <div class="relative flex flex-wrap flex-col shadow mb-4 bg-white dark:bg-gray-800 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
-                <div class="py-2.5 px-5 border-b border-gray-200 mb-0 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-700" id="HeadingThreee">
+              <div class="relative flex flex-wrap flex-col shadow mb-4 bg-base-100 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+                <div class="py-2.5 px-5 border-b border-base-300 mb-0 bg-base-200" id="HeadingThreee">
                   <div class="d-grid mb-0">
                     <button class="py-3 px-0 w-full rounded-md leading-5 font-medium flex justify-between focus:outline-none focus:ring-0" @click="selected !== 2 ? selected = 2 : selected = null">
                       Do you offer any discounted plans?
@@ -106,14 +106,14 @@
                 </div>
                 <div id="CollapseThreee" x-show="selected == 2">
                   <div class="flex-1 p-5">
-                    <p class="text-gray-500">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    <p class="text-base-content/70">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
                   </div>
                 </div>
               </div>
 
               <!-- faq list -->
-              <div class="relative flex flex-wrap flex-col shadow mb-4 bg-white dark:bg-gray-800 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
-                <div class="py-2.5 px-5 border-b border-gray-200 mb-0 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-700" id="HeadingFoure">
+              <div class="relative flex flex-wrap flex-col shadow mb-4 bg-base-100 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".7s">
+                <div class="py-2.5 px-5 border-b border-base-300 mb-0 bg-base-200" id="HeadingFoure">
                   <div class="d-grid mb-0">
                     <button class="py-3 px-0 w-full rounded-md leading-5 font-medium flex justify-between focus:outline-none focus:ring-0" @click="selected !== 3 ? selected = 3 : selected = null">
                       Can I cancel my account at any time?
@@ -127,7 +127,7 @@
                 </div>
                 <div id="CollapseFoure" x-show="selected == 3">
                   <div class="flex-1 p-5">
-                    <p class="text-gray-500">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+                    <p class="text-base-content/70">The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
                   </div>
                 </div>
               </div>

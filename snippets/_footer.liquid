@@ -1,13 +1,13 @@
 {% assign footer_menus = site.settings.footer_menu | newline_to_br | split: '<br />' %}
 <!-- =========={ FOOTER }==========  -->
-<footer class="bg-gray-900 text-gray-300">
+<footer class="bg-neutral text-neutral-content">
     <div class="container xl:max-w-6xl mx-auto px-4 pt-16 pb-5 lg:pb-16">
         <div class="grid grid-cols-2 md:grid-cols-5 gag-4 xl:gap-8">
             <!-- left widget -->
             <div class="col-span-5 sm:col-span-2">
                 <!-- Footer Content -->
                 <div class="leading-relaxed">
-                    <h4 class="font-semibold text-xl mb-4 text-gray-200">关于我们</h4>
+                    <h4 class="font-semibold text-xl mb-4 text-primary-content opacity-40">关于我们</h4>
                     {% if site.settings.footer_logo_url %}
                         <img src="{{ site.settings.footer_logo_url }}" alt="{{ site.name }}" class="h-12 md:h-24 mb-2">
                     {% endif %}
@@ -23,7 +23,7 @@
 
             {% if sub_menus_count > 0 %}
                 <div class="hidden sm:flex flex-col" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                    <a class="font-semibold text-xl mb-4 text-gray-200" href="{{ parent_menu[1] | default: 'javascript:void(0);' }}" :aria-expanded="open">{{ parent_menu[0] }}</a>
+                    <a class="font-semibold text-xl mb-4 text-primary-content opacity-40" href="{{ parent_menu[1] | default: 'javascript:void(0);' }}" :aria-expanded="open">{{ parent_menu[0] }}</a>
                     <!-- 2nd level menu -->
                     <ul class="">
                     {% for second_menu in sub_menus %}
@@ -46,7 +46,7 @@
 
         <!-- copyright  -->
         <div class="container xl:max-w-6xl mx-auto px-4">
-            <div class="flex flex-wrap lg:flex-row -mx-4 border-t border-primary-200 border-opacity-10 py-9">
+            <div class="flex flex-wrap lg:flex-row -mx-4 border-t border-primary/30 border-opacity-10 py-9">
             <div class="w-full text-center">
                 {{ site.settings.copyright_info }}
             </div>
@@ -56,7 +56,7 @@
 </footer>
 
 <!-- =========={ SCROLL TO TOP }==========  -->
-<a href="#" class="back-top fixed p-4 rounded bg-gray-100 border border-gray-200 text-gray-500 dark:bg-gray-900 dark:border-gray-800 end-4 bottom-4 hidden" aria-label="Scroll To Top">
+<a href="#" class="back-top fixed p-4 rounded bg-base-200 border border-base-300 text-base-content/70 end-4 bottom-4 hidden" aria-label="Scroll To Top">
     <svg width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M8 3.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
         <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 3.707 5.354 6.354a.5.5 0 11-.708-.708l3-3z" clip-rule="evenodd"></path>

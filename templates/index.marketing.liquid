@@ -10,16 +10,16 @@
 
 <main id="content">
   <!-- =========={ Hero }==========  -->
-  <div id="hero" class="relative overflow-hidden bg-primary-700 z-0">
+  <div id="hero" class="relative overflow-hidden bg-primary z-0">
     <!-- bg wrapper -->
-    <div class="absolute inset-y-0 start-auto end-0 w-1/2 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style='background-image: url("{{ page.settings.hero_image_url | default: default_hero_image }}");background-repeat: no-repeat;background-size: cover;z-index: -1;'></div>
-    <div class="absolute inset-y-0 end-auto start-0 block lg:hidden h-full w-1/2 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="z-index:-1"></div>
+    <div class="absolute inset-y-0 start-auto end-0 w-1/2 bg-base-200" style='background-image: url("{{ page.settings.hero_image_url | default: default_hero_image }}");background-repeat: no-repeat;background-size: cover;z-index: -1;'></div>
+    <div class="absolute inset-y-0 end-auto start-0 block lg:hidden h-full w-1/2 bg-base-200" style="z-index:-1"></div>
 
     <div class="container xl:max-w-6xl mx-auto px-4">
       <div class="flex flex-wrap flex-row">
         <!-- img block -->
         <div class="flex-shrink max-w-full px-4 w-full lg:w-5/12 lg:order-2">
-          <svg class="hidden lg:block lg:ms-2 xl:ms-3 h-full w-1/4 transform ltr:-translate-x-3/4 rtl:translate-x-3/4 text-primary-700" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+          <svg class="hidden lg:block lg:ms-2 xl:ms-3 h-full w-1/4 transform ltr:-translate-x-3/4 rtl:translate-x-3/4 text-primary" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             <polygon points="50,0 100,0 50,100 0,100"></polygon>
           </svg>
         </div>
@@ -27,26 +27,26 @@
         <!-- content block -->
         <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 lg:order-1 my-auto">
           <div class="pt-8 pb-12 md:pb-24">
-            <div class="bg-primary-700 rounded p-6 lg:p-12 lg:px-0 lg:py-6 mt-8 md:mt-12 md:pt-16 text-center lg:text-start wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
-              <h1 class="text-4xl lg:text-5xl leading-normal lg:leading-tight text-gray-100 font-semibold mb-4">
+            <div class="bg-primary rounded p-6 lg:p-12 lg:px-0 lg:py-6 mt-8 md:mt-12 md:pt-16 text-center lg:text-start wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
+              <h1 class="text-4xl lg:text-5xl leading-normal lg:leading-tight text-primary-content font-semibold mb-4">
                 {{ page.settings.title }}</h1>
-              <p class="leading-relaxed font-light text-xl mx-auto pb-2 mb-12 pr-6 text-gray-50">
+              <p class="leading-relaxed font-light text-xl mx-auto pb-2 mb-12 pr-6 text-base-content/20">
                 {{ page.settings.description | default: '如果您拥有优质的产品或服务，但对营销计划感到困惑，那么我们就是您的正确解决方案，选择我们进入 AI 时代的数字内容花园。' }}</p>
-                
+
               {% form_tag 'search', class: "relative" %}
                 <!-- input group -->
                 <div class="flex flex-wrap items-stretch w-full max-w-72 relative">
-                  <input type="text" name="{{form.keywords_field_name}}" value="{{ search.keywords | escape_once }}" class="flex-shrink flex-grow max-w-full shadow-xl leading-5 w-px flex-1 relative py-3 px-5 rounded-s-full text-gray-800 bg-white border border-secondary overflow-x-auto focus:outline-none focus:border-secondary focus:ring-0 dark:text-secondary dark:bg-gray-700 dark:border-gray-700 dark:focus:border-gray-600" name="email" required="" placeholder="输入搜索关键词" aria-label="输入搜索关键词"  aria-label="subcribe newsletter">
+                  <input type="text" name="{{form.keywords_field_name}}" value="{{ search.keywords | escape_once }}" class="flex-shrink flex-grow max-w-full shadow-xl leading-5 w-px flex-1 relative py-3 px-5 rounded-s-full text-base-content bg-base-100 border border-secondary overflow-x-auto focus:outline-none focus:border-secondary focus:ring-0 dark:text-secondary dark:bg-neutral focus:border-base-300" name="email" required="" placeholder="输入搜索关键词" aria-label="输入搜索关键词"  aria-label="subcribe newsletter">
                   <div class="flex -me-px">
-                    <button class="flex items-center py-3 px-5 -ms-1 rounded-e-full leading-5 text-gray-100 shadow-xl bg-secondary border border-secondary hover:text-white hover:bg-secondary-800 hover:ring-0 hover:border-secondary-800 focus:bg-secondary-800 focus:border-secondary-800 focus:outline-none focus:ring-0" type="submit">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 text-white mr-1">
+                    <button class="flex items-center py-3 px-5 -ms-1 rounded-e-full leading-5 text-secondary-content shadow-xl bg-secondary border border-secondary hover:text-primary-content hover:bg-secondary hover:ring-0 hover:border-secondary focus:bg-secondary focus:border-secondary focus:outline-none focus:ring-0" type="submit">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 text-neutral-content mr-1">
                         <path d="M15.98 1.804a1 1 0 0 0-1.96 0l-.24 1.192a1 1 0 0 1-.784.785l-1.192.238a1 1 0 0 0 0 1.962l1.192.238a1 1 0 0 1 .785.785l.238 1.192a1 1 0 0 0 1.962 0l.238-1.192a1 1 0 0 1 .785-.785l1.192-.238a1 1 0 0 0 0-1.962l-1.192-.238a1 1 0 0 1-.785-.785l-.238-1.192ZM6.949 5.684a1 1 0 0 0-1.898 0l-.683 2.051a1 1 0 0 1-.633.633l-2.051.683a1 1 0 0 0 0 1.898l2.051.684a1 1 0 0 1 .633.632l.683 2.051a1 1 0 0 0 1.898 0l.683-2.051a1 1 0 0 1 .633-.633l2.051-.683a1 1 0 0 0 0-1.898l-2.051-.683a1 1 0 0 1-.633-.633L6.95 5.684ZM13.949 13.684a1 1 0 0 0-1.898 0l-.184.551a1 1 0 0 1-.632.633l-.551.183a1 1 0 0 0 0 1.898l.551.183a1 1 0 0 1 .633.633l.183.551a1 1 0 0 0 1.898 0l.184-.551a1 1 0 0 1 .632-.633l.551-.183a1 1 0 0 0 0-1.898l-.551-.184a1 1 0 0 1-.633-.632l-.183-.551Z" />
                       </svg>
                       AI 搜索</button>
                   </div>
                 </div>
               {% endform_tag %}
-                
+
             </div>
           </div>
         </div>
@@ -57,19 +57,23 @@
 
   <!-- =========={ Brand }==========  -->
   {% if brand_logos_size > 1 %}
-    <div id="partner-brand" class="relative py-3 md:py-6 bg-white dark:bg-gray-800">
+    <div id="partner-brand" class="relative py-3 md:py-6 bg-base-100">
       <div class="container xl:max-w-6xl mx-auto px-4">
         <div class="lex flex-wrap flex-row -mx-4 justify-center">
           <div class="w-full px-4">
             <!-- slider brand -->
-            <div class="nav-dark-button" data-flickity='{ "cellAlign": "center", "wrapAround": true, "adaptiveHeight": true, "pageDots": false, "imagesLoaded": true }'>
-              {% for url in brand_logos %}
-                <div class="flex-shrink max-w-full w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 py-4 lg:py-1 px-3 lg:px-6 text-center">
-                  <a href="javascript:void(0);" class="h-12 md:h-24 inline-block">
-                    <img class="hover:brands-image object-contain opacity-80 hover:opacity-100" src="{{ url }}" alt="{{site.name}} Brand LOGO">
-                  </a>
-                </div>
-              {% endfor %}
+            <div class="nav-dark-button" data-controller="swiper" data-swiper-options-value='{"loop":true,"autoHeight":true,"pagination":false,"centeredSlides":true,"slidesPerView":"auto","spaceBetween":24}'>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                          {% for url in brand_logos %}
+                            <div class="swiper-slide flex-shrink max-w-full w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5 py-4 lg:py-1 px-3 lg:px-6 text-center">
+                              <a href="javascript:void(0);" class="h-12 md:h-24 inline-block">
+                                <img class="hover:brands-image object-contain opacity-80 hover:opacity-100" src="{{ url }}" alt="{{site.name}} Brand LOGO">
+                              </a>
+                            </div>
+                          {% endfor %}
+                            </div>
+              </div>
             </div><!-- end slider brand -->
           </div>
         </div>
@@ -82,14 +86,14 @@
   <!-- =========={ SERVICE }==========  -->
   {% if service_page %}
     <!-- Services start -->
-    <div id="services" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+    <div id="services" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-base-200">
       <div class="container xl:max-w-6xl mx-auto px-4">
         <!-- section header -->
         <header class="text-center mx-auto mb-12 lg:px-20">
-          <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100">
+          <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-base-content text-base-content">
             {{ service_page.settings.title |  default: '服务项目' }} </h2>
-          <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
-          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">
+          <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary border-primary">
+          <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2">
             {{ service_page.settings.description |  default: '我们是一家创意公司，服务于各行各业的本地和国际企业，从小型到大型企业。' }}
           </p>
         </header><!-- end section header -->
@@ -98,25 +102,25 @@
         <div class="flex flex-wrap flex-row -mx-4 items-center justify-around">
           {% for item in service_page.children_in_nav_menu %}
             <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2">
-              <div class="p-6 mx-2 mb-12 bg-white dark:bg-gray-800 rounded-md shadow wow fadeInUp" data-wow-duration="1s">
+              <div class="p-6 mx-2 mb-12 bg-base-100 rounded-md shadow wow fadeInUp" data-wow-duration="1s">
                 <div class="flex rounded ps-4 pe-1 md:px-1 py-2">
                   <div class="flex items-center text-center me-6">
                     {% if item.settings.thumb_image_url %}
                       <img src="{{ item.settings.thumb_image_url }}" class="max-w-24"/>
                     {% else %}
-                      <svg xmlns="http://www.w3.org/2000/svg" width="3.5rem" height="3.5rem" fill="currentColor" class="bi bi-camera text-primary-700 inline-block" viewBox="0 0 16 16">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="3.5rem" height="3.5rem" fill="currentColor" class="bi bi-camera text-primary inline-block" viewBox="0 0 16 16">
                         <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
                         <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
                       </svg>
                     {% endif %}
                   </div>
                   <div class="text-start">
-                    <h3 class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">
+                    <h3 class="text-lg leading-normal mb-2 font-semibold text-base-content text-base-content">
                       {{ item.link_text }}</h3>
-                    <p class="text-gray-500 mb-0">
+                    <p class="text-base-content/70 mb-0">
                       {{ item.settings.description }}</p>
                     <p class="mt-2">
-                      <a href="{{ item.path }}" class="text-blue-600 hover:text-primary">了解详情 &gt;&gt; </a>
+                      <a href="{{ item.path }}" class="text-info hover:text-primary">了解详情 &gt;&gt; </a>
                     </p>
                   </div>
                 </div>
@@ -133,19 +137,19 @@
 
   <!-- =========={ About }==========  -->
   {% if about_page %}
-    <div id="about" class="relative py-20 md:py-24 bg-white dark:bg-gray-800">
+    <div id="about" class="relative py-20 md:py-24 bg-base-100">
       <div class="container xl:max-w-6xl mx-auto px-4">
         <div class="flex flex-wrap flex-row -mx-4">
           <!-- content -->
           <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 lg:order-2 self-center">
             <div class="mb-12 lg:mb-0 lg:ms-12 lg:pe-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s">
-              <h2 class="text-4xl leading-normal font-bold text-gray-800 dark:text-gray-100 mb-3">
+              <h2 class="text-4xl leading-normal font-bold text-base-content text-base-content mb-3">
                 {{ about_page.settings.title | default: 'Story Behind Our Digital Marketing Agency' }}</h2>
-              <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">
+              <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">
                 {{ about_page.settings.description | default: 'Upgency is the leading digital marketing agency in New York. We are striving to provide integrated digital marketing solutions.' }}
                 </p>
               <!-- button -->
-              <a href="{{ about_page.path }}" class="py-3 px-5 -ms-1 rounded-md leading-5 text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0 me-3">
+              <a href="{{ about_page.path }}" class="py-3 px-5 -ms-1 rounded-md leading-5 text-primary-content bg-primary border border-primary hover:text-primary-content hover:bg-primary hover:ring-0 hover:border-primary focus:bg-primary focus:border-primary focus:outline-none focus:ring-0 me-3">
                 <!-- <i class="fas fa-paper-plane me-1"></i> -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" class="inline-block me-2" fill="currentColor" viewBox="0 0 512 512"><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
                 了解详情
@@ -157,7 +161,7 @@
           <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 lg:order-1">
             <div class="relative rounded-md overflow-hidden hover:shadow-xl">
               <img src="{{ about_page.settings.thumb_image_url |  default: default_about_image }}" class="max-w-full w-full h-auto" alt="background images">
-              
+
             </div>
           </div><!-- end team -->
         </div>
@@ -165,12 +169,12 @@
     </div>
   {% else %}
     {% render 'demo/about' %}
-  {% endif %}  
+  {% endif %}
   <!-- end about -->
 
   <!-- =========={ HTML }==========  -->
   {% if page.settings.html_content %}
-    <div id="about" class="relative py-6 md:py-10 bg-white dark:bg-gray-800">
+    <div id="about" class="relative py-6 md:py-10 bg-base-100">
         <div class="container xl:max-w-6xl mx-auto px-4">
           {{ page.settings.html_content }}
         </div>
@@ -186,7 +190,7 @@
 </main>
 
 <!-- Posts list -->
-<section class="relative py-12 md:py-20 border-t border-slate-200 dark:border-slate-800">
+<section class="relative py-12 md:py-20 border-t border-base-300">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="pb-12 md:pb-20">
             <div class="lg:flex lg:justify-between">
@@ -216,13 +220,13 @@
                                         </h3>
                                     </a>
                                 </header>
-                                <div class="text-slate-500 dark:text-slate-300 grow line-clamp-2">{{ item.settings.description |  truncate: 120 }}</div>
+                                <div class="text-base-content/70 text-base-content grow line-clamp-2">{{ item.settings.description |  truncate: 120 }}</div>
                                 <footer class="flex items-center mt-4">
                                     <a href="javascript:void(0);">
                                         <img class="rounded-full shrink-0 mr-3" src="{{ item.author.avatar_url | default: site.settings.default_avatar }}" width="22" height="22" alt="Author 03" />
                                     </a>
-                                    <div class="text-sm text-slate-500">
-                                        · <span class="text-slate-500">{{ item.published_at | date: '%Y-%m-%d' }}</span>
+                                    <div class="text-sm text-base-content/70">
+                                        · <span class="text-base-content/70">{{ item.published_at | date: '%Y-%m-%d' }}</span>
                                     </div>
                                 </footer>
                             </article>
@@ -238,16 +242,16 @@
                         <h4 class="md:text-2xl text-xl font-black tracking-tight font-red-hat-display mb-5">热门推荐 🎉</h4>
                         <ul class="-my-3">
                             {% for item in hot_pages %}
-                                <li class="flex py-3 border-b border-slate-200 dark:border-slate-800">
-                                    <div class="md:text-2xl text-xl font-black tracking-tight w-12 font-red-hat-display text-slate-400 dark:text-slate-600 shrink-0 mt-1">0{{ forloop.index }}</div>
+                                <li class="flex py-3 border-b border-base-300">
+                                    <div class="md:text-2xl text-xl font-black tracking-tight w-12 font-red-hat-display text-base-content/60 dark:text-primary-content opacity-80 shrink-0 mt-1">0{{ forloop.index }}</div>
                                     <article>
                                         <a class="hover:underline" href="{{ item.path }}">
                                             <h3 class="font-red-hat-display tracking-tight mb-1">
                                                 {{ item.link_text }}
                                             </h3>
                                         </a>
-                                        <div class="text-sm text-slate-500">
-                                            发布于：<span class="text-slate-500"> {{ item.published_at | date: '%Y-%m-%d' }}</span>
+                                        <div class="text-sm text-base-content/70">
+                                            发布于：<span class="text-base-content/70"> {{ item.published_at | date: '%Y-%m-%d' }}</span>
                                         </div>
                                     </article>
                                 </li>
@@ -266,17 +270,17 @@
     {
         "name": "Index.Marketing",
         "description": "市场营销类首页模板",
-        "thumb_url": "images/theme/index1.webp",
+        "thumb_url": "images/theme/${lang}/index-marketing.jpg",
         "preview_image_urls": [
-        "images/theme/index1.webp"
+        "images/theme/${lang}/index-marketing.jpg"
         ],
         "sub_page_templates": ["channel"],
         "settings": [
-          {"id": "title","type": "html", "rows": "10", "placeholder": "","label": "首页标题（50 字以内）", "default": "您的新一代 <span class='text-yellow-300'>Digital Content Marketing</span> 营销服务"},
-          {"id": "description","type": "textarea","label": "首页描述（200 字以内）"},
-          {"id": "cta_title","type": "text","placeholder": "","label": "首页CTA行动号召（50 字以内）"},
-          {"id": "hero_image_url","type": "image_picker","ratio": "4:3","width": 400, "label": "首页封面图"},
-          {"id": "html_content","type": "html", "label": "HTML 内容"}
+          {"id": "title","type": "html", "rows": "10", "placeholder": "","label": "首页标题（50 字以内）", "default": "您的新一代 <span class='text-warning'>Digital Content Marketing</span> 营销服务", "to_markdown": true},
+          {"id": "description","type": "textarea","label": "首页描述（200 字以内）", "to_markdown": true},
+          {"id": "cta_title","type": "text","placeholder": "","label": "首页CTA行动号召（50 字以内）", "to_markdown": true},
+          {"id": "hero_image_url","type": "image_picker","ratio": "4:3","width": 400, "label": "首页封面图", "to_markdown": true},
+          {"id": "html_content","type": "html", "label": "HTML 内容", "to_markdown": true}
         ]
     }
 {% endschema %}

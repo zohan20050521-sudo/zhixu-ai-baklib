@@ -1,30 +1,29 @@
 pages:
-  name: "TailPro Web Design"
+  name: "WWW 企业品牌官网"
   slug: "index"
   template_name: "index"
-  template_style: "web-design"
   settings:
     counter_lines: |
-      9年|品牌与技术协同经验
-      800+|全球企业选择 TailPro
-      10.5K|上线的页面与模块
-      120+|常驻创意与工程顾问
-    slider_one_title: "以创意与技术 <span class='text-yellow-300'>重塑官网体验</span>"
+      8年|企业官网与 CMS 实施经验
+      500+|品牌站点与内容门户交付
+      12+|开箱即用的首页主题变体
+      48h|典型双语站点上线周期
+    slider_one_title: "以内容与体验 <span class='text-yellow-300'>驱动企业增长</span>"
     slider_one_url: "/services"
-    slider_one_image_url: "images/img-min/hero-agency.jpg"
-    slider_two_title: "TailPro 模板，<span class='text-yellow-300'>两周交付品牌门户</span>"
+    slider_one_image_url: "images/demo/bg-hero.jpg"
+    slider_two_title: "Baklib CMS 门户，<span class='text-yellow-300'>两周上线品牌官网</span>"
     slider_two_url: "/portfolio"
-    slider_two_image_url: "images/img-min/marketing.jpg"
-    section_image_url: "images/img-min/bg-planet.jpg"
+    slider_two_image_url: "images/demo/building-600x400.png"
+    section_image_url: "images/demo/bg-planet.jpg"
     html_content: |
       <div class="grid gap-6 md:grid-cols-2">
         <div class="p-6 rounded-2xl shadow-lg bg-white/70">
-          <h3 class="text-xl font-semibold text-primary-700">一站式实施保障</h3>
-          <p class="mt-2 text-slate-600">TailPro 提供信息架构、视觉、前端与内容运营的联合服务，帮助企业在短周期内上线高转化的品牌门户。</p>
+          <h3 class="text-xl font-semibold text-primary-700">CMS 一体化内容运营</h3>
+          <p class="mt-2 text-slate-600">从信息架构、视觉系统到栏目与多主题首页，WWW 模板帮助团队快速搭建可维护的企业官网与推广站点。</p>
         </div>
         <div class="p-6 rounded-2xl shadow-lg bg-white/70">
-          <h3 class="text-xl font-semibold text-primary-700">多行业落地经验</h3>
-          <p class="mt-2 text-slate-600">广泛服务于 B2B 科技、消费品牌、教育培训与企业服务客户，可快速复用成熟案例与组件库。</p>
+          <h3 class="text-xl font-semibold text-primary-700">多行业可复制实践</h3>
+          <p class="mt-2 text-slate-600">覆盖 B2B 科技、制造、金融与企业服务场景，复用案例库、新闻资讯与视频中心组件，降低改版成本。</p>
         </div>
       </div>
   children:
@@ -34,8 +33,8 @@ pages:
       template_style: "side"
       settings:
         title: "关于我们"
-        description: "了解 TailPro 团队的使命、文化与合作方式。"
-        thumb_image_url: "images/img-min/bg-planet.jpg"
+        description: "了解 WWW 模板的定位、实施方式与 Baklib CMS 能力。"
+        thumb_image_url: "images/demo/bg-planet.jpg"
       children:
         - name: "企业故事"
           slug: "company"
@@ -43,31 +42,33 @@ pages:
           template_style: "side"
           settings:
             title: "企业故事"
-            description: "TailPro 专注于打造高性能的品牌官网与内容体验。"
-            thumb_image_url: "images/img-min/img4.png"
+            description: "面向企业品牌官网与 CMS 门户的一站式模板实践。"
+            thumb_image_url: "images/demo/building-600x400.png"
             content: |
-              <p>自 2016 年成立以来，我们已为超过 300 家品牌提供创意设计、网站搭建与数字营销服务。TailPro 模板凝聚了多个行业项目的最佳实践，帮助企业在 2 周内完成官网上线。</p>
-              <p>这一页适合作为“公司简介”或“品牌背景”区块，建议补充关键里程碑、团队规模或所在城市，帮助访客建立信任感。</p>
+              <p>WWW 模板凝聚 Baklib 在企业官网、内容门户与营销推广项目中的最佳实践，帮助团队在短周期内完成站点结构、视觉与栏目配置。</p>
+              <p>建议在本页补充公司里程碑、服务区域与核心客户类型，建立访客信任并承接后续咨询转化。</p>
         - name: "专业团队"
           slug: "team"
           template_name: "page"
           template_style: "side"
           settings:
             title: "专业团队"
-            description: "跨学科团队保障项目从策略到执行的全流程质量。"
+            description: "策略、设计、工程与内容运营协同交付企业门户项目。"
+            thumb_image_url: "images/demo/product-400x600.png"
             content: |
-              <p>核心团队由品牌策略、体验设计、前端工程与数据分析顾问组成，采用敏捷协作模型，以周为单位迭代交付成果。</p>
-              <p>导入后可以在此处加入成员介绍、荣誉或服务流程，让客户快速了解团队分工与交付方式。</p>
+              <p>典型项目组包含品牌策略、体验设计、前端工程与内容运营角色，按周迭代交付原型、视觉稿与可上线页面。</p>
+              <p>可在此展示团队分工、资质认证或交付流程图，便于潜在客户评估合作方式。</p>
         - name: "加入我们"
           slug: "career"
           template_name: "page"
           template_style: "side"
           settings:
             title: "加入我们"
-            description: "探索 UX、内容与技术岗位，加入 TailPro 创意网络。"
+            description: "探索与 Baklib 生态相关的合作、顾问与实施岗位。"
+            thumb_image_url: "images/demo/1-600x800.png"
             content: |
-              <p>我们在北京、上海和成都设有创意中心，欢迎产品设计师、内容策划和前端工程师加入，共同打造下一代品牌体验。</p>
-              <p>可以把该页替换为最新的招聘岗位或合作方式，也可作为 CTA，引导访客填写表单或订阅资讯。</p>
+              <p>欢迎体验设计师、内容策划与前端工程师参与主题共建与客户项目实施，共同打造下一代企业内容体验。</p>
+              <p>可将本页替换为最新招聘或合作伙伴计划，并引导访客提交表单或订阅动态。</p>
 
     - name: "服务项目"
       slug: "services"
@@ -75,111 +76,130 @@ pages:
       template_style: "list"
       settings:
         title: "服务项目"
-        description: "面向品牌的策略、创意与数字化服务组合。"
-        thumb_image_url: "images/img-min/img3.jpg"
+        description: "品牌官网建设、CMS 门户运营与企业推广数字化服务。"
+        thumb_image_url: "images/demo/book-600x400.png"
       children:
-        - name: "品牌策略咨询"
+        - name: "品牌策略与官网规划"
           slug: "branding-strategy"
           template_name: "page"
           settings:
-            title: "品牌策略咨询"
-            description: "从定位、识别系统到资产管理的一站式品牌升级方案。"
-            thumb_image_url: "images/img-min/img1.jpg"
+            title: "品牌策略与官网规划"
+            description: "从定位、信息架构到识别系统，规划可扩展的企业官网。"
+            thumb_image_url: "images/demo/1-800x600.png"
             content: |
-              <p>TailPro 团队基于行业洞察与竞争分析，为企业输出品牌定位、视觉识别与传播体系，确保品牌资产持续增值。</p>
-        - name: "数字营销运营"
+              <p>基于行业洞察与竞品分析，输出品牌定位、站点地图与核心栏目策略，确保 CMS 内容结构可持续演进。</p>
+        - name: "数字营销与内容增长"
           slug: "digital-growth"
           template_name: "page"
           settings:
-            title: "数字营销运营"
-            description: "整合 SEO、内容和社媒策略，驱动询盘增长。"
+            title: "数字营销与内容增长"
+            description: "整合 SEO、资讯栏目与线索转化模块，支撑企业推广目标。"
+            thumb_image_url: "images/demo/10-600x800.png"
             content: |
-              <p>我们提供覆盖 SEO、SEM、内容营销和社媒运营的整合方案，结合数据分析持续优化投放效果。</p>
-              <p>这里可以继续延伸“服务流程”“常用工具”“适用行业”等内容，并加入案例或套餐表格，强化引导。</p>
+              <p>结合新闻资讯、案例作品与 CTA 模块，构建从认知到询盘的内容闭环，并通过数据指标持续优化。</p>
+              <p>可延伸服务流程、适用行业与常用工具栈说明，强化方案可信度。</p>
         - name: "体验设计与前端开发"
           slug: "experience-design"
           template_name: "page"
           settings:
             title: "体验设计与前端开发"
-            description: "以设计驱动产品体验，输出高性能的前端实现。"
-            thumb_image_url: "images/img-min/img5.jpg"
+            description: "多主题首页、响应式布局与 daisyUI 运行时主题色定制。"
+            thumb_image_url: "images/demo/product-400x600.png"
             content: |
-              <p>TailPro 设计与工程团队协作，提供全流程 UX 设计、原型验证与自适应前端开发，确保品牌在各终端呈现一致体验。</p>
-              <p>建议在此补充交付阶段（调研、原型、视觉、上线）或常见技术栈，帮助潜在客户更快了解你的实施方法。</p>
+              <p>WWW 模板提供多套首页变体与可配置组件，设计工程团队协作完成 UX 验证、视觉落地与高性能前端实现。</p>
+              <p>建议补充交付阶段（调研、原型、视觉、上线）及技术栈说明，便于客户评估实施方法。</p>
 
     - name: "作品中心"
       slug: "portfolio"
       template_name: "channel"
       settings:
         title: "作品中心"
-        description: "以真实项目展示 TailPro 的创意与执行能力。"
-        thumb_image_url: "images/theme/project1.jpg"
+        description: "企业官网、CMS 门户与品牌推广类项目案例精选。"
+        thumb_image_url: "images/demo/project_1.jpg"
       children:
         - name: "金融科技品牌官网改版"
           slug: "case-fintech"
           template_name: "page"
           settings:
             title: "金融科技品牌官网改版"
-            description: "帮助 B2B 金融科技企业重塑官网体验，提升线索转化率。"
-            thumb_image_url: "images/theme/project2.jpg"
+            description: "B2B 金融科技企业官网信息架构与视觉升级，提升线索转化。"
+            thumb_image_url: "images/demo/project_2.jpg"
             content: |
-              <p>通过信息架构重组和视觉升级，网站访问深度提升 63%，营销漏斗的转化率提升 31%。</p>
-              <p>可直接把这段结构替换为自己的案例摘要，并继续补充“客户痛点”“解决方案”“上线结果”三部分内容。</p>
-        - name: "智能家居产品发布会"
-          slug: "case-smart-home"
+              <p>重组产品与服务栏目，强化合规披露与案例入口，访问深度与营销漏斗转化率显著提升。</p>
+              <p>可替换为客户痛点、解决方案与量化结果，形成完整案例叙事。</p>
+        - name: "制造企业 CMS 内容门户"
+          slug: "case-manufacturing"
           template_name: "page"
           settings:
-            title: "智能家居产品发布会"
-            description: "构建沉浸式交互页面，配合线上发布拉新活动。"
-            thumb_image_url: "images/theme/project3.jpg"
+            title: "制造企业 CMS 内容门户"
+            description: "统一产品资料、新闻与下载中心，服务全球经销商与客户。"
+            thumb_image_url: "images/demo/project_3.jpg"
             content: |
-              <p>提供多段产品亮点动画与现场直播嵌入，结合社交裂变活动，在两周内为新品带来大量线索。</p>
-              <p>可以在该页面添加直播平台、报名表单或下载资料链接，让访客能立即参与活动。</p>
-        - name: "SaaS 企业内容运营平台"
+              <p>通过 Baklib CMS 集中管理多语言页面与资料版本，减少重复维护并缩短新品信息发布周期。</p>
+        - name: "SaaS 企业知识与客户成功门户"
           slug: "case-saas"
           template_name: "page"
           settings:
-            title: "SaaS 企业内容运营平台"
-            description: "为 SaaS 企业打造知识库与客户成功门户的一体化体验。"
-            thumb_image_url: "images/theme/project4.jpg"
+            title: "SaaS 企业知识与客户成功门户"
+            description: "产品更新、实施指南与培训内容的一体化体验。"
+            thumb_image_url: "images/demo/project_4.jpg"
             content: |
-              <p>整合产品更新、实施指南与培训视频，帮助客户成功团队减少 42% 的重复咨询，并实现内容的版本化管理。</p>
-              <p>建议在这里列出“知识库结构”“多语言支持”“权限管理”等要点，展示该方案可复制到实际项目中。</p>
+              <p>整合帮助文档、版本说明与视频课程，降低客户成功团队重复咨询，并支持权限与版本管理。</p>
+        - name: "跨境品牌多语言推广站"
+          slug: "case-global-brand"
+          template_name: "page"
+          settings:
+            title: "跨境品牌多语言推广站"
+            description: "面向海外市场的品牌故事、产品与活动落地页矩阵。"
+            thumb_image_url: "images/demo/project_5.jpg"
+            content: |
+              <p>基于 WWW 模板快速复制区域站点结构，配合多语言内容与 SEO 策略，在 48 小时内完成核心市场页面上线。</p>
+        - name: "企业内训与活动微站"
+          slug: "case-campaign"
+          template_name: "page"
+          settings:
+            title: "企业内训与活动微站"
+            description: "大型发布会与渠道活动的专题页与报名转化。"
+            thumb_image_url: "images/demo/project_6.jpg"
+            content: |
+              <p>搭建沉浸式专题页并嵌入直播与资料下载，结合社交传播组件，在活动期间集中获取高质量线索。</p>
 
     - name: "新闻资讯"
       slug: "news"
       template_name: "channel"
       settings:
         title: "新闻资讯"
-        description: "关注行业趋势、产品更新与营销洞察。"
-        thumb_image_url: "images/img-min/blog_1.jpg"
+        description: "行业趋势、产品动态与企业数字化实践洞察。"
+        thumb_image_url: "images/demo/10-800x600.png"
       children:
-        - name: "2025 企业数字化体验趋势报告"
+        - name: "2025 企业官网与 CMS 体验趋势"
           slug: "industry-trends"
           template_name: "page"
           settings:
-            title: "2025 企业数字化体验趋势报告"
-            description: "洞察品牌如何通过数据与内容驱动增长。"
+            title: "2025 企业官网与 CMS 体验趋势"
+            description: "品牌如何通过结构化内容与多主题站点驱动增长。"
+            thumb_image_url: "images/demo/bg-hero.jpg"
             content: |
-              <p>报告总结了多行业数字化实践案例，提出 “体验分层” 与 “内容闭环” 两大增长模型，适用于快速评估品牌官网的演进路径。</p>
-              <p>导入后可以附上 PDF 下载、填写表单或跳转链接，把此页当作真实的内容落地页使用。</p>
-        - name: "TailPro 模板新增多主题首页"
+              <p>报告归纳科技、制造与金融行业的数字化实践，提出「体验分层」与「内容闭环」两大增长模型，适用于评估现有官网演进路径。</p>
+              <p>导入后可附上白皮书下载或表单，将本页作为真实内容落地页使用。</p>
+        - name: "WWW 模板发布多主题首页套件"
           slug: "product-update"
           template_name: "page"
           settings:
-            title: "TailPro 模板新增多主题首页"
-            description: "全新营销、创意与移动应用三套首页主题现已开放。"
-            thumb_image_url: "images/img-min/blog_3.jpg"
+            title: "WWW 模板发布多主题首页套件"
+            description: "营销、创意、SEO 与移动应用等多套首页主题现已内置。"
+            thumb_image_url: "images/demo/1-600x800.png"
             content: |
-              <p>此次更新增加了 12 套首页主题、更多组件库以及自定义 CTA 模块，让企业无需编码即可生成差异化的官网风格。</p>
-        - name: "跨境品牌如何构建多语言官网"
+              <p>本次更新提供 12+ 首页变体、品牌 LOGO 墙与可配置 CTA，企业无需编码即可切换差异化推广风格。</p>
+        - name: "跨境品牌多语言官网实践指南"
           slug: "global-playbook"
           template_name: "page"
           settings:
-            title: "跨境品牌如何构建多语言官网"
-            description: "多语言内容协同与 SEO 策略的实操建议。"
+            title: "跨境品牌多语言官网实践指南"
+            description: "多语言内容协同、栏目映射与 SEO 策略建议。"
+            thumb_image_url: "images/demo/10.png"
             content: |
-              <p>通过 TailPro 的多语言能力与内容同步流程，团队可在 48 小时内完成双语上线，并为不同市场配置独立的营销页面。</p>
+              <p>结合 Baklib CMS 多语言能力与 WWW 模板栏目结构，团队可在短周期内完成双语上线，并为不同市场配置独立推广页。</p>
 
     - name: "视频中心"
       slug: "videos"
@@ -187,29 +207,28 @@ pages:
       template_style: "videos"
       settings:
         title: "视频中心"
-        description: "观看 TailPro 的实施案例、功能解读与设计灵感。"
-        thumb_image_url: "images/img-min/app.jpg"
+        description: "主题功能演示、实施案例与客户成功分享。"
+        thumb_image_url: "images/demo/product-400x600.png"
       children:
-        - name: "TailPro 模板快速演示"
+        - name: "WWW 模板与 Baklib CMS 快速演示"
           slug: "video-tour"
           template_name: "page"
           template_style: "video"
           settings:
-            title: "TailPro 模板快速演示"
-            description: "5 分钟了解 TailPro 的首页配置、栏目搭建与主题切换。"
+            title: "WWW 模板与 Baklib CMS 快速演示"
+            description: "5 分钟了解首页主题切换、栏目搭建与站点设置。"
             youtube_id: "dQw4w9WgXcQ"
+            thumb_image_url: "images/demo/bg-hero.jpg"
             content: |
-              <p>视频展示了如何切换首页主题、调整 CTA 模块，并通过品牌 LOGO 墙增强信任背书。</p>
-        - name: "案例分享：B2B 数字营销官网"
+              <p>演示如何切换首页变体、配置 CTA 与品牌 LOGO 墙，并展示企业门户常见栏目结构。</p>
+        - name: "案例分享：B2B 企业推广官网"
           slug: "video-case-study"
           template_name: "page"
           template_style: "video"
           settings:
-            title: "案例分享：B2B 数字营销官网"
-            description: "客户成功团队如何借助 TailPro 打造线索转化引擎。"
+            title: "案例分享：B2B 企业推广官网"
+            description: "客户成功团队如何借助 CMS 打造线索转化引擎。"
             youtube_id: "l482T0yNkeo"
-            thumb_image_url: "images/img-min/app5.jpg"
+            thumb_image_url: "images/demo/10.png"
             content: |
-              <p>案例讲解了从信息架构到内容产出的一体化流程，并分享了 KPI 指标的持续优化方法。</p>
-
-
+              <p>案例讲解从信息架构、内容产出到数据指标优化的完整流程，适用于制造业与科技服务行业参考。</p>

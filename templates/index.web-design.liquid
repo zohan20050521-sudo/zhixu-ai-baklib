@@ -19,21 +19,23 @@
 
 <main id="content" class="relative">
   <!-- =========={ SLIDER }==========  -->
-  <div id="slider" class="relative bg-primary-900">
-    <div class="hero-slider nav-inset-button nav-light-dots carousel" data-flickity='{ "cellAlign": "left", "wrapAround": true, "adaptiveHeight": true, "pageDots": true, "autoPlay": 4000 }'>
-      <div class="z-0 px-0 py-4 w-full md:py-12" style='min-height: 520px;background-image: url("{{ page.settings.slider_one_image_url | default: default_hero_image }}");background-size: cover;'>
+  <div id="slider" class="relative z-0 bg-primary overflow-hidden">
+    <div class="hero-slider nav-inset-button nav-light-dots" data-controller="swiper" data-swiper-options-value='{"loop":true,"autoHeight":true,"autoplay":{"delay":4000,"disableOnInteraction":false},"pagination":{"clickable":true},"navigation":true}'>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide relative z-0 px-0 py-4 w-full md:py-12" style='min-height: 520px;background-image: url("{{ page.settings.slider_one_image_url | default: default_hero_image }}");background-size: cover;'>
 
         <!-- background overlay -->
-        <div class="absolute top-0 w-full h-full opacity-30 start-0 bg-primary" style="z-index:-1;"></div>
+        <div class="absolute top-0 start-0 w-full h-full opacity-80 bg-neutral" style="z-index:-1;" aria-hidden="true"></div>
 
-        <div class="container px-4 mx-auto xl:max-w-6xl">
+        <div class="container relative z-10 px-4 mx-auto xl:max-w-6xl">
           <div class="flex flex-row flex-wrap justify-center items-center -mx-4">
             <!-- content -->
             <div class="px-4 w-full max-w-full md:w-10/12">
               <div class="py-6 mt-12 text-center lg:py-12">
-                <h1 class="mb-8 text-4xl font-semibold leading-tight text-white capitalize lg:text-5xl lg:leading-snug">
+                <h1 class="mb-8 text-4xl font-semibold leading-tight text-neutral-content capitalize lg:text-5xl lg:leading-snug">
                   {{ page.settings.slider_one_title | default: '我们为您的企业设计和开发精美的网站。' }} </h1>
-                <a class="inline-block px-5 py-3 leading-normal text-center text-gray-100 bg-transparent rounded-md border border-gray-100 hover:text-gray-900 hover:bg-gray-200 hover:ring-0 hover:border-gray-200 focus:text-gray-900 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0" href="{{ page.settings.slider_one_url  | default: '#' }}">
+                <a class="inline-block px-5 py-3 leading-normal text-center text-primary-content bg-transparent rounded-md border border-base-300 hover:text-base-content hover:bg-base-300 hover:ring-0 hover:border-base-300 focus:text-base-content focus:bg-base-300 focus:border-base-300 focus:outline-none focus:ring-0" href="{{ page.settings.slider_one_url  | default: '#' }}">
                     了解更多
                   </a>
               </div>
@@ -42,18 +44,18 @@
         </div>
       </div>
 
-      <div class="z-0 px-0 w-full y-4 md:py-12" style='min-height: 520px;background-image: url("{{ page.settings.slider_two_image_url | default: default_hero_image }}");background-size: cover;'>
+      <div class="swiper-slide relative z-0 px-0 py-4 w-full md:py-12" style='min-height: 520px;background-image: url("{{ page.settings.slider_two_image_url | default: default_hero_image }}");background-size: cover;'>
         <!-- background overlay -->
-        <div class="absolute top-0 w-full h-full opacity-30 start-0 bg-secondary" style="z-index:-1;"></div>
+        <div class="absolute top-0 start-0 w-full h-full opacity-80 bg-neutral" style="z-index:-1;" aria-hidden="true"></div>
 
-        <div class="container px-4 mx-auto xl:max-w-6xl">
+        <div class="container relative z-10 px-4 mx-auto xl:max-w-6xl">
           <div class="flex flex-row flex-wrap justify-center items-center -mx-4">
             <!-- content -->
             <div class="px-4 w-full max-w-full md:w-10/12">
               <div class="py-6 mt-12 text-center lg:py-12">
-                <h2 class="mb-8 text-4xl font-semibold leading-tight text-white capitalize lg:text-5xl lg:leading-snug">
+                <h2 class="mb-8 text-4xl font-semibold leading-tight text-neutral-content capitalize lg:text-5xl lg:leading-snug">
                   {{ page.settings.slider_two_title | default: '我们为您的企业设计和开发精美的网站。' }} </h2>
-                <a class="inline-block px-5 py-3 leading-normal text-center text-gray-100 bg-transparent rounded-md border border-gray-100 hover:text-gray-900 hover:bg-gray-200 hover:ring-0 hover:border-gray-200 focus:text-gray-900 focus:bg-gray-200 focus:border-gray-200 focus:outline-none focus:ring-0" href="{{ page.settings.slider_two_url |  default: '#' }}">
+                <a class="inline-block px-5 py-3 leading-normal text-center text-primary-content bg-transparent rounded-md border border-base-300 hover:text-base-content hover:bg-base-300 hover:ring-0 hover:border-base-300 focus:text-base-content focus:bg-base-300 focus:border-base-300 focus:outline-none focus:ring-0" href="{{ page.settings.slider_two_url |  default: '#' }}">
                   了解更多
                 </a>
               </div>
@@ -61,22 +63,27 @@
           </div>
         </div>
       </div>
-    </div>
+        </div>
+    <div class="swiper-pagination"></div>
+    <button type="button" class="swiper-button-prev" aria-label="Previous slide"></button>
+    <button type="button" class="swiper-button-next" aria-label="Next slide"></button>
+  </div>
+</div>
   </div><!-- end slider-->
 
   <!-- =========={ COUNTERS }==========  -->
   {% if counter_lines_size > 1 %}
-    <div class="overflow-hidden relative -mt-64 lg:-mt-24">
+    <div class="relative z-10 overflow-hidden -mt-64 lg:-mt-24">
       <div class="container px-4 mx-auto xl:max-w-6xl">
-        <div class="mb-4 rounded-xl shadow bg-primary-700">
+        <div class="mb-4 rounded-xl shadow bg-primary">
           <div class="flex flex-row flex-wrap pt-12 -mx-4">
             {% for line in counter_lines %}
               {% assign line_arr = line | split: '|' %}
               <div class="flex-shrink px-4 w-1/2 max-w-full md:w-1/4">
                 <div class="pb-12">
                   <div class="text-center">
-                    <p class="mb-1 text-3xl font-semibold leading-normal text-gray-100"><span class="counter">{{ line_arr[0] }}</span></p>
-                    <p class="mb-0 text-lg font-normal leading-normal text-gray-200">{{ line_arr[1] }}</p>
+                    <p class="mb-1 text-3xl font-semibold leading-normal text-primary-content"><span class="counter">{{ line_arr[0] }}</span></p>
+                    <p class="mb-0 text-lg font-normal leading-normal text-primary-content opacity-40">{{ line_arr[1] }}</p>
                   </div>
                 </div>
               </div>
@@ -92,20 +99,24 @@
   <!-- =========={ Brand }==========  -->
   {% if site.settings.brand_logos_on %}
     {% if brand_logos_size > 1 %}
-      <div id="partner-brand" class="relative py-3 bg-white md:py-6 dark:bg-gray-800">
+      <div id="partner-brand" class="relative py-3 bg-base-100 md:py-6 dark:bg-neutral">
         <div class="container px-4 mx-auto xl:max-w-6xl">
           <div class="flex-row flex-wrap justify-center -mx-4 lex">
             <div class="px-4 w-full">
               <!-- slider brand -->
-              <div class="nav-dark-button" data-flickity='{ "cellAlign": "center", "wrapAround": true, "adaptiveHeight": true, "pageDots": false, "imagesLoaded": true }'>
-                {% for url in brand_logos %}
-                  <div class="flex-shrink px-3 w-1/2 max-w-full text-center md:w-1/3 lg:w-1/4 xl:w-1/5 lg:px-6">
-                    <a href="javascript:void(0);" class="inline-block">
-                      <img class="object-contain opacity-80 hover:brands-image hover:opacity-100" src="{{ url }}" alt="{{site.name}} Brand LOGO">
-                    </a>
-                  </div>
-                {% endfor %}
-              </div><!-- end slider brand -->
+              <div class="nav-dark-button" data-controller="swiper" data-swiper-options-value='{"loop":true,"autoHeight":true,"pagination":false,"centeredSlides":true,"slidesPerView":"auto","spaceBetween":24}'>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                            {% for url in brand_logos %}
+                              <div class="swiper-slide flex-shrink px-3 w-1/2 max-w-full text-center md:w-1/3 lg:w-1/4 xl:w-1/5 lg:px-6">
+                                <a href="javascript:void(0);" class="inline-block">
+                                  <img class="object-contain opacity-80 hover:brands-image hover:opacity-100" src="{{ url }}" alt="{{site.name}} Brand LOGO">
+                                </a>
+                              </div>
+                            {% endfor %}
+                              </div>
+              </div>
+            </div><!-- end slider brand -->
             </div>
           </div>
         </div>
@@ -117,18 +128,18 @@
 
   <!-- =========={ ABOUT }==========  -->
   {% if about_page %}
-    <div id="about" class="relative py-6 bg-white md:py-10 dark:bg-gray-800">
+    <div id="about" class="relative py-6 bg-base-100 md:py-10 dark:bg-neutral">
       <div class="container px-4 mx-auto xl:max-w-6xl">
         <div class="flex flex-row flex-wrap -mx-4">
           <!-- content -->
           <div class="flex-shrink self-center px-4 w-full max-w-full lg:w-1/2 lg:order-2">
             <div class="mb-12 lg:mb-0 lg:ms-12 lg:pe-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s">
-              <h2 class="mb-2 text-2xl font-bold leading-normal text-gray-800 md:text-3xl dark:text-gray-100">{{ about_page.settings.title }}</h2>
-              <p class="pb-2 mx-auto mb-12 text-xl font-light leading-relaxed text-gray-500">
+              <h2 class="mb-2 text-2xl font-bold leading-normal text-base-content md:text-3xl text-base-content">{{ about_page.settings.title }}</h2>
+              <p class="pb-2 mx-auto mb-12 text-xl font-light leading-relaxed text-base-content/70">
                 {{ about_page.settings.description | default: 'Upgency is the leading digital marketing agency in New York. We are striving to provide integrated digital marketing solutions.' }}
                 </p>
               <!-- button -->
-              <a href="{{ about_page.path }}" class="px-5 py-3 leading-5 text-gray-100 rounded-md border -ms-1 bg-primary-700 border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0 me-3">
+              <a href="{{ about_page.path }}" class="px-5 py-3 leading-5 text-primary-content rounded-md border -ms-1 bg-primary border-primary hover:text-primary-content hover:bg-primary hover:ring-0 hover:border-primary focus:bg-primary focus:border-primary focus:outline-none focus:ring-0 me-3">
                 <!-- <i class="fas fa-paper-plane me-1"></i> -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" class="inline-block me-2" fill="currentColor" viewBox="0 0 512 512"><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
                 了解详情
@@ -161,33 +172,12 @@
   {% endif %}
 
   <!-- =========={ PORTFOLIO }==========  -->
-  {% if portfolio_page %}
-    {% render 'sections/portfolio1', page: portfolio_page %}
-  {% endif %}
-
-  <!-- =========={ HTML }==========  -->
-  {% if page.settings.html_content %}
-    <div id="about" class="relative py-6 bg-white md:py-10 dark:bg-gray-800">
-        <div class="container px-4 mx-auto xl:max-w-6xl">
-          {{ page.settings.html_content }}
-        </div>
-    </div>
-  {% endif %}
 
 </main>
 
-<section class="relative mx-auto max-w-6xl">
-    <!-- Background image -->
-    <div class="box-content absolute inset-0 pt-16 -z-1">
-        <img class="object-cover absolute inset-0 w-full h-full opacity-60" src="{{ page.settings.section_image_url | default: default_hero_image }}" width="1280" height="400" alt=" Hero About">
-        <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-slate-900" aria-hidden="true"></div>
-    </div>
-    <div class="py-12 lg:py-16"></div>
-</section>
-
 
 <!-- Posts list -->
-<section class="relative py-6 -mt-24 md:py-12 dark:border-slate-800">
+<section class="relative py-6 -mt-24 md:py-12">
     <div class="px-4 mx-auto max-w-6xl sm:px-6">
         <div class="">
             <div class="lg:flex lg:justify-between">
@@ -204,7 +194,7 @@
                                 {% continue %}
                             {% endif %}
                             <!-- 1st article -->
-                            <article class="flex flex-col h-full border p-2 hover:bg-primary-50 group {% if forloop.index0 < 2 %} bg-primary-50 {% endif %}">
+                            <article class="flex flex-col h-full border p-2 hover:bg-primary/5 group {% if forloop.index0 < 2 %} bg-primary/5 {% endif %}">
                                 <header>
                                     <a class="block" href="{{ item.path }}"></a>
                                         <figure class="relative {% if forloop.index == 3 or forloop.index == 4 or forloop.index == 9 or forloop.index == 10 %} h-64 {% else %} h-0 pb-9/16 {% endif %}">
@@ -217,13 +207,13 @@
                                         </h3>
                                     </a>
                                 </header>
-                                <div class="text-slate-500 dark:text-slate-300 grow line-clamp-2">{{ item.settings.description |  truncate: 120 }}</div>
+                                <div class="text-base-content/70 text-base-content grow line-clamp-2">{{ item.settings.description |  truncate: 120 }}</div>
                                 <footer class="flex items-center mt-4">
                                     <a href="javascript:void(0);">
                                         <img class="mr-3 rounded-full shrink-0" src="{{ item.author.avatar_url | default: site.settings.default_avatar_url }}" width="22" height="22" alt="Author 03" />
                                     </a>
-                                    <div class="text-sm text-slate-500">
-                                        · <span class="text-slate-500">{{ item.published_at | date: '%Y-%m-%d' }}</span>
+                                    <div class="text-sm text-base-content/70">
+                                        · <span class="text-base-content/70">{{ item.published_at | date: '%Y-%m-%d' }}</span>
                                     </div>
                                 </footer>
                             </article>
@@ -239,16 +229,16 @@
                         <h4 class="mb-5 text-2xl font-black tracking-tight lg:text-3xl font-red-hat-display">热门推荐 🎉</h4>
                         <ul class="-my-3">
                             {% for item in hot_pages %}
-                                <li class="flex py-3 border-b border-slate-200 dark:border-slate-800 hover:bg-primary-50">
-                                    <div class="mt-1 w-12 text-xl font-black tracking-tight md:text-2xl font-red-hat-display text-slate-400 dark:text-slate-600 shrink-0">0{{ forloop.index }}</div>
+                                <li class="flex py-3 border-b border-base-300 hover:bg-primary/5">
+                                    <div class="mt-1 w-12 text-xl font-black tracking-tight md:text-2xl font-red-hat-display text-base-content/60 dark:text-primary-content opacity-80 shrink-0">0{{ forloop.index }}</div>
                                     <article>
                                         <a class="hover:underline" href="{{ item.path }}">
                                             <h3 class="mb-1 tracking-tight font-red-hat-display">
                                                 {{ item.link_text }}
                                             </h3>
                                         </a>
-                                        <div class="text-sm text-slate-500">
-                                            发布于：<span class="text-slate-500"> {{ item.published_at | date: '%Y-%m-%d' }}</span>
+                                        <div class="text-sm text-base-content/70">
+                                            发布于：<span class="text-base-content/70"> {{ item.published_at | date: '%Y-%m-%d' }}</span>
                                         </div>
                                     </article>
                                 </li>
@@ -270,30 +260,30 @@
 {% schema %}
     {
         "name": "Index.Web Design",
-        "description": "技术研发类首页模板",
-        "thumb_url": "images/theme/index2.webp",
+        "description": "Web Design services homepage layout",
+        "thumb_url": "images/theme/${lang}/index-web-design.jpg",
         "preview_image_urls": [
-        "images/theme/index2.webp"
+        "images/theme/${lang}/index-web-design.jpg"
         ],
         "sub_page_templates": ["channel"],
         "settings": [
 
-          {"id": "counter_lines", "type": "textarea", "label": "数据统计栏目","info": "每行一个，格式：数据|描述", "default": "9年|成熟的团队丰富的经验\n800+|先进企业客户的选择\n10.5K|在线知识库和网站数量\n1000+K|在线托管的数字资源数\n"},
+          {"id": "counter_lines", "type": "textarea", "label": "数据统计栏目","info": "每行一个，格式：数据|描述", "default": "9年|成熟的团队丰富的经验\n800+|先进企业客户的选择\n10.5K|在线知识库和网站数量\n1000+K|在线托管的数字资源数\n", "to_markdown": true},
 
           {"type": "header", "content": "首页轮播1" },
           {"type": "paragraph", "content": "首页大屏轮播图" },
-          {"id": "slider_one_title","type": "html", "rows": "10", "label": "轮播标题", "default": "您的新一代 <span class='text-yellow-300'>Digital Content Marketing</span> 营销服务"},
+          {"id": "slider_one_title","type": "html", "rows": "10", "label": "轮播标题", "default": "您的新一代 <span class='text-warning'>Digital Content Marketing</span> 营销服务", "to_markdown": true},
           {"id": "slider_one_url","type": "text","label": "轮播按钮 URL"},
-          {"id": "slider_one_image_url","type": "image_picker","ratio": "6:2","width": 400, "label": "轮播封面图"},
+          {"id": "slider_one_image_url","type": "image_picker","ratio": "6:2","width": 400, "label": "轮播封面图", "to_markdown": true},
           {"type": "header", "content": "首页轮播2" },
           {"type": "paragraph", "content": "首页大屏轮播图" },
-          {"id": "slider_two_title","type": "html", "rows": "10", "label": "轮播标题", "default": "<span class='text-yellow-300'>Digital Content Marketing</span> 专业服务提供商。"},
+          {"id": "slider_two_title","type": "html", "rows": "10", "label": "轮播标题", "default": "<span class='text-warning'>Digital Content Marketing</span> 专业服务提供商。", "to_markdown": true},
           {"id": "slider_two_url","type": "text","label": "轮播按钮 URL"},
-          {"id": "slider_two_image_url","type": "image_picker","ratio": "6:2","width": 400, "label": "轮播封面图"},
+          {"id": "slider_two_image_url","type": "image_picker","ratio": "6:2","width": 400, "label": "轮播封面图", "to_markdown": true},
           {"type": "header", "content": "HTML 内容" },
           {"type": "paragraph", "content": "一些 HTML 定制内容" },
-          {"id": "section_image_url","type": "image_picker","ratio": "6:2","width": 400, "label": "内容背景图片"},
-          {"id": "html_content","type": "html", "label": "HTML 内容"}
+          {"id": "section_image_url","type": "image_picker","ratio": "6:2","width": 400, "label": "内容背景图片", "to_markdown": true},
+          {"id": "html_content","type": "html", "label": "HTML 内容", "to_markdown": true}
         ]
     }
 {% endschema %}

@@ -1,4 +1,4 @@
-{% comment %} 页面内容部分 {% endcomment %}
+{%# Page content %}
 {% assign default_hero_bg = 'images/img-min/bg-planet.jpg' | asset_url %}
 {% if page.parent.settings.thumb_image_url %}
     {% assign hero_bg = page.parent.settings.thumb_image_url %}
@@ -14,7 +14,7 @@
     <!-- background parallax -->
     <img class="jarallax-img" src="{{ hero_bg }}" alt="title">
     <!-- background overlay -->
-    <div class="absolute top-0 w-full h-full opacity-90 start-0 bg-primary-700" style="z-index:-1;"></div>
+    <div class="absolute top-0 w-full h-full opacity-90 start-0 bg-primary" style="z-index:-1;"></div>
 
     <div class="container px-4 mx-auto xl:max-w-6xl">
       <div class="flex flex-row flex-wrap justify-center items-center -mx-4">
@@ -22,11 +22,11 @@
         <div class="px-4 w-full max-w-full lg:w-10/12">
           <div class="py-6 mt-0 text-center">
             <div class="text-center">
-              <a href="{{ page.parent.path }}" class="px-3 py-1 text-sm text-gray-700 bg-yellow-300 rounded">{{ page.parent.link_text }}</a>
+              <a href="{{ page.parent.path }}" class="px-3 py-1 text-sm text-base-content bg-warning rounded">{{ page.parent.link_text }}</a>
             </div>
             <div class="pt-8 mt-0 text-center">
-              <h1 class="mb-0 text-3xl font-bold leading-normal text-white md:text-4xl">{{ page.settings.title }}</h1>
-              <p class="mt-4 text-gray-300">{{ page.settings.description }}</p>
+              <h1 class="mb-0 text-3xl font-bold leading-normal text-neutral-content md:text-4xl">{{ page.settings.title }}</h1>
+              <p class="mt-4 text-primary-content opacity-50">{{ page.settings.description }}</p>
             </div>
 
           </div>
@@ -37,24 +37,27 @@
 
 
   <!-- =========={ POST }==========  -->
-  <div id="post-content" class="relative pb-12 bg-white dark:bg-gray-800">
+  <div id="post-content" class="relative pb-12 bg-base-100">
     <div class="container px-4 mx-auto xl:max-w-6xl">
       <div class="flex flex-row flex-wrap justify-center -mx-4">
         <div class="px-4 w-full max-w-full lg:w-10/12">
+          <div class="py-4 w-full max-w-full">
+            {% render 'breadcrumb', breadcrumb: page.breadcrumb, page: page %}
+          </div>
           <div class="p-4">
             <!-- author -->
             {% if site.settings.is_show_author %}
               <div class="flex flex-row flex-wrap py-4 -mx-4 space-x-3">
                 <div class="">
-                  <a href="javascript:void(0);"><img class="w-8 h-8 rounded-full border-2 shadow-xl border-primary/30 md:w-12 md:h-12 dark:border-gray-700" src="{{ page.author.avatar_url | default: site.settings.default_avatar_url }}" alt="author"></a>
+                  <a href="javascript:void(0);"><img class="w-8 h-8 rounded-full border-2 shadow-xl border-primary/30 md:w-12 md:h-12" src="{{ page.author.avatar_url | default: site.settings.default_avatar_url }}" alt="author"></a>
                 </div>
                 <div class="">
                   <!--name-->
-                  <p class="mb-2 text-lg font-semibold leading-normal text-gray-800 dark:text-gray-100">
+                  <p class="mb-2 text-lg font-semibold leading-normal text-base-content text-base-content">
                     <span class="font-semibold">{{ page.author.name }}</span>
                   </p>
                   <!--description-->
-                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                  <p class="text-sm text-base-content/70 text-base-content/70">
                     <time pubdate datetime="{{ page.published_at }}" title="{{ page.published_at }}">发布于：{{ page.published_at | date: "%Y-%m-%d" }}</time>
                     <br/> 浏览：{{ page.visits_count }}</p>
                 </div>
@@ -74,8 +77,8 @@
               {% for tag in page.settings.tags %}
                 {% render 'tag', tag: tag %}
               {% endfor %}
-              {% render "feedback_form", page: page %}
-              {%# render "feedback_btn", page: page %}
+              {%# render "feedback_form", page: page %}
+              {% render "feedback_btn", page: page %}
             </div>
           </div>
         </div>
@@ -84,18 +87,13 @@
   </div><!-- End Contact Form -->
 </main>
 
-<div class="container mx-auto xl:max-w-6xl">
-  <div class="px-4 py-4 w-full max-w-full lg:w-10/12">
-    {% render 'breadcrumb', breadcrumb: page.breadcrumb  %}
-  </div>
-</div>
 
 {% schema %}
   {
     "name": "Page",
-    "thumb_url": "images/theme/page.webp",
+    "thumb_url": "images/theme/${lang}/page.png",
     "preview_image_urls": [
-      "images/theme/page.webp"
+      "images/theme/${lang}/page.png"
     ],
     "sub_page_templates": ["page"],
     "settings": [
@@ -104,30 +102,43 @@
         "type": "text",
         "placeholder": "",
         "label": "t:settings_schema.page.settings.title.label",
-        "info": "t:settings_schema.page.settings.title.info"
+        "info": "t:settings_schema.page.settings.title.info",
+        "to_markdown": true
       },
       {
         "id": "description",
         "type": "textarea",
-        "label": "t:settings_schema.page.settings.description.label"
+        "label": "t:settings_schema.page.settings.description.label",
+        "to_markdown": true
+      },
+      {
+        "id": "icon",
+        "type": "select",
+        "label": "t:settings_schema.page.settings.icon.label",
+        "info": "icon 名称查找字典：https://lucide.dev/icons/",
+        "choices_from": "$site.lucide_icons",
+        "include_blank": true
       },
       {
         "id": "thumb_image_url",
         "type": "image_picker",
         "ratio": "4:3",
         "width": 200,
-        "label": "t:settings_schema.page.settings.thumb_image_url.label"
+        "label": "t:settings_schema.page.settings.thumb_image_url.label",
+        "to_markdown": true
       },
       {
         "id": "content",
         "type": "richtext",
-        "label": "t:settings_schema.page.settings.content.label"
+        "label": "t:settings_schema.page.settings.content.label",
+        "to_markdown": true
       },
       {
         "id": "tags",
         "type": "tag_picker",
         "multiple": true,
-        "label": "t:settings_schema.page.settings.tags.label"
+        "label": "t:settings_schema.page.settings.tags.label",
+        "to_markdown": true
       }
     ]
   }

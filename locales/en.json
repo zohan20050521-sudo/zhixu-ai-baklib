@@ -1,6 +1,6 @@
 {
-  "theme_label": "Tailpro CMS",
-  "theme_description": "Multipurpose Template to build website for Advertising, Branding and more",
+  "theme_label": "WWW",
+  "theme_description": "Enterprise brand site, CMS portal, corporate marketing, and standalone store templates",
   "generic": {
     "search": "👋 What Can We Help?",
     "search_from": "All search results from: ",
@@ -19,7 +19,49 @@
     "prev_page": "Previous Page",
     "page": "Page",
     "copyright": "All rights reserved",
-    "current_version": "Current Version"
+    "current_version": "Current Version",
+    "close": "Close",
+    "feedback": "Was this article helpful?",
+    "feedbacked": "Thanks for your feedback!",
+    "feedback_created_at": "Last feedback at",
+    "breadcrumb_nav": "Breadcrumb"
+  },
+  "snippets": {
+    "feedback_form": {
+      "title": "Submit Feedback",
+      "message_label": "Message",
+      "message_placeholder": "Please enter your feedback",
+      "message_required": "Feedback cannot be empty",
+      "submit": "Submit",
+      "cancel": "Cancel"
+    },
+    "feedback_btn": {
+      "more_questions": "Have more questions?",
+      "submit_request": "Submit a request."
+    },
+    "page_tools": {
+      "copy_page_label": "Copy",
+      "copy_page_description": "Copy this page as Markdown for LLMs",
+      "ask_ai_label": "Ask",
+      "open_in_chatgpt": "Open in ChatGPT",
+      "open_in_claude": "Open in Claude",
+      "open_in_doubao": "Open in Doubao",
+      "open_in_deepseek": "Open in DeepSeek",
+      "ask_about_page": "Ask about this page",
+      "copy_mcp_label": "Copy MCP install command",
+      "copy_mcp_description": "Copy the npx command to install the MCP server",
+      "connect_to_cursor": "Connect to Cursor",
+      "connect_to_cursor_description": "Install MCP Server in Cursor",
+      "connect_to_vscode": "Connect to VS Code",
+      "connect_to_vscode_description": "Install MCP Server in VS Code"
+    }
+  },
+  "templates": {
+    "page": {
+      "llm_prompt_template": "Read the content at %{url} so I can ask questions about it.",
+      "llm_copying": "Copying...",
+      "llm_copied": "Copied"
+    }
   },
   "placeholders": {
     "search": "Searching...",
@@ -35,7 +77,25 @@
   "prompts": {
     "page_restricted": "This page can only be accessed with authentication"
   },
+  "recommendations": {
+    "baklib": {
+      "name": "Business Tech Blue"
+    },
+    "fashion": {
+      "name": "Fashion"
+    },
+    "old_school": {
+      "name": "Old School"
+    }
+  },
   "settings_schema": {
+    "brand_guidelines": {
+      "name": "Brand Guidelines",
+      "header": "Brand colors & DaisyUI semantics",
+      "paragraph": "Site colors are injected at runtime from the admin theme panel. Templates must use DaisyUI semantic utilities (e.g. bg-primary, text-base-content)—never hard-coded gray/slate scales or hex values.",
+      "tokens": "The default “Business Tech Blue” palette: primary Blue #2563EB, secondary Slate #475569, accent #0F172A; surface base-100 #FFFFFF.",
+      "usage": "Primary CTAs: bg-primary + text-primary-content. Cards and page surfaces: bg-base-100. Muted copy: text-base-content/70. Borders: border-base-300. Status: info, success, warning, error."
+    },
     "section_brand": "Brand Info",
     "logo_url_label": "Logo",
     "logo_url_info": "Recommend 150x60px size PNG/SVG",

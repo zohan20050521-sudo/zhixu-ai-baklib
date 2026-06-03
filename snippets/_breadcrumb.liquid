@@ -1,20 +1,33 @@
-{% comment %}
+{%- comment -%}
   @params breadcrumb
-    array of objects with keys:
-      link_text: string
-      path: string
-{% endcomment %}
-<ul class="list-none text-gray-400 text-xs hidden sm:flex items-center space-x-1">
-  {% for crumb in breadcrumb %}
-    <li>
-      <div class="flex items-center">
-        {% if forloop.index0 > 0 %}
-        <svg class="h-5 w-5 flex-shrink-0 text-gray-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-          <path d="M5.555 17.776l8-16 .894.448-8 16-.894-.448z" />
-        </svg>
-        {% endif %}
-        <a href="{{ crumb.path }}" data-turbo-frame="_top">{{ crumb.link_text }}</a>
+    array of objects with keys: link_text, path
+  @params page (optional)
+    current page — shows page tools on the right when present
+{%- endcomment -%}
+
+{% assign crumbs_size = breadcrumb | size %}
+{% if crumbs_size > 0 or page %}
+  <div class="flex flex-wrap items-center justify-between gap-3 print:hidden">
+    {% if crumbs_size > 0 %}
+      <ul class="list-none text-base-content/60 text-sm hidden sm:flex items-center space-x-1 min-w-0 flex-1" aria-label="{{ 'generic.breadcrumb_nav' | t: 'Breadcrumb' }}">
+        {% for crumb in breadcrumb %}
+          <li>
+            <div class="flex items-center">
+              {% if forloop.index0 > 0 %}
+                {% render 'icon', name: 'chevron-right', class: 'h-5 w-5 flex-shrink-0' %}
+              {% endif %}
+              <a href="{{ crumb.path }}" data-turbo-frame="_top">{{ crumb.link_text }}</a>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <div class="min-w-0 flex-1" aria-hidden="true"></div>
+    {% endif %}
+    {% if page %}
+      <div class="shrink-0">
+        {% render 'page_tools_dropdown', page: page %}
       </div>
-    </li>
-  {% endfor %}
-</ul>
+    {% endif %}
+  </div>
+{% endif %}

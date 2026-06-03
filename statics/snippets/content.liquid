@@ -5,7 +5,7 @@
       <!-- background parallax -->
       <img class="jarallax-img" src="{{ 'images/img-min/bg-planet.jpg' | asset_url }}" alt="title">
       <!-- background overlay -->
-      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary-700" style="z-index:-1;"></div>
+      <div class="absolute top-0 start-0 w-full h-full opacity-90 bg-primary" style="z-index:-1;"></div>
 
       <div class="container xl:max-w-6xl mx-auto px-4">
         <div class="flex flex-wrap flex-row -mx-4 items-center justify-center">
@@ -14,24 +14,24 @@
             <nav aria-label="breadcrumb">
               <ol class="flex flex-wrap justify-center bg-transparent text-sm mb-0 space-x-1">
                 <li>
-                  <a href="#" class="text-gray-200 hover:text-white">
+                  <a href="#" class="text-neutral-content/70 hover:text-neutral-content">
                     Home
                     <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
                   </a>
                 </li>
                 <li>
-                  <a href="/s/index" class="text-gray-200 hover:text-white">
+                  <a href="/s/index" class="text-neutral-content/70 hover:text-neutral-content">
                     Snippets
                     <svg xmlns="http://www.w3.org/2000/svg" class="mx-1 inline-block transform ltr:rotate-0 rtl:rotate-180" width="1rem" height="1rem" fill="currentColor" viewBox="0 0 512 512"><polyline points="184 112 328 256 184 400" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:48px"/></svg>
                   </a>
                 </li>
-                <li class="hidden md:block text-white" aria-current="page">Content Sections</li>
+                <li class="hidden md:block text-neutral-content" aria-current="page">Content Sections</li>
               </ol>
             </nav>
 
             <div class="mt-0 pt-6 text-center">
-              <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-white">Content Sections</h1>    
-              <hr class="block w-12 h-0.5 mx-auto my-5 bg-yellow-300 border-yellow-300">       
+              <h1 class="text-2xl md:text-3xl leading-normal mb-2 font-semibold text-neutral-content">Content Sections</h1>    
+              <hr class="block w-12 h-0.5 mx-auto my-5 bg-warning border-warning">       
             </div>
           </div><!-- end content -->
         </div>
@@ -39,21 +39,21 @@
     </div><!-- End hero -->
 
     <!-- =========={ SNIPPETS }==========  -->
-    <div id="snippets" class="relative pt-12 bg-white dark:bg-gray-800">
+    <div id="snippets" class="relative pt-12 bg-base-100">
       <div class="container mx-auto px-6 lg:px-4">
         <!-- row -->
         <div class="flex flex-wrap flex-row -mx-4">
-          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
-            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-base-200 border-base-300 mb-20">
+            <div class="px-4 py-2 border-b border-base-300 flex justify-between items-center bg-base-100 sm:py-4 sm:px-6 sm:items-baseline">
               <div class="flex-shrink min-w-0 flex items-center">
                 Content Sections style 1
               </div>
               <div class="ms-4 flex flex-shrink-0 items-center">
                 <div class="flex items-center text-sm md:text-base">
-                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                  <button type="button" @click="tabs = 1" :class="{'bg-base-200 text-primary': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-base-200 text-primary">
                     Preview
                   </button>
-                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                  <button type="button" @click="tabs = 2" :class="{'bg-base-200 text-primary': tabs === 2 }" class="ms-2 hover:text-primary focus:text-primary inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-base-200 text-primary">
                     Code
                   </button>
                 </div>
@@ -62,12 +62,12 @@
             <div>
               <div x-show="tabs === 1">
                 <!-- content start -->
-                <div id="about" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-white dark:bg-gray-800">
+                <div id="about" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-base-100">
                   <div class="container xl:max-w-6xl mx-auto px-4">
                     <!-- section header -->
                     <header class="text-center mx-auto mb-12">
-                      <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"><span class="font-light">What</span> We Do</h2>
-                      <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
+                      <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-base-content"><span class="font-light">What</span> We Do</h2>
+                      <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary border-primary">
                     </header><!-- end section header -->
 
                     <!-- showcase  -->
@@ -83,48 +83,48 @@
                         <ol>
                           <li class="flex wow fadeInUp" data-wow-duration="1s">
                             <div class="relative flex-shrink-0 w-16 text-center">
-                              <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"></span>
-                              <div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-800 dark:bg-opacity-20 dark:border-gray-700">
-                                <span class="text-primary-700 text-xl">
+                              <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-base-300"></span>
+                              <div class="w-12 h-12 me-auto rounded-full p-2 bg-base-200 border border-base-300">
+                                <span class="text-primary text-xl">
                                   1
                                 </span>
                               </div>
                             </div>
 
                             <div class="ms-4 mb-4 lg:ms-6">
-                              <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">Rational Brand</h3>
+                              <h3 class="text-xl font-semibold mb-2 text-base-content">Rational Brand</h3>
                               <p>Create attribute in a brand that serves to make a brand a consumer choice.</p>
                             </div>
                           </li>
 
                           <li class="flex wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
                             <div class="relative flex-shrink-0 w-16 text-center">
-                              <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"></span>
-                              <div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-800 dark:bg-opacity-20 dark:border-gray-700">
-                                <span class="text-primary-700 text-xl">
+                              <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-base-300"></span>
+                              <div class="w-12 h-12 me-auto rounded-full p-2 bg-base-200 border border-base-300">
+                                <span class="text-primary text-xl">
                                   2
                                 </span>
                               </div>
                             </div>
 
                             <div class="ms-4 mb-4 lg:ms-6">
-                              <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">Emotional Brand</h3>
+                              <h3 class="text-xl font-semibold mb-2 text-base-content">Emotional Brand</h3>
                               <p>Create attributes in a brand that serve to create bonds emotions with customers.</p>
                             </div>
                           </li>
 
                           <li class="flex wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                             <div class="relative flex-shrink-0 w-16 text-center">
-                              <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"></span>
-                              <div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-800 dark:bg-opacity-20 dark:border-gray-700">
-                                <span class="text-primary-700 text-xl">
+                              <span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-base-300"></span>
+                              <div class="w-12 h-12 me-auto rounded-full p-2 bg-base-200 border border-base-300">
+                                <span class="text-primary text-xl">
                                   3
                                 </span>
                               </div>
                             </div>
 
                             <div class="ms-4 mb-4 lg:ms-6">
-                              <h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100">Visual Identity</h3>
+                              <h3 class="text-xl font-semibold mb-2 text-base-content">Visual Identity</h3>
                               <p>Create attributes that can be recognized and have a characteristic in the eyes of consumers.</p>
                             </div>
                           </li>
@@ -139,12 +139,12 @@
                 <pre>
                   <code class="language-html" data-lang="html">
                     &lt;!-- content start --&gt;
-                    &lt;div id="about" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-white dark:bg-gray-800"&gt;
+                    &lt;div id="about" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-base-100"&gt;
                       &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
                         &lt;!-- section header --&gt;
                         &lt;header class="text-center mx-auto mb-12"&gt;
-                          &lt;h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100"&gt;&lt;span class="font-light"&gt;What&lt;/span&gt; We Do&lt;/h2&gt;
-                          &lt;hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700"&gt;
+                          &lt;h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-base-content"&gt;&lt;span class="font-light"&gt;What&lt;/span&gt; We Do&lt;/h2&gt;
+                          &lt;hr class="block w-12 h-0.5 mx-auto my-5 bg-primary border-primary"&gt;
                         &lt;/header&gt;&lt;!-- end section header --&gt;
                       
                         &lt;!-- showcase  --&gt;
@@ -160,48 +160,48 @@
                             &lt;ol&gt;
                               &lt;li class="flex wow fadeInUp" data-wow-duration="1s"&gt;
                                 &lt;div class="relative flex-shrink-0 w-16 text-center"&gt;
-                                  &lt;span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"&gt;&lt;/span&gt;
-                                  &lt;div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-800 dark:bg-opacity-20 dark:border-gray-700"&gt;
-                                    &lt;span class="text-primary-700 text-xl"&gt;
+                                  &lt;span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-base-300"&gt;&lt;/span&gt;
+                                  &lt;div class="w-12 h-12 me-auto rounded-full p-2 bg-base-200 border border-base-300"&gt;
+                                    &lt;span class="text-primary text-xl"&gt;
                                       1
                                     &lt;/span&gt;
                                   &lt;/div&gt;
                                 &lt;/div&gt;
 
                                 &lt;div class="ms-4 mb-4 lg:ms-6"&gt;
-                                  &lt;h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"&gt;Rational Brand&lt;/h3&gt;
+                                  &lt;h3 class="text-xl font-semibold mb-2 text-base-content"&gt;Rational Brand&lt;/h3&gt;
                                   &lt;p&gt;Create attribute in a brand that serves to make a brand a consumer choice.&lt;/p&gt;
                                 &lt;/div&gt;
                               &lt;/li&gt;
 
                               &lt;li class="flex wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s"&gt;
                                 &lt;div class="relative flex-shrink-0 w-16 text-center"&gt;
-                                  &lt;span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"&gt;&lt;/span&gt;
-                                  &lt;div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-800 dark:bg-opacity-20 dark:border-gray-700"&gt;
-                                    &lt;span class="text-primary-700 text-xl"&gt;
+                                  &lt;span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-base-300"&gt;&lt;/span&gt;
+                                  &lt;div class="w-12 h-12 me-auto rounded-full p-2 bg-base-200 border border-base-300"&gt;
+                                    &lt;span class="text-primary text-xl"&gt;
                                       2
                                     &lt;/span&gt;
                                   &lt;/div&gt;
                                 &lt;/div&gt;
 
                                 &lt;div class="ms-4 mb-4 lg:ms-6"&gt;
-                                  &lt;h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"&gt;Emotional Brand&lt;/h3&gt;
+                                  &lt;h3 class="text-xl font-semibold mb-2 text-base-content"&gt;Emotional Brand&lt;/h3&gt;
                                   &lt;p&gt;Create attributes in a brand that serve to create bonds emotions with customers.&lt;/p&gt;
                                 &lt;/div&gt;
                               &lt;/li&gt;
 
                               &lt;li class="flex wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"&gt;
                                 &lt;div class="relative flex-shrink-0 w-16 text-center"&gt;
-                                  &lt;span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-gray-200 dark:border-gray-700"&gt;&lt;/span&gt;
-                                  &lt;div class="w-12 h-12 me-auto rounded-full p-2 bg-gray-100 border border-gray-200 dark:bg-gray-800 dark:bg-opacity-20 dark:border-gray-700"&gt;
-                                    &lt;span class="text-primary-700 text-xl"&gt;
+                                  &lt;span class="absolute start-1/3 top-12 -bottom-8 border-s-2 border-dashed border-base-300"&gt;&lt;/span&gt;
+                                  &lt;div class="w-12 h-12 me-auto rounded-full p-2 bg-base-200 border border-base-300"&gt;
+                                    &lt;span class="text-primary text-xl"&gt;
                                       3
                                     &lt;/span&gt;
                                   &lt;/div&gt;
                                 &lt;/div&gt;
 
                                 &lt;div class="ms-4 mb-4 lg:ms-6"&gt;
-                                  &lt;h3 class="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-100"&gt;Visual Identity&lt;/h3&gt;
+                                  &lt;h3 class="text-xl font-semibold mb-2 text-base-content"&gt;Visual Identity&lt;/h3&gt;
                                   &lt;p&gt;Create attributes that can be recognized and have a characteristic in the eyes of consumers.&lt;/p&gt;
                                 &lt;/div&gt;
                               &lt;/li&gt;
@@ -217,17 +217,17 @@
             </div>
           </div>
 
-          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
-            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-base-200 border-base-300 mb-20">
+            <div class="px-4 py-2 border-b border-base-300 flex justify-between items-center bg-base-100 sm:py-4 sm:px-6 sm:items-baseline">
               <div class="flex-shrink min-w-0 flex items-center">
                 Content Sections style 2
               </div>
               <div class="ms-4 flex flex-shrink-0 items-center">
                 <div class="flex items-center text-sm md:text-base">
-                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                  <button type="button" @click="tabs = 1" :class="{'bg-base-200 text-primary': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-base-200 text-primary">
                     Preview
                   </button>
-                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                  <button type="button" @click="tabs = 2" :class="{'bg-base-200 text-primary': tabs === 2 }" class="ms-2 hover:text-primary focus:text-primary inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-base-200 text-primary">
                     Code
                   </button>
                 </div>
@@ -236,9 +236,9 @@
             <div>
               <div x-show="tabs === 1">
                 <!-- content start -->
-                <div id="about" class="relative z-0 py-20 lg:py-24 bg-white dark:bg-gray-800">
+                <div id="about" class="relative z-0 py-20 lg:py-24 bg-base-100">
                   <!-- bg wrapper -->
-                  <div class="absolute inset-y-0 start-auto end-0 hidden lg:block w-1/3 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="z-index:-1"></div>
+                  <div class="absolute inset-y-0 start-auto end-0 hidden lg:block w-1/3 bg-base-200" style="z-index:-1"></div>
                   <div class="container xl:max-w-6xl mx-auto px-4">
                     <div class="flex flex-wrap flex-row">
                       <!-- img block -->
@@ -249,8 +249,8 @@
                       <!-- content block -->
                       <div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 lg:order-1 my-auto">
                         <div class="p-4 md:p-12 lg:p-16 lg:ps-0 text-center lg:text-start">
-                          <h2 class="text-4xl leading-normal mb-4 font-semibold text-gray-800 dark:text-gray-100">Build your Awesome <span class="text-primary-700">Website and Logo Design</span></h2>
-                          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Landcore is a full service Creative Agency in New York, providing integrated solutions for your business. We offer services from Logo design, web & mobile apps design, photography, event organizer and etc.</p>
+                          <h2 class="text-4xl leading-normal mb-4 font-semibold text-base-content">Build your Awesome <span class="text-primary">Website and Logo Design</span></h2>
+                          <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2">Landcore is a full service Creative Agency in New York, providing integrated solutions for your business. We offer services from Logo design, web & mobile apps design, photography, event organizer and etc.</p>
                         </div>
                       </div>
                     </div>
@@ -261,9 +261,9 @@
                 <pre>
                   <code class="language-html" data-lang="html">
                     &lt;!-- content start --&gt;
-                    &lt;div id="about" class="relative z-0 py-20 lg:py-24 bg-white dark:bg-gray-800"&gt;
+                    &lt;div id="about" class="relative z-0 py-20 lg:py-24 bg-base-100"&gt;
                       &lt;!-- bg wrapper --&gt;
-                      &lt;div class="absolute inset-y-0 start-auto end-0 hidden lg:block w-1/3 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20" style="z-index:-1"&gt;&lt;/div&gt;
+                      &lt;div class="absolute inset-y-0 start-auto end-0 hidden lg:block w-1/3 bg-base-200" style="z-index:-1"&gt;&lt;/div&gt;
                       &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
                         &lt;div class="flex flex-wrap flex-row"&gt;
                           &lt;!-- img block --&gt;
@@ -274,8 +274,8 @@
                           &lt;!-- content block --&gt;
                           &lt;div class="flex-shrink max-w-full px-4 w-full lg:w-1/2 lg:order-1 my-auto"&gt;
                             &lt;div class="p-4 md:p-12 lg:p-16 lg:ps-0 text-center lg:text-start"&gt;
-                              &lt;h2 class="text-4xl leading-normal mb-4 font-semibold text-gray-800 dark:text-gray-100"&gt;Build your Awesome &lt;span class="text-primary-700"&gt;Website and Logo Design&lt;/span&gt;&lt;/h2&gt;
-                              &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2"&gt;Landcore is a full service Creative Agency in New York, providing integrated solutions for your business. We offer services from Logo design, web & mobile apps design, photography, event organizer and etc.&lt;/p&gt;
+                              &lt;h2 class="text-4xl leading-normal mb-4 font-semibold text-base-content"&gt;Build your Awesome &lt;span class="text-primary"&gt;Website and Logo Design&lt;/span&gt;&lt;/h2&gt;
+                              &lt;p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2"&gt;Landcore is a full service Creative Agency in New York, providing integrated solutions for your business. We offer services from Logo design, web & mobile apps design, photography, event organizer and etc.&lt;/p&gt;
                             &lt;/div&gt;
                           &lt;/div&gt;
                         &lt;/div&gt;
@@ -287,17 +287,17 @@
             </div>
           </div>
 
-          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
-            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-base-200 border-base-300 mb-20">
+            <div class="px-4 py-2 border-b border-base-300 flex justify-between items-center bg-base-100 sm:py-4 sm:px-6 sm:items-baseline">
               <div class="flex-shrink min-w-0 flex items-center">
                 Content Sections style 3
               </div>
               <div class="ms-4 flex flex-shrink-0 items-center">
                 <div class="flex items-center text-sm md:text-base">
-                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                  <button type="button" @click="tabs = 1" :class="{'bg-base-200 text-primary': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-base-200 text-primary">
                     Preview
                   </button>
-                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                  <button type="button" @click="tabs = 2" :class="{'bg-base-200 text-primary': tabs === 2 }" class="ms-2 hover:text-primary focus:text-primary inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-base-200 text-primary">
                     Code
                   </button>
                 </div>
@@ -306,14 +306,14 @@
             <div>
               <div x-show="tabs === 1">
                 <!-- start content -->
-                <div id="about-us" class="relative py-12 bg-white dark:bg-gray-800">
+                <div id="about-us" class="relative py-12 bg-base-100">
                   <div class="container xl:max-w-6xl mx-auto px-4">
                     <div class="flex flex-wrap flex-row -mx-4">
-                      <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 bg-white dark:bg-gray-800">
+                      <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 bg-base-100">
                         <div class="pt-12 lg:py-16 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s">
-                          <h2 class="text-4xl leading-normal mb-4 font-semibold text-gray-800 dark:text-gray-100">Who We Are.</h2>
-                          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
-                          <a href="#" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0">
+                          <h2 class="text-4xl leading-normal mb-4 font-semibold text-base-content">Who We Are.</h2>
+                          <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.</p>
+                          <a href="#" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-primary-content bg-primary border border-primary hover:text-primary-content hover:bg-primary hover:ring-0 hover:border-primary focus:bg-primary focus:border-primary focus:outline-none focus:ring-0">
                             Company story
                             <svg class="bi bi-chevron-double-right inline-block ms-2 transform ltr:rotate-0 rtl:rotate-180" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L9.293 8 3.646 2.354a.5.5 0 010-.708z" clip-rule="evenodd"></path>
@@ -336,14 +336,14 @@
                 <pre>
                   <code class="language-html" data-lang="html">
                     &lt;!-- start content --&gt;
-                    &lt;div id="about-us" class="relative py-12 bg-white dark:bg-gray-800"&gt;
+                    &lt;div id="about-us" class="relative py-12 bg-base-100"&gt;
                       &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
                         &lt;div class="flex flex-wrap flex-row -mx-4"&gt;
-                          &lt;div class="flex-shrink max-w-full px-4 w-full md:w-1/2 bg-white dark:bg-gray-800"&gt;
+                          &lt;div class="flex-shrink max-w-full px-4 w-full md:w-1/2 bg-base-100"&gt;
                             &lt;div class="pt-12 lg:py-16 wow fadeInLeft" data-wow-duration="1s" data-wow-delay=".1s"&gt;
-                              &lt;h2 class="text-4xl leading-normal mb-4 font-semibold text-gray-800 dark:text-gray-100"&gt;Who We Are.&lt;/h2&gt;
-                              &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12"&gt;Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.&lt;/p&gt;
-                              &lt;a href="#" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0"&gt;
+                              &lt;h2 class="text-4xl leading-normal mb-4 font-semibold text-base-content"&gt;Who We Are.&lt;/h2&gt;
+                              &lt;p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2 mb-12"&gt;Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.&lt;/p&gt;
+                              &lt;a href="#" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-primary-content bg-primary border border-primary hover:text-primary-content hover:bg-primary hover:ring-0 hover:border-primary focus:bg-primary focus:border-primary focus:outline-none focus:ring-0"&gt;
                                 Company story
                                 &lt;svg class="bi bi-chevron-double-right inline-block ms-2 transform ltr:rotate-0 rtl:rotate-180" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
                                   &lt;path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L9.293 8 3.646 2.354a.5.5 0 010-.708z" clip-rule="evenodd"&gt;&lt;/path&gt;
@@ -367,17 +367,17 @@
             </div>
           </div>
 
-          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
-            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-base-200 border-base-300 mb-20">
+            <div class="px-4 py-2 border-b border-base-300 flex justify-between items-center bg-base-100 sm:py-4 sm:px-6 sm:items-baseline">
               <div class="flex-shrink min-w-0 flex items-center">
                 Content Sections style 4
               </div>
               <div class="ms-4 flex flex-shrink-0 items-center">
                 <div class="flex items-center text-sm md:text-base">
-                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                  <button type="button" @click="tabs = 1" :class="{'bg-base-200 text-primary': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-base-200 text-primary">
                     Preview
                   </button>
-                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                  <button type="button" @click="tabs = 2" :class="{'bg-base-200 text-primary': tabs === 2 }" class="ms-2 hover:text-primary focus:text-primary inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-base-200 text-primary">
                     Code
                   </button>
                 </div>
@@ -386,7 +386,7 @@
             <div>
               <div x-show="tabs === 1">
                 <!-- content start -->
-                <div id="about" class="relative py-20 md:py-24 bg-white dark:bg-gray-800">
+                <div id="about" class="relative py-20 md:py-24 bg-base-100">
                   <div class="container xl:max-w-6xl mx-auto px-4">
                     <!-- row -->
                     <div class="flex flex-wrap flex-row -mx-4 justify-between">
@@ -399,9 +399,9 @@
                         </div>
                       </div>
                       <div class="max-w-full w-full lg:w-1/2 px-4 wow flipInX" data-wow-duration="1s" data-wow-delay=".1s">
-                        <h2 class="text-3xl md:text-4xl leading-normal md:leading-tight mb-4 font-bold text-gray-800 dark:text-gray-100">Creative Digital Agency</h2>
-                        <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">You will get all statistic from your business. Upgency tells you exactly what kind of financial information you need to enter and then it does all the calculations automatically using built-in formulas. Lorem Ipsum has been the industry's standard dummy.</p>
-                        <a href="#services" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0">
+                        <h2 class="text-3xl md:text-4xl leading-normal md:leading-tight mb-4 font-bold text-base-content">Creative Digital Agency</h2>
+                        <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2 mb-12">You will get all statistic from your business. Upgency tells you exactly what kind of financial information you need to enter and then it does all the calculations automatically using built-in formulas. Lorem Ipsum has been the industry's standard dummy.</p>
+                        <a href="#services" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-primary-content bg-primary border border-primary hover:text-primary-content hover:bg-primary hover:ring-0 hover:border-primary focus:bg-primary focus:border-primary focus:outline-none focus:ring-0">
                           Our Services
                           <svg class="bi bi-chevron-double-right inline-block ms-2 transform ltr:rotate-0 rtl:rotate-180" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L9.293 8 3.646 2.354a.5.5 0 010-.708z" clip-rule="evenodd"></path>
@@ -417,7 +417,7 @@
                 <pre>
                   <code class="language-html" data-lang="html">
                     &lt;!-- content start --&gt;
-                    &lt;div id="about" class="relative py-20 md:py-24 bg-white dark:bg-gray-800"&gt;
+                    &lt;div id="about" class="relative py-20 md:py-24 bg-base-100"&gt;
                       &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
                         &lt;!-- row --&gt;
                         &lt;div class="flex flex-wrap flex-row -mx-4 justify-between"&gt;
@@ -430,9 +430,9 @@
                             &lt;/div&gt;
                           &lt;/div&gt;
                           &lt;div class="max-w-full w-full lg:w-1/2 px-4 wow flipInX" data-wow-duration="1s" data-wow-delay=".1s"&gt;
-                            &lt;h2 class="text-3xl md:text-4xl leading-normal md:leading-tight mb-4 font-bold text-gray-800 dark:text-gray-100"&gt;Creative Digital Agency&lt;/h2&gt;
-                            &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mb-12"&gt;You will get all statistic from your business. Upgency tells you exactly what kind of financial information you need to enter and then it does all the calculations automatically using built-in formulas. Lorem Ipsum has been the industry's standard dummy.&lt;/p&gt;
-                            &lt;a href="#services" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-gray-100 bg-primary-700 border border-primary-700 hover:text-white hover:bg-primary-800 hover:ring-0 hover:border-primary-800 focus:bg-primary-800 focus:border-primary-800 focus:outline-none focus:ring-0"&gt;
+                            &lt;h2 class="text-3xl md:text-4xl leading-normal md:leading-tight mb-4 font-bold text-base-content"&gt;Creative Digital Agency&lt;/h2&gt;
+                            &lt;p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2 mb-12"&gt;You will get all statistic from your business. Upgency tells you exactly what kind of financial information you need to enter and then it does all the calculations automatically using built-in formulas. Lorem Ipsum has been the industry's standard dummy.&lt;/p&gt;
+                            &lt;a href="#services" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-primary-content bg-primary border border-primary hover:text-primary-content hover:bg-primary hover:ring-0 hover:border-primary focus:bg-primary focus:border-primary focus:outline-none focus:ring-0"&gt;
                               Our Services
                               &lt;svg class="bi bi-chevron-double-right inline-block ms-2 transform ltr:rotate-0 rtl:rotate-180" width=".8rem" height=".8rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg"&gt;
                                 &lt;path fill-rule="evenodd" d="M3.646 1.646a.5.5 0 01.708 0l6 6a.5.5 0 010 .708l-6 6a.5.5 0 01-.708-.708L9.293 8 3.646 2.354a.5.5 0 010-.708z" clip-rule="evenodd"&gt;&lt;/path&gt;
@@ -449,17 +449,17 @@
             </div>
           </div>
 
-          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-gray-50 border-gray-200 dark:bg-gray-900 dark:bg-opacity-20 dark:border-gray-800 mb-20">
-            <div class="px-4 py-2 border-b border-gray-200 flex justify-between items-center bg-white dark:bg-gray-800 dark:border-gray-700 sm:py-4 sm:px-6 sm:items-baseline">
+          <div x-data="{ tabs: 1 }" class="flex-shrink w-full max-w-full border bg-base-200 border-base-300 mb-20">
+            <div class="px-4 py-2 border-b border-base-300 flex justify-between items-center bg-base-100 sm:py-4 sm:px-6 sm:items-baseline">
               <div class="flex-shrink min-w-0 flex items-center">
                 Content Sections style 5
               </div>
               <div class="ms-4 flex flex-shrink-0 items-center">
                 <div class="flex items-center text-sm md:text-base">
-                  <button type="button" @click="tabs = 1" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                  <button type="button" @click="tabs = 1" :class="{'bg-base-200 text-primary': tabs === 1 }" class="inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-base-200 text-primary">
                     Preview
                   </button>
-                  <button type="button" @click="tabs = 2" :class="{'bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-80 dark:text-gray-100': tabs === 2 }" class="ms-2 hover:text-primary-600 focus:text-primary-600 inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-gray-100 text-primary-700 dark:bg-gray-900 dark:bg-opacity-40 dark:hover:text-gray-100">
+                  <button type="button" @click="tabs = 2" :class="{'bg-base-200 text-primary': tabs === 2 }" class="ms-2 hover:text-primary focus:text-primary inline-block rounded-lg font-medium leading-none py-3 px-4 focus:outline-none bg-base-200 text-primary">
                     Code
                   </button>
                 </div>
@@ -468,7 +468,7 @@
             <div>
               <div x-show="tabs === 1">
                 <!-- content start -->
-                <div id="overview" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-white dark:bg-gray-800">
+                <div id="overview" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-base-100">
                   <div class="container xl:max-w-6xl mx-auto px-4">
                     <!-- row -->
                     <div class="flex flex-wrap flex-row -mx-4 mb-12 md:mb-16">
@@ -477,8 +477,8 @@
                       </div>
                       <div class="flex-shrink w-full max-w-full md:w-1/2 md:order-1 px-4 self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s">
                         <div class="mt-6 md:mt-0"> 
-                          <h2 class="text-4xl leading-normal mb-2 mt-4 font-light text-gray-800 dark:text-gray-100">Get lots of <span class="font-semibold">new experiences</span> by joining with our Team</h2>
-                          <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                          <h2 class="text-4xl leading-normal mb-2 mt-4 font-light text-base-content">Get lots of <span class="font-semibold">new experiences</span> by joining with our Team</h2>
+                          <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2 mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
                       </div>
                     </div><!-- end row -->
@@ -490,7 +490,7 @@
                 <pre>
                   <code class="language-html" data-lang="html">
                     &lt;!-- content start --&gt;
-                    &lt;div id="overview" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-white dark:bg-gray-800"&gt;
+                    &lt;div id="overview" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-base-100"&gt;
                       &lt;div class="container xl:max-w-6xl mx-auto px-4"&gt;
                         &lt;!-- row --&gt;
                         &lt;div class="flex flex-wrap flex-row -mx-4 mb-12 md:mb-16"&gt;
@@ -499,8 +499,8 @@
                           &lt;/div&gt;
                           &lt;div class="flex-shrink w-full max-w-full md:w-1/2 md:order-1 px-4 self-center wow fadeInRight" data-wow-duration="1s" data-wow-delay=".1s"&gt;
                             &lt;div class="mt-6 md:mt-0"&gt; 
-                              &lt;h2 class="text-4xl leading-normal mb-2 mt-4 font-light text-gray-800 dark:text-gray-100"&gt;Get lots of &lt;span class="font-semibold"&gt;new experiences&lt;/span&gt; by joining with our Team&lt;/h2&gt;
-                              &lt;p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2 mt-4"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+                              &lt;h2 class="text-4xl leading-normal mb-2 mt-4 font-light text-base-content"&gt;Get lots of &lt;span class="font-semibold"&gt;new experiences&lt;/span&gt; by joining with our Team&lt;/h2&gt;
+                              &lt;p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2 mt-4"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
                             &lt;/div&gt;
                           &lt;/div&gt;
                         &lt;/div&gt;&lt;!-- end row --&gt;

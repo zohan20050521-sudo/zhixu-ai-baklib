@@ -1,32 +1,30 @@
 site:
   language: "zh-CN"
   time_zone: "Asia/Shanghai"
-  favicon: "images/img/favicon.png"
+  favicon: "images/demo/product-400x400.png"
   settings:
-    logo_url: "images/logo.png"
-    footer_logo_url: "images/logo.png"
-    slogan: "TailPro · 以创意驱动的全栈数字营销门户"
-    request_title: "预约咨询"
-    request_url: "https://www.baklib.cn/themes/cms-tailpro"
+    slogan: "WWW · 基于 Baklib CMS 的企业品牌官网与内容门户"
+    request_title: "预约演示"
+    request_url: "https://help.baklib.cn/themes/www"
     is_show_author: true
-    default_avatar_url: "images/img-min/avatar.png"
-    default_thumb_url: "images/img-min/blog_1.jpg"
+    default_avatar_url: "images/demo/1.png"
+    default_thumb_url: "images/demo/book-600x400.png"
     cta_title: |
-      <h2 class="text-3xl font-semibold text-white">立即启动您的企业门户升级计划</h2>
-      <p class="mt-3 text-lg text-white/80">填写联系信息，我们将在 1 个工作日内为您安排专属顾问，提供演示与改版建议。</p>
+      <h2 class="text-3xl font-semibold text-white">启动企业官网与 CMS 门户升级</h2>
+      <p class="mt-3 text-lg text-white/80">填写联系信息，我们将在 1 个工作日内安排顾问，提供主题演示、信息架构与改版建议。</p>
     brand_logos_on: true
     brand_logos: |
-      https://images.unsplash.com/photo-1500522144261-ea64433bbe27?w=320
-      https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=320
-      https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=320
-      https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=320
-      https://images.unsplash.com/photo-1485988412941-77a35537dae4?w=320
+      images/demo/product-400x400.png
+      images/demo/building-600x400.png
+      images/demo/book-600x400.png
+      images/demo/1-800x600.png
+      images/demo/10-800x600.png
     aside_html: |
       <div class="p-4 text-white bg-gradient-to-r rounded-xl from-primary-600 to-secondary-500">
-        <h4 class="text-lg font-semibold">需要定制服务？</h4>
-        <p class="mt-2 text-sm text-white/80">联系我们的顾问团队，获取行业解决方案白皮书与排期报价。</p>
-        <a href="https://www.baklib.cn/themes/cms-tailpro" class="inline-flex gap-1 items-center px-3 py-2 mt-3 text-sm font-semibold rounded-md bg-white/90 text-primary-700 hover:bg-white">
-          获取解决方案
+        <h4 class="text-lg font-semibold">需要行业解决方案？</h4>
+        <p class="mt-2 text-sm text-white/80">获取企业门户白皮书、多站点内容协同方案与实施排期报价。</p>
+        <a href="https://help.baklib.cn/themes/www" class="inline-flex gap-1 items-center px-3 py-2 mt-3 text-sm font-semibold rounded-md bg-white/90 text-primary-700 hover:bg-white">
+          获取方案资料
           <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M6 3.5a.5.5 0 0 1 .8-.4l4 3a.5.5 0 0 1 0 .8l-4 3A.5.5 0 0 1 6 9.5V8H1.5a.5.5 0 0 1 0-1H6z"/></svg>
         </a>
       </div>
@@ -38,8 +36,9 @@ site:
       新闻资讯[/news
       视频中心[/videos
       关于我们[/about
-    company_info: "TailPro Experience Studio 专注于品牌官网、数字营销与内容体验设计，持续为科技、制造、金融等行业客户提供创意与技术支持。"
-    copyright_info: "© 2025 TailPro Experience Studio · Powered by Baklib CMS"
+      🎉 更多主题与插件[/s/index
+    company_info: "WWW 企业官网模板面向科技公司、制造与金融团队，提供品牌展示、CMS 内容门户与企业推广落地能力，由 Baklib CMS 驱动。"
+    copyright_info: "© 2025 WWW · Enterprise Brand Site · Powered by Baklib CMS"
     footer_menu: |
       快捷导航[/about{公司介绍[/about/company|服务项目[/services|作品中心[/portfolio
       资源中心[/services/experience-design{体验设计[/services/experience-design|案例合集[/portfolio

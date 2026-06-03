@@ -75,9 +75,11 @@
                     <div class="flex flex-wrap flex-row -mx-4 justify-center">
                       <div class="max-w-full px-4 w-11/12 md:w-full">
                         <!-- review slider -->
-                        <div class="nav-dark-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "adaptiveHeight": true, "pageDots": false }'>
+                        <div class="nav-dark-button" data-controller="swiper" data-swiper-options-value='{"loop":true,"autoHeight":true,"pagination":false,"slidesPerView":"auto","spaceBetween":24}'>
+  <div class="swiper">
+    <div class="swiper-wrapper">
                           <!-- item -->
-                          <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 lg:px-12">
+                          <div class="swiper-slide flex-shrink max-w-full px-4 w-full md:w-1/2 lg:px-12">
                             <!-- Reviews -->
                             <div class="mb-12 md:mb-2">
                               <div class="w-full text-center">
@@ -125,7 +127,7 @@
                           </div>
 
                           <!-- item -->
-                          <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 lg:px-12">
+                          <div class="swiper-slide flex-shrink max-w-full px-4 w-full md:w-1/2 lg:px-12">
                             <!-- Reviews -->
                             <div class="mb-12 md:mb-2">
                               <div class="w-full text-center">
@@ -173,7 +175,7 @@
                           </div>
 
                            <!-- item -->
-                          <div class="flex-shrink max-w-full px-4 w-full md:w-1/2 lg:px-12">
+                          <div class="swiper-slide flex-shrink max-w-full px-4 w-full md:w-1/2 lg:px-12">
                             <!-- Reviews -->
                             <div class="mb-12 md:mb-2">
                               <div class="w-full text-center">
@@ -219,7 +221,9 @@
                               </div>
                             </div><!-- End Reviews -->
                           </div>
-                        </div><!-- end review slider -->
+                            </div>
+  </div>
+</div><!-- end review slider -->
                       </div>
                     </div><!-- end row -->
                   </div>
@@ -242,7 +246,7 @@
                         &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
                           &lt;div class="max-w-full px-4 w-11/12 md:w-full"&gt;
                             &lt;!-- review slider --&gt;
-                            &lt;div class="nav-dark-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "adaptiveHeight": true, "pageDots": false }'&gt;
+                            &lt;div class="nav-dark-button" data-controller="swiper" data-swiper-options-value='{"loop":true,"autoHeight":true,"pagination":false,"slidesPerView":"auto","spaceBetween":24}'&gt;
                               &lt;!-- item --&gt;
                               &lt;div class="flex-shrink max-w-full px-4 w-full md:w-1/2 lg:px-12"&gt;
                                 &lt;!-- Reviews --&gt;
@@ -429,11 +433,13 @@
                     <div class="flex flex-wrap flex-row -mx-4 justify-center">
                       <div class="max-w-full w-full px-4 md:w-10/12">
                         <!-- review slider -->
-                        <div class="nav-dark-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "adaptiveHeight": true, "pageDots": false, "imagesLoaded": true }'>
+                        <div class="nav-dark-button" data-controller="swiper" data-swiper-options-value='{"loop":true,"autoHeight":true,"pagination":false,"slidesPerView":"auto","spaceBetween":24}'>
+  <div class="swiper">
+    <div class="swiper-wrapper">
                           <!-- item -->
-                          <div class="w-full px-12 lg:px-24 text-center">
+                          <div class="swiper-slide w-full px-12 lg:px-24 text-center">
                             <div class="mt-2">
-                              <img src="{{ 'images/img-min/avatar.png' | asset_url }}" alt="avatar" class="mx-auto w-24 h-24 max-w-full rounded-full">
+                              <img src="{{ 'images/avatar.svg' | asset_url }}" alt="avatar" class="mx-auto w-24 h-24 max-w-full rounded-full">
                               <blockquote>
                                 <ul class="flex my-6 mx-auto justify-center">
                                   <li class="me-3 text-yellow-300">
@@ -469,7 +475,7 @@
                           </div>
 
                           <!-- item -->
-                          <div class="w-full px-12 lg:px-24 text-center">
+                          <div class="swiper-slide w-full px-12 lg:px-24 text-center">
                             <div class="mt-2">
                               <img src="{{ 'images/img-min/img2-small.jpg' | asset_url }}" alt="avatar" class="mx-auto w-24 h-24 max-w-full rounded-full">
                               <blockquote>
@@ -507,7 +513,7 @@
                           </div>
 
                           <!-- item -->
-                          <div class="w-full px-12 lg:px-24 text-center">
+                          <div class="swiper-slide w-full px-12 lg:px-24 text-center">
                             <div class="mt-2">
                               <img src="{{ 'images/img-min/img3-small.jpg' | asset_url }}" alt="avatar" class="mx-auto w-24 h-24 max-w-full rounded-full">
                               <blockquote>
@@ -543,7 +549,9 @@
                               <p class="text-center text-gray-500 mb-0 mt-6"><span class="font-bold">John Doe</span>, One Company</p>
                             </div>
                           </div>
-                        </div><!-- End Reviews -->
+                            </div>
+  </div>
+</div><!-- End Reviews -->
                       </div>
                     </div><!-- end row -->
                   </div>
@@ -566,11 +574,11 @@
                         &lt;div class="flex flex-wrap flex-row -mx-4 justify-center"&gt;
                           &lt;div class="max-w-full w-full px-4 md:w-10/12"&gt;
                             &lt;!-- review slider --&gt;
-                            &lt;div class="nav-dark-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "adaptiveHeight": true, "pageDots": false, "imagesLoaded": true }'&gt;
+                            &lt;div class="nav-dark-button" data-controller="swiper" data-swiper-options-value='{"loop":true,"autoHeight":true,"pagination":false,"slidesPerView":"auto","spaceBetween":24}'&gt;
                               &lt;!-- item --&gt;
                               &lt;div class="w-full px-12 lg:px-24 text-center"&gt;
                                 &lt;div class="mt-2"&gt;
-                                  &lt;img src="{{ 'images/img-min/avatar.png' | asset_url }}" alt="avatar" class="mx-auto w-24 h-24 max-w-full rounded-full"&gt;
+                                  &lt;img src="{{ 'images/avatar.svg' | asset_url }}" alt="avatar" class="mx-auto w-24 h-24 max-w-full rounded-full"&gt;
                                   &lt;blockquote&gt;
                                     &lt;ul class="flex my-6 mx-auto justify-center"&gt;
                                       &lt;li class="me-3 text-yellow-300"&gt;

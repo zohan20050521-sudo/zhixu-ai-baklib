@@ -1,25 +1,22 @@
-<div class="flex flex-col items-center">
+<div id="js--feedback-{{ page.id }}" class="flex flex-col items-center">
   {% if page.visitor_posted_feedback %}
     <a  data-turbo-stream="true"
-        href="{{ page.feedback_path }}" class="items-center space-x-1 rounded-full p-4 border border-base-300 !bg-secondary text-white hover:bg-primary-300 text-base-content/50 hover:text-base-content/70">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12 w-10 h-10 bg-primary">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
-            </svg>
+        href="{{ page.feedback_path }}" class="items-center space-x-1 rounded-full p-4 border border-base-300 !bg-secondary text-secondary-content hover:bg-primary/30 hover:text-primary-content">
+            {% render 'icon', name: 'message-square-dot', class: 'size-12 w-10 h-10 bg-primary' %}
     </a>
     <div>{{ 'generic.feedbacked' | t }}</div>
   {% else %}
     <a  data-turbo-stream="true"
-        href="{{ page.feedback_path }}" class="items-center space-x-1 rounded-full p-4 border border-base-300 hover:bg-primary-300 text-base-content/50 hover:text-base-content/70">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-12 w-10 h-10 text-primary">
-              <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
-            </svg>
+        href="{{ page.feedback_path }}" class="items-center space-x-1 rounded-full p-4 border border-base-300 text-base-content hover:bg-primary/30 hover:text-primary-content">
+            {% render 'icon', name: 'message-square-share', class: 'size-12 w-10 h-10 text-primary' %}
     </a>
     <div>{{ 'generic.feedback' | t }}</div>
   {% endif %}
   
   {% if site.settings.request_form_url %}
-    <p class="mt-2 text-gray-600 text-sm text-center">
-      Have more question? <a href="{{ site.settings.request_form_url | default: '#' }}" target="_blank" class="text-blue-600 underline">Submit a request.</a>
+    <p class="mt-2 text-primary-content opacity-80 text-sm text-center">
+      {{ 'snippets.feedback_btn.more_questions' | t }}
+      <a href="{{ site.settings.request_form_url | default: '#' }}" target="_blank" rel="noopener noreferrer" class="text-info underline">{{ 'snippets.feedback_btn.submit_request' | t }}</a>
     </p>
   {% endif %}
 </div>

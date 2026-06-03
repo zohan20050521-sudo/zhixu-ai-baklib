@@ -1,5 +1,23 @@
 {
+  "recommendations": {
+    "baklib": {
+      "name": "科技蓝（企业）"
+    },
+    "fashion": {
+      "name": "时尚"
+    },
+    "old_school": {
+      "name": "复古"
+    }
+  },
   "settings_schema": {
+    "brand_guidelines": {
+      "name": "品牌规范",
+      "header": "品牌色与 DaisyUI 语义色",
+      "paragraph": "本站主题通过站点后台「主题色」实时注入，模板仅使用 DaisyUI 语义类（如 bg-primary、text-base-content），勿在模板中写死 gray/slate 色阶或 Hex。",
+      "tokens": "默认色板「科技蓝（企业）」：主色 Blue #2563EB、辅色 Slate #475569、强调 #0F172A；表面色 base-100 为纯白 #FFFFFF。",
+      "usage": "主按钮用 bg-primary + text-primary-content；卡片与页面底用 bg-base-100；弱化文案用 text-base-content/70；边框用 border-base-300；状态色用 info/success/warning/error。"
+    },
     "generic": {
       "name": "主题默认设置",
       "settings": {
@@ -22,6 +40,10 @@
         },
         "is_allow_footer":{
           "label": "是否展示页脚Footer部分"
+        },
+        "lucide_icons": {
+          "label": "Lucide 图标库",
+          "info": "每行一个图标名称（kebab-case），供页面「图标」下拉选择；字典见 https://lucide.dev/icons/"
         }
       }
     },
@@ -56,6 +78,10 @@
         },
         "tags":{
           "label": "标签"
+        },
+        "icon": {
+          "label": "图标",
+          "info": "Lucide 图标名称，用于服务卡片等展示"
         },
         "thumb_image_url":{
           "label": "封面图"

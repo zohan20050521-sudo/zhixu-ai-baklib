@@ -1,0 +1,18 @@
+{% layout none %}
+<turbo-stream action="remove" target="js--feedback-modal"></turbo-stream>
+
+<turbo-stream action="append" target="js-body">
+  <template>
+    <dialog id="js--feedback-modal" class="modal">
+      <div class="modal-box max-w-lg">
+        {% render 'feedback_form', page: page %}
+      </div>
+      <form method="dialog" class="modal-backdrop">
+        <button type="submit" aria-label="{{ 'generic.close' | t }}">{{ 'generic.close' | t }}</button>
+      </form>
+    </dialog>
+    <script>
+      document.getElementById('js--feedback-modal').showModal();
+    </script>
+  </template>
+</turbo-stream>

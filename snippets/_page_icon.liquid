@@ -1,0 +1,15 @@
+{%- comment -%}
+  Page/channel child icon: Lucide name from settings.icon, else thumb image, else fallback Lucide.
+  @param item {Object} page drop with settings
+  @param class {String} CSS classes for icon or image
+  @param fallback_name {String} kebab-case Lucide name when icon unset (default: package)
+{%- endcomment -%}
+{% assign icon_name = item.settings.icon.value | default: item.settings.icon %}
+{% assign fallback = fallback_name | default: 'package' %}
+{% if icon_name != blank %}
+  {% render 'icon', name: icon_name, class: class %}
+{% elsif item.settings.thumb_image_url != blank %}
+  <img src="{{ item.settings.thumb_image_url }}" alt="" class="{{ class }}" loading="lazy">
+{% else %}
+  {% render 'icon', name: fallback, class: class %}
+{% endif %}

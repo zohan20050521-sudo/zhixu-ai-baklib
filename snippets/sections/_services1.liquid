@@ -1,13 +1,13 @@
-{%# 小图标 style 1: https://demo-tailpro.uibak.com/s/snippets/services %}
+{%# 小图标 style 1: https://demo-www.uibak.com/s/snippets/services %}
 
 <!-- start services -->
-  <div id="service" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-gray-50 dark:bg-gray-900 dark:bg-opacity-20">
+  <div id="service" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-base-200">
     <div class="container xl:max-w-6xl mx-auto px-4">
       <!-- section header -->
       <header class="text-center mx-auto mb-12">
-        <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-gray-800 dark:text-gray-100">{{ page.settings.title |  default: '服务项目' }}</h2>
-        <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary-700 border-primary-700">
-        <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">{{ page.settings.description |  default: '我们是一家创意公司，服务于各行各业的本地和国际企业，从小型到大型企业。' }}</p>
+        <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-base-content text-base-content">{{ page.settings.title |  default: '服务项目' }}</h2>
+        <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary border-primary">
+        <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2">{{ page.settings.description |  default: '我们是一家创意公司，服务于各行各业的本地和国际企业，从小型到大型企业。' }}</p>
       </header><!-- end section header -->
 
       <!-- row -->
@@ -15,19 +15,12 @@
         {% for item in page.children_in_nav_menu %}
         <div class="flex-shrink px-4 max-w-full w-1/2 md:w-1/4 lg:px-6 wow fadeInUp" data-wow-duration="1s">
           <!-- service block -->
-          <a href="{{ item.path }}" class="p-2 md:p-6 mb-6 block shadow rounded bg-white dark:bg-gray-800 transform transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
-            <div class="inline-block text-primary-700 mb-4">
-              <!-- icon -->
-              {% if item.settings.thumb_image_url %}
-                <img src="{{ item.settings.thumb_image_url }}" class="h-12 w-12 max-w-24"/>
-              {% else %}
-                <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
-                  <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811V2.828zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-                </svg>
-              {% endif %}
+          <a href="{{ item.path }}" class="p-2 md:p-6 mb-6 block shadow rounded bg-base-100 transform transition duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
+            <div class="inline-block text-primary mb-4">
+              {% render 'page_icon', item: item, class: 'h-12 w-12 max-w-24', fallback_name: 'briefcase' %}
             </div>
-            <h3 class="text-lg leading-normal mb-2 font-semibold text-gray-800 dark:text-gray-100">{{ item.link_text }}</h3>
-            <div class="text-gray-500 line-clamp-3 hidden sm:flex">{{ item.settings.description | truncate: 120 }}</div>
+            <h3 class="text-lg leading-normal mb-2 font-semibold text-base-content text-base-content">{{ item.link_text }}</h3>
+            <div class="text-base-content/70 line-clamp-3 hidden sm:flex">{{ item.settings.description | truncate: 120 }}</div>
           </a> <!-- end service block -->
         </div>
         {% endfor %}

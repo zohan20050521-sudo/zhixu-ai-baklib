@@ -63,8 +63,10 @@
               <div x-show="tabs === 1">
                 <!-- Slider start -->
                 <div id="slider" class="relative bg-primary-900">
-                  <div class="slider-slider nav-inset-button nav-light-dots carousel" data-flickity='{ "cellAlign": "left", "wrapAround": true, "adaptiveHeight": true, "pageDots": true, "autoPlay": 5000 }'>
-                    <div class="w-full px-0 py-12 z-0" style="min-height: 520px;background-image: url({{ 'images/img-min/marketing.jpg' | asset_url }});background-size: cover;">
+                  <div class="slider-slider nav-inset-button nav-light-dots" data-controller="swiper" data-swiper-options-value='{"loop":true,"autoHeight":true,"autoplay":{"delay":5000,"disableOnInteraction":false},"pagination":{"clickable":true}}'>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+                    <div class="swiper-slide w-full px-0 py-12 z-0" style="min-height: 520px;background-image: url({{ 'images/img-min/marketing.jpg' | asset_url }});background-size: cover;">
 
                       <!-- background overlay -->
                       <div class="absolute top-0 start-0 w-full h-full opacity-80 bg-black" style="z-index:-1;"></div>
@@ -84,7 +86,7 @@
                       </div>
                     </div>
 
-                    <div class="w-full px-0 py-12 z-0" style="min-height: 520px;background-image: url({{ 'images/img-min/advertising.jpg' | asset_url }});background-size: cover;">
+                    <div class="swiper-slide w-full px-0 py-12 z-0" style="min-height: 520px;background-image: url({{ 'images/img-min/advertising.jpg' | asset_url }});background-size: cover;">
                       <!-- background overlay -->
                       <div class="absolute top-0 start-0 w-full h-full opacity-80 bg-black" style="z-index:-1;"></div>
 
@@ -102,7 +104,10 @@
                         </div>
                       </div>
                     </div>
-                  </div>
+                      </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
                 </div><!-- end slider-->
               </div>
               <div x-show="tabs === 2" class="pt-6 px-6 pb-0">
@@ -110,7 +115,7 @@
                   <code class="language-html" data-lang="html">
                     &lt;!-- Slider start --&gt;
                     &lt;div id="slider" class="relative bg-primary-900"&gt;
-                      &lt;div class="hero-slider nav-inset-button nav-light-dots carousel" data-flickity='{ "cellAlign": "left", "wrapAround": true, "adaptiveHeight": true, "pageDots": true, "autoPlay": 5000 }'&gt;
+                      &lt;div class="hero-slider nav-inset-button nav-light-dots carousel" data-controller="swiper" data-swiper-options-value='{"loop":true,"autoHeight":true,"autoplay":{"delay":5000,"disableOnInteraction":false},"pagination":{"clickable":true}}'&gt;
                         &lt;div class="w-full px-0 py-12 z-0" style="min-height: 520px;background-image: url('src/img-min/human/marketing.jpg');background-size: cover;"&gt;
 
                           &lt;!-- background overlay --&gt;
@@ -188,8 +193,10 @@
                     <div class="flex flex-wrap flex-row -mx-4 items-center">
                       <div class="w-full lg:w-10/12 px-4 mx-auto">
                         <!-- screenshot slider -->
-                        <div class="carousel nav-dark-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "adaptiveHeight": true, "prevNextButtons": true , "pageDots": false, "imagesLoaded": true }'>
-                          <div class="max-w-full w-full md:w-1/2 lg:w-1/3 px-24 md:px-12 text-center">
+                        <div class="nav-dark-button" data-controller="swiper" data-swiper-options-value='{"loop":true,"autoHeight":true,"pagination":false,"navigation":true,"slidesPerView":"auto","spaceBetween":24}'>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+                          <div class="swiper-slide max-w-full w-full md:w-1/2 lg:w-1/3 px-24 md:px-12 text-center">
                             <div class="slider-item">
                               <figure class="relative">
                                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000">
@@ -209,7 +216,7 @@
                               </figure>
                             </div>
                           </div>
-                          <div class="max-w-full w-full md:w-1/2 lg:w-1/3 px-24 md:px-12 text-center">
+                          <div class="swiper-slide max-w-full w-full md:w-1/2 lg:w-1/3 px-24 md:px-12 text-center">
                             <div class="slider-item">
                               <figure class="relative">
                                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000">
@@ -229,7 +236,7 @@
                               </figure>
                             </div>
                           </div>
-                          <div class="max-w-full w-full md:w-1/2 lg:w-1/3 px-24 md:px-12 text-center">
+                          <div class="swiper-slide max-w-full w-full md:w-1/2 lg:w-1/3 px-24 md:px-12 text-center">
                             <div class="slider-item">
                               <figure class="relative">
                                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000">
@@ -249,7 +256,7 @@
                               </figure>
                             </div>
                           </div>
-                          <div class="max-w-full w-full md:w-1/2 lg:w-1/3 px-24 md:px-12 text-center">
+                          <div class="swiper-slide max-w-full w-full md:w-1/2 lg:w-1/3 px-24 md:px-12 text-center">
                             <div class="slider-item">
                               <figure class="relative">
                                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000">
@@ -269,7 +276,7 @@
                               </figure>
                             </div>
                           </div>
-                          <div class="max-w-full w-full md:w-1/2 lg:w-1/3 px-24 md:px-12 text-center">
+                          <div class="swiper-slide max-w-full w-full md:w-1/2 lg:w-1/3 px-24 md:px-12 text-center">
                             <div class="slider-item">
                               <figure class="relative">
                                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.000000 906.000000">
@@ -289,7 +296,11 @@
                               </figure>
                             </div>
                           </div>
-                        </div><!-- end screenshot slider -->
+                            </div>
+    <button type="button" class="swiper-button-prev" aria-label="Previous slide"></button>
+    <button type="button" class="swiper-button-next" aria-label="Next slide"></button>
+  </div>
+</div><!-- end screenshot slider -->
                       </div>
                     </div>
                   </div>
@@ -311,7 +322,7 @@
                         &lt;div class="flex flex-wrap flex-row -mx-4 items-center"&gt;
                           &lt;div class="w-full lg:w-10/12 px-4 mx-auto"&gt;
                             &lt;!-- screenshot slider --&gt;
-                            &lt;div class="carousel nav-dark-button" data-flickity='{ "cellAlign": "left", "wrapAround": true, "adaptiveHeight": true, "prevNextButtons": true , "pageDots": false, "imagesLoaded": true }'&gt;
+                            &lt;div class="carousel nav-dark-button" data-controller="swiper" data-swiper-options-value='{"loop":true,"autoHeight":true,"pagination":false,"navigation":true,"slidesPerView":"auto","spaceBetween":24}'&gt;
                               &lt;div class="max-w-full w-full md:w-1/2 lg:w-1/3 px-24 md:px-12 text-center"&gt;
                                 &lt;div class="slider-item"&gt;
                                   &lt;figure class="relative"&gt;
