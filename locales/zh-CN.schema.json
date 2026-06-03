@@ -86,8 +86,85 @@
         "thumb_image_url":{
           "label": "封面图"
         },
+        "background_cover_image": {
+          "label": "背景封面图"
+        },
         "content":{
           "label": "页面内容"
+        }
+      }
+    },
+    "templates_schema": {
+      "channel": {
+        "card": {
+          "name": "栏目-Card 卡片式列表",
+          "description": "卡片列表栏目模板"
+        },
+        "list": {
+          "name": "栏目-List 上下图文列表",
+          "description": "上下图文列表栏目模板"
+        },
+        "side": {
+          "name": "栏目-Side 侧边栏列表",
+          "description": "Channel 带侧边栏设计的文章列表"
+        },
+        "videos": {
+          "name": "栏目-视频资源列表",
+          "description": "Videos 视频列表"
+        }
+      },
+      "index": {
+        "demo": {
+          "name": "Index.Demo",
+          "description": "演示首页模板",
+          "title_label": "首页标题（50 字以内）",
+          "description_label": "首页描述（200 字以内）",
+          "cta_title_label": "首页 CTA 行动号召（50 字以内）",
+          "hero_image_label": "首页封面图"
+        },
+        "marketing": {
+          "name": "Index.Marketing",
+          "description": "市场营销类首页模板",
+          "title_label": "首页标题（50 字以内）",
+          "description_label": "首页描述（200 字以内）",
+          "cta_title_label": "首页 CTA 行动号召（50 字以内）",
+          "hero_image_label": "首页封面图",
+          "html_content_label": "HTML 内容"
+        },
+        "web_design": {
+          "name": "Index.Web Design",
+          "description": "Web Design 服务首页布局",
+          "counter_lines_label": "数据统计栏目",
+          "counter_lines_info": "每行一个，格式：数据|描述",
+          "slider_one_header": "首页轮播 1",
+          "slider_one_paragraph": "首页大屏轮播图",
+          "slider_title_label": "轮播标题",
+          "slider_url_label": "轮播按钮 URL",
+          "slider_image_label": "轮播封面图",
+          "slider_two_header": "首页轮播 2",
+          "html_content_header": "HTML 内容",
+          "html_content_paragraph": "一些 HTML 定制内容",
+          "section_image_label": "内容背景图片",
+          "html_content_label": "HTML 内容"
+        }
+      },
+      "page": {
+        "video": {
+          "name": "Page-视频页面",
+          "description": "page.video: 视频详情页面模板",
+          "youtube_header": "Youtube 视频（二选一）",
+          "youtube_paragraph": "视频支持 Youtube 和本地视频两种方式上传，请二选一。如果两者都填写，则优先使用 Youtube 视频。",
+          "youtube_id_label": "Youtube 视频链接 ID",
+          "youtube_id_info": "Youtube → 分享 → 嵌入 → 复制 embed 链接 ID: 6c3RXM7lK20。如：https://www.youtube.com/embed/6c3RXM7lK20",
+          "local_video_header": "本地视频（二选一）",
+          "video_url_label": "选择视频",
+          "video_url_info": "支持 MP4 格式的视频文件，一旦选择了 Youtube 视频 ID，这里将被忽略。",
+          "basic_info_header": "基本信息"
+        },
+        "side": {
+          "name": "Page-带侧边栏导航",
+          "description": "page.side: 与上一级栏目关联的侧边栏导航页面",
+          "icon_label": "ICON 图标"
         }
       }
     }

@@ -1,13 +1,15 @@
 {%# 小图标 style 1: https://demo-www.uibak.com/s/snippets/services %}
 
+{% assign default_services_title = 'defaults.services_title' | t %}
+{% assign default_services_description = 'defaults.services_description' | t %}
 <!-- start services -->
   <div id="service" class="relative pt-20 pb-8 md:pt-24 md:pb-12 bg-base-200">
     <div class="container xl:max-w-6xl mx-auto px-4">
       <!-- section header -->
       <header class="text-center mx-auto mb-12">
-        <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-base-content text-base-content">{{ page.settings.title |  default: '服务项目' }}</h2>
+        <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-base-content text-base-content">{{ page.settings.title |  default: default_services_title }}</h2>
         <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary border-primary">
-        <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2">{{ page.settings.description |  default: '我们是一家创意公司，服务于各行各业的本地和国际企业，从小型到大型企业。' }}</p>
+        <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2">{{ page.settings.description |  default: default_services_description }}</p>
       </header><!-- end section header -->
 
       <!-- row -->

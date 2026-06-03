@@ -18,7 +18,7 @@
         <div class="max-w-full w-full lg:w-10/12 px-4">
           <div class="mt-0 py-6 text-center">
             <div class="mt-0 pt-8 text-center">
-              <h1 class="text-3xl md:text-4xl leading-normal mb-0 font-bold text-neutral-content">AI 智能搜索</h1>           
+              <h1 class="text-3xl md:text-4xl leading-normal mb-0 font-bold text-neutral-content">{{ 'ai.title' | t }}</h1>           
             </div>
           </div>
         </div><!-- end content -->
@@ -31,7 +31,7 @@
       <!-- start chat-leftsidebar -->
       <div class="min-w-[380px] max-w-[400px] px-8 py-8 h-screen overflow-y-auto hidden sm:block">
           <div class="">
-            <h2 class="mb-4 text-xl font-bold">AI 智能搜索</h2>
+            <h2 class="mb-4 text-xl font-bold">{{ 'ai.title' | t }}</h2>
           </div>
 
           <turbo-frame id="frame--search-results" class="overflow-hidden flex-1">
@@ -44,7 +44,7 @@
               {% paginate_tag search.pages, as: 'items', per: 10 %}
               <!-- 搜索结果 -->
               <div>
-                  <h3 class="mb-4 text-primary-content opacity-50">搜索结果</h3>
+                  <h3 class="mb-4 text-primary-content opacity-50">{{ 'ai.search_results' | t }}</h3>
 
                   <!-- 单条搜索结果 -->
                   <div class="space-y-5">
@@ -92,8 +92,8 @@
           </turbo-frame>
       </div>
       <!-- end chat-leftsidebar -->
-      {% assign ai_search_thinking_text = 'ai.thinking' | t: 'AI 正在思考...' %}
-      {% assign ai_search_canceled_text = 'ai.canceled' | t: "已取消回答" %}
+      {% assign ai_search_thinking_text = 'ai.thinking' | t %}
+      {% assign ai_search_canceled_text = 'ai.canceled' | t %}
       <!-- Start User chat -->
       <div class="overflow-hidden w-full" id="js--ai-search-completion-container"  x-data="{ tab: 'chat' }" >
           <div class="sm:flex" :class="{'hidden': tab !== 'chat'}" id="js--ai-search-completion" data-controller="ai-search-completion"
@@ -270,7 +270,7 @@
                           <!-- 输入框 -->
                           <textarea id="js--ai-chat-input"
                           data-ai-search-completion-target="input" autocomplete="off"
-                          class="flex-1 p-2 mr-4 rounded-lg border-1 bg-base-100 sm:min-h-20 text-base-content input input-bordered focus:outline-none focus:ring-0 placeholder:text-base-content/60" placeholder="请输入你的问题…"></textarea>
+                          class="flex-1 p-2 mr-4 rounded-lg border-1 bg-base-100 sm:min-h-20 text-base-content input input-bordered focus:outline-none focus:ring-0 placeholder:text-base-content/60" placeholder="{{ 'ai.question_placeholder' | t }}"></textarea>
 
                           <button id="js--ai-chat-send" data-ai-search-completion-target="send" type="button" class="bg-primary text-primary-content rounded-md p-2 px-4 md:py-4 hover:bg-primary/80 focus:outline-none focus:ring-2 focus:ring-primary/50">
                               {% render 'icon', name: 'send-horizontal', class: 'size-6 w-6 h-6 md:w-12 md:h-12' %}
@@ -283,11 +283,11 @@
           <div class="px-8 sm:hidden" :class="{'hidden': tab !== 'search'}">
               <div class="flex justify-between items-center px-8 h-16 border-b border-base-content/15 bg-base-200">
                   <!-- 左侧绿色小圆点 -->
-                  <span class="hidden sm:block">会话中 <i class="ri-record-circle-fill font-size-10 text-secondary d-inline-block ms-1"></i>
+                  <span class="hidden sm:block">{{ 'ai.in_session' | t }} <i class="ri-record-circle-fill font-size-10 text-secondary d-inline-block ms-1"></i>
                   </span>
-                  <button class="pb-2 ml-2 w-1/2 text-sm border-b-2" :class="{'border-primary text-primary': tab === 'chat'}" @click="tab = 'chat'">AI 对话</button>
+                  <button class="pb-2 ml-2 w-1/2 text-sm border-b-2" :class="{'border-primary text-primary': tab === 'chat'}" @click="tab = 'chat'">{{ 'ai.chat_tab' | t }}</button>
                   <div class="flex w-full sm:hidden">
-                  <button class="pb-2 w-1/2 text-sm border-b-2" :class="{'border-primary text-primary': tab === 'search'}" @click="tab = 'search'">搜索结果</button>
+                  <button class="pb-2 w-1/2 text-sm border-b-2" :class="{'border-primary text-primary': tab === 'search'}" @click="tab = 'search'">{{ 'ai.search_results' | t }}</button>
                   </div>
                   <!-- 右侧更多操作 -->
               </div>
@@ -301,9 +301,8 @@
                       </svg>
 
                       {% form_tag 'search', class: 'w-full' %}
-                      <input type="text" class="grow"  placeholder="输入关键词过滤"
-                          name="{{form.keywords_field_name}}" value="{{ search.keywords | escape_once }}" placeholder="{{ "
-                          layout.theme.search_input_placeholder" | t }}" autocomplete="off" />
+                      <input type="text" class="grow" placeholder="{{ 'ai.filter_placeholder' | t }}"
+                          name="{{form.keywords_field_name}}" value="{{ search.keywords | escape_once }}" autocomplete="off" />
                       <button type="submit" class="hidden"></button>
                       {% endform_tag %}
                   </label>
@@ -311,7 +310,7 @@
                   {% paginate_tag search.pages, as: 'items', per: 10 %}
                   <!-- 搜索结果 -->
                   <div>
-                      <h3 class="mb-4 text-sm text-primary-content opacity-50">搜索结果</h3>
+                      <h3 class="mb-4 text-sm text-primary-content opacity-50">{{ 'ai.search_results' | t }}</h3>
 
                       <!-- 单条搜索结果 -->
                       <div class="space-y-5">

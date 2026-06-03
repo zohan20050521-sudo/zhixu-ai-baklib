@@ -11,8 +11,21 @@
     "submit": "Submit",
     "empty": "Content is Empty",
     "published_at": "Published at",
-    "visits": "visits",
+    "published_at_colon": "Published:",
+    "visits": "views",
+    "visits_colon": "Views:",
     "recent_news": "Recent News",
+    "learn_more": "Learn More",
+    "learn_details": "Learn More",
+    "learn_details_link": "Learn more >>",
+    "latest_content": "Latest Content",
+    "hot_recommendations": "Trending 🎉",
+    "read_more": "Read More",
+    "site_search": "Site Search",
+    "search_keywords_placeholder": "Enter search keywords",
+    "ai_search": "AI Search",
+    "about_us": "About Us",
+    "scroll_to_top": "Scroll to Top",
     "404": "404 not found",
     "403": "403 No access permission",
     "next_page": "Next Page",
@@ -25,6 +38,29 @@
     "feedbacked": "Thanks for your feedback!",
     "feedback_created_at": "Last feedback at",
     "breadcrumb_nav": "Breadcrumb"
+  },
+  "ai": {
+    "title": "AI Smart Search",
+    "thinking": "AI is thinking...",
+    "canceled": "Response canceled",
+    "search_results": "Search Results",
+    "chat_tab": "AI Chat",
+    "in_session": "In session",
+    "question_placeholder": "Enter your question…",
+    "filter_placeholder": "Filter by keyword"
+  },
+  "defaults": {
+    "web_design_slider_title": "We design and develop beautiful websites for your business.",
+    "marketing_description": "If you have great products or services but feel uncertain about marketing, we are the right solution—join us in the AI-era digital content garden.",
+    "cta_description": "We are a creative agency serving local and international businesses of all sizes across industries.",
+    "services_title": "Services",
+    "services_description": "We are a creative agency serving local and international businesses of all sizes across industries.",
+    "about_description": "Upgency is the leading digital marketing agency in New York. We are striving to provide integrated digital marketing solutions.",
+    "counter_lines": "9 yrs|Experienced team with rich expertise\n800+|Trusted by leading enterprises\n10.5K|Online knowledge bases and websites\n1000+K|Digitally hosted assets\n",
+    "index_title": "A beautiful <span class='hidden sm:inline-block text-warning'>brand website</span> template<br> Build with Baklib CMS",
+    "marketing_title": "Your next-generation <span class='text-warning'>Digital Content Marketing</span> services",
+    "web_design_slider_one_title": "Your next-generation <span class='text-warning'>Digital Content Marketing</span> services",
+    "web_design_slider_two_title": "<span class='text-warning'>Digital Content Marketing</span> professional service provider."
   },
   "snippets": {
     "feedback_form": {
@@ -42,7 +78,7 @@
     "page_tools": {
       "copy_page_label": "Copy",
       "copy_page_description": "Copy this page as Markdown for LLMs",
-      "ask_ai_label": "Ask",
+      "ask_ai_label": "Ask AI",
       "open_in_chatgpt": "Open in ChatGPT",
       "open_in_claude": "Open in Claude",
       "open_in_doubao": "Open in Doubao",
@@ -54,6 +90,18 @@
       "connect_to_cursor_description": "Install MCP Server in Cursor",
       "connect_to_vscode": "Connect to VS Code",
       "connect_to_vscode_description": "Install MCP Server in VS Code"
+    },
+    "footer": {
+      "about_us": "About Us"
+    },
+    "sidebar": {
+      "search_placeholder": "Enter search keywords",
+      "site_search": "Site Search"
+    },
+    "demo": {
+      "developer_note": "Developer Note",
+      "about_notice": "To display your company profile, add an \"About Us\" channel under Pages in the admin. The channel URL slug must be:",
+      "services_notice": "To display your services like above, add a \"Services\" channel under Pages in the admin. The channel URL slug must be:"
     }
   },
   "templates": {
@@ -61,6 +109,35 @@
       "llm_prompt_template": "Read the content at %{url} so I can ask questions about it.",
       "llm_copying": "Copying...",
       "llm_copied": "Copied"
+    },
+    "index": {
+      "demo": {
+        "hero_title": "Corporate Portal",
+        "hero_subtitle_cms": "CMS Website Template",
+        "hero_subtitle_for": "for building",
+        "typed_corporate": "Corporate Sites",
+        "typed_portal": "Portal Sites",
+        "typed_seo": "SEO Optimization",
+        "styles_title": "Rich Homepage Styles",
+        "styles_description": "Choose any homepage style you prefer.",
+        "setup_title": "How to Configure Your Site?",
+        "setup_description": "With simple configuration, get a personalized official site combining static and dynamic content.",
+        "step_homepage_title": "Choose Homepage",
+        "step_homepage_p1": "In the admin under Application Settings → Display → Homepage Layout, switch to one of the other layout templates (the current homepage is for tutorial purposes only).",
+        "step_homepage_p2": "Configure homepage details under Pages → Home → Edit Content.",
+        "step_channels_title": "Add Channels",
+        "step_channels_intro": "Under Pages → Home → Add Sub-page:",
+        "step_channels_news": "1. Select template Channel - Card Grid, add \"News\", custom URL: \"news\" (required)",
+        "step_channels_services": "2. Select template Channel - List with Image, add \"Services\", custom URL: \"services\" (required)",
+        "step_channels_about": "3. Select template Channel - Sidebar List, add \"About Us\", custom URL: \"about\" (required)",
+        "step_channels_optional": "The above are required. Add other channels as needed, e.g. blog, products, FAQ…",
+        "step_site_title": "Site Configuration",
+        "step_site_intro": "Configure site properties to make your website complete.",
+        "step_site_colors": "1. Theme colors: configure primary and secondary (required)",
+        "step_site_defaults": "2. Default values: update logo, default author avatar, default article thumbnail, company intro video, tagline, nav button text and link (required)",
+        "step_site_sections": "3. Custom page sections: LOGO wall, sidebar ads, etc. (optional)",
+        "step_site_header_footer": "4. Header & footer: Head HTML, header nav, footer nav, company info. Focus on header nav and footer nav settings."
+      }
     }
   },
   "placeholders": {
@@ -101,6 +178,107 @@
     "logo_url_info": "Recommend 150x60px size PNG/SVG",
     "slogan_label": "Site Slogan",
     "copyright_info_label": "Copyright info",
-    "copyright_info_placeholder": "Tanmer Inc.All right Served."
+    "copyright_info_placeholder": "Tanmer Inc.All right Served.",
+    "page": {
+      "settings": {
+        "title": {
+          "label": "Title",
+          "info": "Article title shown above the body"
+        },
+        "description": {
+          "label": "Summary"
+        },
+        "tags": {
+          "label": "Tags"
+        },
+        "icon": {
+          "label": "Icon",
+          "info": "Lucide icon name lookup: https://lucide.dev/icons/"
+        },
+        "thumb_image_url": {
+          "label": "Cover image"
+        },
+        "background_cover_image": {
+          "label": "Background cover image"
+        },
+        "content": {
+          "label": "Page content"
+        }
+      }
+    },
+    "templates_schema": {
+      "channel": {
+        "card": {
+          "name": "Channel - Card Grid",
+          "description": "Card grid channel template"
+        },
+        "list": {
+          "name": "Channel - List with Image",
+          "description": "Vertical list channel template with image and text"
+        },
+        "side": {
+          "name": "Channel - Sidebar List",
+          "description": "Article list channel template with sidebar"
+        },
+        "videos": {
+          "name": "Channel - Video List",
+          "description": "Video resource list template"
+        }
+      },
+      "index": {
+        "demo": {
+          "name": "Index.Demo",
+          "description": "Demo index page template",
+          "title_label": "Homepage title (max 50 chars)",
+          "description_label": "Homepage description (max 200 chars)",
+          "cta_title_label": "Homepage CTA (max 50 chars)",
+          "hero_image_label": "Homepage cover image"
+        },
+        "marketing": {
+          "name": "Index.Marketing",
+          "description": "Marketing agency homepage template",
+          "title_label": "Homepage title (max 50 chars)",
+          "description_label": "Homepage description (max 200 chars)",
+          "cta_title_label": "Homepage CTA (max 50 chars)",
+          "hero_image_label": "Homepage cover image",
+          "html_content_label": "HTML content"
+        },
+        "web_design": {
+          "name": "Index.Web Design",
+          "description": "Web design services homepage layout",
+          "counter_lines_label": "Statistics section",
+          "counter_lines_info": "One entry per line, format: value|description",
+          "slider_one_header": "Homepage slider 1",
+          "slider_one_paragraph": "Full-width homepage carousel",
+          "slider_title_label": "Slider title",
+          "slider_url_label": "Slider button URL",
+          "slider_image_label": "Slider cover image",
+          "slider_two_header": "Homepage slider 2",
+          "html_content_header": "HTML content",
+          "html_content_paragraph": "Custom HTML content blocks",
+          "section_image_label": "Content background image",
+          "html_content_label": "HTML content"
+        }
+      },
+      "page": {
+        "video": {
+          "name": "Page - Video",
+          "description": "Video detail page template",
+          "youtube_header": "YouTube video (choose one)",
+          "youtube_paragraph": "Supports YouTube or local upload—choose one. YouTube takes priority if both are set.",
+          "youtube_id_label": "YouTube video embed ID",
+          "youtube_id_info": "YouTube → Share → Embed → copy embed ID, e.g. 6c3RXM7lK20. Example: https://www.youtube.com/embed/6c3RXM7lK20",
+          "local_video_header": "Local video (choose one)",
+          "video_url_label": "Select video",
+          "video_url_info": "MP4 video file. Ignored when a YouTube video ID is set.",
+          "basic_info_header": "Basic info"
+        },
+        "side": {
+          "name": "Page - Sidebar Navigation",
+          "description": "Sidebar navigation page linked to parent channel",
+          "icon_label": "Icon image"
+        }
+      }
+    }
   }
 }

@@ -1,3 +1,4 @@
+{% assign default_cta_description = 'defaults.cta_description' | t %}
 <div id="cta" class="relative py-20 md:py-24 jarallax">
   <!-- background parallax -->
   <img class="jarallax-img" src="{{ 'images/img-min/bg3.jpg' | asset_url }}" alt="title">
@@ -7,20 +8,20 @@
 
   <div class="container xl:max-w-4xl mx-auto px-4 text-center">
     <h3 class="text-3xl leading-normal font-semibold text-primary-content mb-12">
-      {{ site.settings.cta_title | default: '我们是一家创意公司，服务于各行各业的本地和国际企业，从小型到大型企业。' }}</h3>
+      {{ site.settings.cta_title | default: default_cta_description }}</h3>
 
     <!-- buttom -->
     <div class="max-w-6xl mx-auto flex justify-center items-center text-center">
       {% form_tag 'search', class: "relative min-w-96 mx-auto my-4" %}
         <!-- input group -->
         <div class="flex flex-wrap items-stretch w-full relative">
-          <input type="text" name="{{form.keywords_field_name}}" value="{{ search.keywords | escape_once }}" class="flex-shrink flex-grow max-w-full shadow-xl leading-5 w-px flex-1 relative py-3 px-5 rounded-s-full text-base-content bg-base-100 border border-secondary overflow-x-auto focus:outline-none focus:border-secondary focus:ring-0 dark:text-secondary dark:bg-neutral focus:border-base-300" name="email" required="" placeholder="输入搜索关键词" aria-label="输入搜索关键词"  aria-label="subcribe newsletter">
+          <input type="text" name="{{form.keywords_field_name}}" value="{{ search.keywords | escape_once }}" class="flex-shrink flex-grow max-w-full shadow-xl leading-5 w-px flex-1 relative py-3 px-5 rounded-s-full text-base-content bg-base-100 border border-secondary overflow-x-auto focus:outline-none focus:border-secondary focus:ring-0 dark:text-secondary dark:bg-neutral focus:border-base-300" name="email" required="" placeholder="{{ 'generic.search_keywords_placeholder' | t }}" aria-label="{{ 'generic.search_keywords_placeholder' | t }}">
           <div class="flex -me-px">
             <button class="flex items-center py-3 px-5 -ms-1 rounded-e-full leading-5 text-secondary-content shadow-xl bg-secondary border border-secondary hover:text-primary-content hover:bg-secondary hover:ring-0 hover:border-secondary focus:bg-secondary focus:border-secondary focus:outline-none focus:ring-0" type="submit">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 text-neutral-content mr-1">
                 <path d="M15.98 1.804a1 1 0 0 0-1.96 0l-.24 1.192a1 1 0 0 1-.784.785l-1.192.238a1 1 0 0 0 0 1.962l1.192.238a1 1 0 0 1 .785.785l.238 1.192a1 1 0 0 0 1.962 0l.238-1.192a1 1 0 0 1 .785-.785l1.192-.238a1 1 0 0 0 0-1.962l-1.192-.238a1 1 0 0 1-.785-.785l-.238-1.192ZM6.949 5.684a1 1 0 0 0-1.898 0l-.683 2.051a1 1 0 0 1-.633.633l-2.051.683a1 1 0 0 0 0 1.898l2.051.684a1 1 0 0 1 .633.632l.683 2.051a1 1 0 0 0 1.898 0l.683-2.051a1 1 0 0 1 .633-.633l2.051-.683a1 1 0 0 0 0-1.898l-2.051-.683a1 1 0 0 1-.633-.633L6.95 5.684ZM13.949 13.684a1 1 0 0 0-1.898 0l-.184.551a1 1 0 0 1-.632.633l-.551.183a1 1 0 0 0 0 1.898l.551.183a1 1 0 0 1 .633.633l.183.551a1 1 0 0 0 1.898 0l.184-.551a1 1 0 0 1 .632-.633l.551-.183a1 1 0 0 0 0-1.898l-.551-.184a1 1 0 0 1-.633-.632l-.183-.551Z" />
               </svg>
-              AI 搜索</button>
+              {{ 'generic.ai_search' | t }}</button>
           </div>
         </div>
       {% endform_tag %}

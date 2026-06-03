@@ -1,5 +1,8 @@
 {% assign pages = site.pages['/'].children_in_list %}
 {% assign default_hero_image = 'images/img-min/templates.png' | asset_url %}
+{% assign typed_corporate = 'templates.index.demo.typed_corporate' | t %}
+{% assign typed_portal = 'templates.index.demo.typed_portal' | t %}
+{% assign typed_seo = 'templates.index.demo.typed_seo' | t %}
 
 <main id="content">
   <!-- =========={ hero }==========  -->
@@ -68,10 +71,10 @@
         <div class="max-w-full w-full lg:w-4/5 px-4">
           <div class="mt-12 lg:mt-16 py-6 text-center">
             <h1 class="text-4xl leading-tight lg:text-5xl lg:leading-snug font-bold text-neutral-content capitalize mb-4">
-               官网门户
+               {{ 'templates.index.demo.hero_title' | t }}
             </h1>
             <p class="text-primary-content leading-relaxed font-light text-xl mx-auto pb-2 mb-12">
-              Baklib <span class="hidden md:inline-block">CMS 网站模板</span> 用于构建 <span class="text-warning font-semibold" data-toggle="typed" data-options='{"strings": ["企业官网", "门户网站", "SEO 优化"]}'></span></p>
+              Baklib <span class="hidden md:inline-block">{{ 'templates.index.demo.hero_subtitle_cms' | t }}</span> {{ 'templates.index.demo.hero_subtitle_for' | t }} <span class="text-warning font-semibold" data-toggle="typed" data-options='{"strings": ["{{ typed_corporate }}", "{{ typed_portal }}", "{{ typed_seo }}"]}'></span></p>
 
             <a href="{{ site.settings.request_url }}" class="py-3 px-5 inline-block text-center rounded-md leading-normal text-base-content bg-warning border border-warning hover:text-base-content hover:bg-warning hover:ring-0 hover:border-warning focus:bg-warning focus:border-warning focus:outline-none focus:ring-0" target="_blank">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="inline me-1" viewBox="0 0 16 16">
@@ -95,9 +98,9 @@
     <div class="container xl:max-w-6xl mx-auto px-4">
       <!-- section header -->
       <header class="text-center mx-auto mb-12">
-        <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-base-content text-base-content">丰富的首页风格</h2>
+        <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-base-content text-base-content">{{ 'templates.index.demo.styles_title' | t }}</h2>
         <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary border-primary">
-        <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2">你可以选择任意一个你喜欢的首页风格。</p>
+        <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2">{{ 'templates.index.demo.styles_description' | t }}</p>
       </header><!-- end section header -->
 
       <!-- row -->
@@ -279,9 +282,9 @@
     <div class="container xl:max-w-6xl mx-auto px-4">
       <!-- section header -->
       <header class="text-center mx-auto mb-6">
-        <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-base-content text-base-content">如何配置网站？</h2>
+        <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-base-content text-base-content">{{ 'templates.index.demo.setup_title' | t }}</h2>
         <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary border-primary">
-        <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2">通过简单配置，你可以获得一个静态/动态结合的个性化官方网站。</p>
+        <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2">{{ 'templates.index.demo.setup_description' | t }}</p>
       </header><!-- end section header -->
 
       <!-- showcase  -->
@@ -306,9 +309,9 @@
               </div>
 
               <div class="ms-4 mb-4 lg:ms-6">
-                <h3 class="text-xl font-semibold mb-2 text-base-content text-base-content">选择首页</h3>
-                <p class="mb-2">在后台<span class="bg-warning/20 text-warning-content">“应用设置”--“界面展示”--“首页布局”</span>，将首页切换为另外两个布局模板（你当前看到的首页模板只为了教程使用）。</p>
-                <p>在<span class="bg-warning/20 text-warning-content">“页面管理”--“首页”--“内容编辑”</span>中配置首页相关信息。</p>
+                <h3 class="text-xl font-semibold mb-2 text-base-content text-base-content">{{ 'templates.index.demo.step_homepage_title' | t }}</h3>
+                <p class="mb-2">{{ 'templates.index.demo.step_homepage_p1' | t }}</p>
+                <p>{{ 'templates.index.demo.step_homepage_p2' | t }}</p>
               </div>
             </li>
 
@@ -323,13 +326,13 @@
               </div>
 
               <div class="ms-4 mb-4 lg:ms-6">
-                <h3 class="text-xl font-semibold mb-2 text-base-content text-base-content">添加栏目</h3>
-                <p class="mb-2">在<span class="bg-warning/20 text-warning-content">“页面管理”--“首页”--“添加子页面”</span></p>
+                <h3 class="text-xl font-semibold mb-2 text-base-content text-base-content">{{ 'templates.index.demo.step_channels_title' | t }}</h3>
+                <p class="mb-2">{{ 'templates.index.demo.step_channels_intro' | t }}</p>
                 <ul class="space-y-2">
-                  <li class="mb-2">1. 选择模板<span class="bg-warning/20 text-warning-content">栏目-Card卡片式列表</span>，添加<span class="bg-warning/20 text-warning-content">“新闻资讯”</span>,自定义URL: <span class="bg-warning/20 text-warning-content">“news”</span>(必填)</li>
-                  <li class="mb-2">2. 选择模板<span class="bg-warning/20 text-warning-content">栏目-List上下图文列表</span>，添加<span class="bg-warning/20 text-warning-content">“服务项目”</span>,自定义URL: <span class="bg-warning/20 text-warning-content">“services”</span>(必填)</li>
-                  <li class="mb-2">3. 选择模板<span class="bg-warning/20 text-warning-content">栏目-Side侧边栏列表</span>，添加<span class="bg-warning/20 text-warning-content">“关于我们”</span>,自定义URL: <span class="bg-warning/20 text-warning-content">“about”</span>(必填)</li>
-                  <li class="mb-2">以上必须添加，其他栏目可根据情况选择性增加，比如博客、产品中心、常见问题。。。</li>
+                  <li class="mb-2">{{ 'templates.index.demo.step_channels_news' | t }}</li>
+                  <li class="mb-2">{{ 'templates.index.demo.step_channels_services' | t }}</li>
+                  <li class="mb-2">{{ 'templates.index.demo.step_channels_about' | t }}</li>
+                  <li class="mb-2">{{ 'templates.index.demo.step_channels_optional' | t }}</li>
                 </ul>
               </div>
             </li>
@@ -359,13 +362,13 @@
               </div>
 
               <div class="ms-4 mb-4 lg:ms-6">
-                <h3 class="text-xl font-semibold mb-2 text-base-content text-base-content">站点配置</h3>
-                <p>配置站点属性，让网站丰满起来.</p>
+                <h3 class="text-xl font-semibold mb-2 text-base-content text-base-content">{{ 'templates.index.demo.step_site_title' | t }}</h3>
+                <p>{{ 'templates.index.demo.step_site_intro' | t }}</p>
                 <ul class="space-y-2">
-                  <li class="mb-2">1. 主题颜色：主要配置<span class="bg-warning/20 text-warning-content">primary</span>和<span class="bg-warning/20 text-warning-content">secondary</span>(必填)</li>
-                  <li class="mb-2">2. 默认值设置：更新Logo图标、默认作者头像、默认文章方面图、公司介绍视频、一句话描述、一句话描述、导航按钮文字、导航按钮链接(必填)</li>
-                  <li class="mb-2">3. 定制页面版块设计：<span class="bg-warning/20 text-warning-content">LOGO 广告墙</span>，<span class="bg-warning/20 text-warning-content">文章侧边栏广告</span>等个性化版块，(选填)</li>
-                  <li class="mb-2">4. 页头页脚设计： 更新Head HTML代码、页头导航菜单设置、页脚菜单设置、页脚公司信息。重点要填写：<span class="bg-warning/20 text-warning-content">页头导航菜单设置</span>和<span class="bg-warning/20 text-warning-content">页脚菜单设置</span></li>
+                  <li class="mb-2">{{ 'templates.index.demo.step_site_colors' | t }}</li>
+                  <li class="mb-2">{{ 'templates.index.demo.step_site_defaults' | t }}</li>
+                  <li class="mb-2">{{ 'templates.index.demo.step_site_sections' | t }}</li>
+                  <li class="mb-2">{{ 'templates.index.demo.step_site_header_footer' | t }}</li>
                 </ul>
               </div>
             </li>
@@ -380,18 +383,18 @@
 
 {% schema %}
     {
-        "name": "Index.Demo",
-        "description": "Demo Index Page Template",
+        "name": "t:settings_schema.templates_schema.index.demo.name",
+        "description": "t:settings_schema.templates_schema.index.demo.description",
         "thumb_url": "images/theme/${lang}/index.jpg",
         "preview_image_urls": [
           "images/theme/${lang}/index.jpg"
         ],
         "sub_page_templates": ["channel"],
         "settings": [
-          {"id": "title","type": "html","placeholder": "","label": "首页标题（50 字以内）", "default": "一个漂亮的 <span class='hidden sm:inline-block text-warning'>品牌官网</span> 设计模板<br> Build with Baklib CMS", "to_markdown": true},
-          {"id": "description","type": "textarea","label": "首页描述（200 字以内）", "to_markdown": true},
-          {"id": "cta_title","type": "html","placeholder": "","label": "首页CTA行动号召（50 字以内）", "to_markdown": true},
-          {"id": "hero_image_url","type": "image_picker","ratio": "4:3","width": 400, "label": "首页封面图", "to_markdown": true}
+          {"id": "title","type": "html","placeholder": "","label": "t:settings_schema.templates_schema.index.demo.title_label", "default": "A beautiful <span class='hidden sm:inline-block text-warning'>brand website</span> template<br> Build with Baklib CMS", "to_markdown": true},
+          {"id": "description","type": "textarea","label": "t:settings_schema.templates_schema.index.demo.description_label", "to_markdown": true},
+          {"id": "cta_title","type": "html","placeholder": "","label": "t:settings_schema.templates_schema.index.demo.cta_title_label", "to_markdown": true},
+          {"id": "hero_image_url","type": "image_picker","ratio": "4:3","width": 400, "label": "t:settings_schema.templates_schema.index.demo.hero_image_label", "to_markdown": true}
         ]
     }
 {% endschema %}

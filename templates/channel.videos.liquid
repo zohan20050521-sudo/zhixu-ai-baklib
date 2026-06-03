@@ -55,8 +55,8 @@
 
 {% schema %}
 {
-    "name": "栏目-视频资源列表",
-    "description": "Videos视频列表",
+    "name": "t:settings_schema.templates_schema.channel.videos.name",
+    "description": "t:settings_schema.templates_schema.channel.videos.description",
     "thumb_url": "images/theme/${lang}/channel-grid.png",
     "preview_image_urls": [
         "images/theme/${lang}/channel-grid.png"
@@ -66,19 +66,22 @@
         {
             "id": "title",
             "type": "text",
-            "label": "标题"
+            "label": "t:settings_schema.page.settings.title.label",
+            "to_markdown": true
         },
         {
             "id": "description",
             "type": "textarea",
-            "label": "摘要"
+            "label": "t:settings_schema.page.settings.description.label",
+            "to_markdown": true
         },
         {
             "id": "thumb_image_url",
             "type": "image_picker",
             "ratio": "6:2",
             "width": 400,
-            "label": "背景封面图"
+            "label": "t:settings_schema.page.settings.background_cover_image.label",
+            "to_markdown": true
         }
     ]
 }

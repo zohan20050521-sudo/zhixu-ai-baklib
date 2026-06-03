@@ -76,8 +76,8 @@
 <!--/ article-->
 {% schema %}
   {
-    "name": "Page-视频页面",
-    "description": "page.video: 视频详情页面模板",
+    "name": "t:settings_schema.templates_schema.page.video.name",
+    "description": "t:settings_schema.templates_schema.page.video.description",
     "thumb_url": "images/theme/${lang}/page.png",
     "preview_image_urls": [
       "images/theme/${lang}/page.png"
@@ -86,57 +86,59 @@
     "settings": [
       {
         "type": "header",
-        "content": "Youtube视频（二选一）"
+        "content": "t:settings_schema.templates_schema.page.video.youtube_header"
       },
       {
         "type": "paragraph",
-        "content": "视频支持Youtube和本地视频两种方式上传，请二选一。如果两者都填写，则优先使用Youtube视频。"
+        "content": "t:settings_schema.templates_schema.page.video.youtube_paragraph"
       },
       {
         "id": "youtube_id",
         "type": "text",
         "placeholder": "6c3RXM7lK20",
-        "label": "Youtube视频链接ID",
-        "info": "Youtube->分享->嵌入->复制embed链接ID: 6c3RXM7lK20。如： https://www.youtube.com/embed/6c3RXM7lK20"
+        "label": "t:settings_schema.templates_schema.page.video.youtube_id_label",
+        "info": "t:settings_schema.templates_schema.page.video.youtube_id_info"
       },
       {
         "type": "header",
-        "content": "本地视频（二选一）"
+        "content": "t:settings_schema.templates_schema.page.video.local_video_header"
       },
       {
         "id": "thumb_image_url",
         "type": "image_picker",
         "ratio": "16:9",
         "width": 200,
-        "label": "封面图",
+        "label": "t:settings_schema.page.settings.thumb_image_url.label",
         "to_markdown": true
       },
       {
         "id": "video_url",
         "type": "video_picker",
-        "label": "选择视频",
-        "info": "支持MP4格式的视频文件，一旦选择了Youtube视频ID，这里将被忽略。"
+        "ratio": "16:9",
+        "width": 200,
+        "label": "t:settings_schema.templates_schema.page.video.video_url_label",
+        "info": "t:settings_schema.templates_schema.page.video.video_url_info"
       },
       {
         "type": "header",
-        "content": "基本信息"
+        "content": "t:settings_schema.templates_schema.page.video.basic_info_header"
       },
       {
         "id": "title",
         "type": "text",
-        "label": "标题",
+        "label": "t:settings_schema.page.settings.title.label",
         "to_markdown": true
       },
       {
         "id": "description",
         "type": "textarea",
-        "label": "摘要",
+        "label": "t:settings_schema.page.settings.description.label",
         "to_markdown": true
       },
       {
         "id": "content",
         "type": "richtext",
-        "label": "内容",
+        "label": "t:settings_schema.page.settings.content.label",
         "to_markdown": true
       },
       {

@@ -11,10 +11,22 @@
     "submit": "提交",
     "empty": "内容为空",
     "published_at": "发布于",
+    "published_at_colon": "发布于：",
     "visits": "次浏览",
+    "visits_colon": "浏览：",
     "recent_news": "最近更新",
-    "articles": "篇文章",
+    "learn_more": "了解更多",
+    "learn_details": "了解详情",
+    "learn_details_link": "了解详情 >>",
+    "latest_content": "最新内容",
+    "hot_recommendations": "热门推荐 🎉",
     "read_more": "阅读更多",
+    "site_search": "全站搜索",
+    "search_keywords_placeholder": "输入搜索关键词",
+    "ai_search": "AI 搜索",
+    "about_us": "关于我们",
+    "scroll_to_top": "回到顶部",
+    "articles": "篇文章",
     "404": "404 页面找不到",
     "403": "403 无访问权限",
     "next_page": "下一页",
@@ -27,6 +39,29 @@
     "feedbacked": "已经提交反馈！",
     "feedback_created_at": "上次反馈于",
     "breadcrumb_nav": "面包屑导航"
+  },
+  "ai": {
+    "title": "AI 智能搜索",
+    "thinking": "AI 正在思考...",
+    "canceled": "已取消回答",
+    "search_results": "搜索结果",
+    "chat_tab": "AI 对话",
+    "in_session": "会话中",
+    "question_placeholder": "请输入你的问题…",
+    "filter_placeholder": "输入关键词过滤"
+  },
+  "defaults": {
+    "web_design_slider_title": "我们为您的企业设计和开发精美的网站。",
+    "marketing_description": "如果您拥有优质的产品或服务，但对营销计划感到困惑，那么我们就是您的正确解决方案，选择我们进入 AI 时代的数字内容花园。",
+    "cta_description": "我们是一家创意公司，服务于各行各业的本地和国际企业，从小型到大型企业。",
+    "services_title": "服务项目",
+    "services_description": "我们是一家创意公司，服务于各行各业的本地和国际企业，从小型到大型企业。",
+    "about_description": "Upgency 是纽约领先的数字营销机构，致力于提供整合的数字营销解决方案。",
+    "counter_lines": "9年|成熟的团队丰富的经验\n800+|先进企业客户的选择\n10.5K|在线知识库和网站数量\n1000+K|在线托管的数字资源数\n",
+    "index_title": "一个漂亮的 <span class='hidden sm:inline-block text-warning'>品牌官网</span> 设计模板<br> Build with Baklib CMS",
+    "marketing_title": "您的新一代 <span class='text-warning'>Digital Content Marketing</span> 营销服务",
+    "web_design_slider_one_title": "您的新一代 <span class='text-warning'>Digital Content Marketing</span> 营销服务",
+    "web_design_slider_two_title": "<span class='text-warning'>Digital Content Marketing</span> 专业服务提供商。"
   },
   "snippets": {
     "feedback_form": {
@@ -42,9 +77,9 @@
       "submit_request": "提交请求"
     },
     "page_tools": {
-      "copy_page_label": "Copy",
+      "copy_page_label": "复制",
       "copy_page_description": "将页面以 Markdown 格式复制给 LLMs",
-      "ask_ai_label": "Ask",
+      "ask_ai_label": "问 AI",
       "open_in_chatgpt": "在 ChatGPT 中打开",
       "open_in_claude": "在 Claude 中打开",
       "open_in_doubao": "在豆包中打开",
@@ -56,6 +91,18 @@
       "connect_to_cursor_description": "在 Cursor 中安装 MCP Server",
       "connect_to_vscode": "连接到 VS Code",
       "connect_to_vscode_description": "在 VS Code 中安装 MCP Server"
+    },
+    "footer": {
+      "about_us": "关于我们"
+    },
+    "sidebar": {
+      "search_placeholder": "输入搜索关键词",
+      "site_search": "全站搜索"
+    },
+    "demo": {
+      "developer_note": "开发者备注",
+      "about_notice": "如果你希望将公司介绍展示出来，请在后台「页面管理」中添加一个「关于我们」的栏目，然后在栏目下添加子页面，注意栏目 URL 名称必须为：",
+      "services_notice": "如果你希望将公司的服务项目像上面一样展示出来，请在后台「页面管理」中添加一个「服务项目」的栏目，然后在栏目下添加子页面，注意栏目 URL 名称必须为："
     }
   },
   "templates": {
@@ -63,6 +110,35 @@
       "llm_prompt_template": "读取 %{url} 的内容，以便我可以询问关于它的问题。",
       "llm_copying": "复制中...",
       "llm_copied": "已复制"
+    },
+    "index": {
+      "demo": {
+        "hero_title": "官网门户",
+        "hero_subtitle_cms": "CMS 网站模板",
+        "hero_subtitle_for": "用于构建",
+        "typed_corporate": "企业官网",
+        "typed_portal": "门户网站",
+        "typed_seo": "SEO 优化",
+        "styles_title": "丰富的首页风格",
+        "styles_description": "你可以选择任意一个你喜欢的首页风格。",
+        "setup_title": "如何配置网站？",
+        "setup_description": "通过简单配置，你可以获得一个静态/动态结合的个性化官方网站。",
+        "step_homepage_title": "选择首页",
+        "step_homepage_p1": "在后台「应用设置」→「界面展示」→「首页布局」，将首页切换为另外两个布局模板（你当前看到的首页模板只为了教程使用）。",
+        "step_homepage_p2": "在「页面管理」→「首页」→「内容编辑」中配置首页相关信息。",
+        "step_channels_title": "添加栏目",
+        "step_channels_intro": "在「页面管理」→「首页」→「添加子页面」",
+        "step_channels_news": "1. 选择模板「栏目-Card 卡片式列表」，添加「新闻资讯」，自定义 URL：「news」（必填）",
+        "step_channels_services": "2. 选择模板「栏目-List 上下图文列表」，添加「服务项目」，自定义 URL：「services」（必填）",
+        "step_channels_about": "3. 选择模板「栏目-Side 侧边栏列表」，添加「关于我们」，自定义 URL：「about」（必填）",
+        "step_channels_optional": "以上必须添加，其他栏目可根据情况选择性增加，比如博客、产品中心、常见问题等。",
+        "step_site_title": "站点配置",
+        "step_site_intro": "配置站点属性，让网站丰满起来。",
+        "step_site_colors": "1. 主题颜色：主要配置 primary 和 secondary（必填）",
+        "step_site_defaults": "2. 默认值设置：更新 Logo 图标、默认作者头像、默认文章封面图、公司介绍视频、一句话描述、导航按钮文字、导航按钮链接（必填）",
+        "step_site_sections": "3. 定制页面版块设计：LOGO 广告墙、文章侧边栏广告等个性化版块（选填）",
+        "step_site_header_footer": "4. 页头页脚设计：更新 Head HTML 代码、页头导航菜单设置、页脚菜单设置、页脚公司信息。重点填写页头导航菜单设置和页脚菜单设置。"
+      }
     }
   },
   "placeholders": {

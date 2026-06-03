@@ -58,8 +58,8 @@
                   </p>
                   <!--description-->
                   <p class="text-sm text-base-content/70 text-base-content/70">
-                    <time pubdate datetime="{{ page.published_at }}" title="{{ page.published_at }}">发布于：{{ page.published_at | date: "%Y-%m-%d" }}</time>
-                    <br/> 浏览：{{ page.visits_count }}</p>
+                    <time pubdate datetime="{{ page.published_at }}" title="{{ page.published_at }}">{{ 'generic.published_at_colon' | t }}{{ page.published_at | date: "%Y-%m-%d" }}</time>
+                    <br/> {{ 'generic.visits_colon' | t }}{{ page.visits_count }}</p>
                 </div>
               </div>
             {% endif %}
@@ -115,7 +115,7 @@
         "id": "icon",
         "type": "select",
         "label": "t:settings_schema.page.settings.icon.label",
-        "info": "icon 名称查找字典：https://lucide.dev/icons/",
+        "info": "t:settings_schema.page.settings.icon.info",
         "choices_from": "$site.lucide_icons",
         "include_blank": true
       },

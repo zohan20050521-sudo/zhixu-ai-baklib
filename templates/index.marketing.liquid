@@ -4,6 +4,9 @@
 {% assign about_page = site.pages['/about'] %}
 {% assign brand_logos = site.settings.brand_logos | newline_to_br | split: '<br />' %}
 {% assign brand_logos_size = brand_logos | size %}
+{% assign default_marketing_description = 'defaults.marketing_description' | t %}
+{% assign default_services_title = 'defaults.services_title' | t %}
+{% assign default_services_description = 'defaults.services_description' | t %}
 
 {% assign newest_pages = site.pages_in_list | order_by: '-created_at' | limit: 8 %}
 {% assign hot_pages = site.pages_in_list | order_by: '-visit_count' | limit: 10 %}
@@ -31,18 +34,18 @@
               <h1 class="text-4xl lg:text-5xl leading-normal lg:leading-tight text-primary-content font-semibold mb-4">
                 {{ page.settings.title }}</h1>
               <p class="leading-relaxed font-light text-xl mx-auto pb-2 mb-12 pr-6 text-base-content/20">
-                {{ page.settings.description | default: '如果您拥有优质的产品或服务，但对营销计划感到困惑，那么我们就是您的正确解决方案，选择我们进入 AI 时代的数字内容花园。' }}</p>
+                {{ page.settings.description | default: default_marketing_description }}</p>
 
               {% form_tag 'search', class: "relative" %}
                 <!-- input group -->
                 <div class="flex flex-wrap items-stretch w-full max-w-72 relative">
-                  <input type="text" name="{{form.keywords_field_name}}" value="{{ search.keywords | escape_once }}" class="flex-shrink flex-grow max-w-full shadow-xl leading-5 w-px flex-1 relative py-3 px-5 rounded-s-full text-base-content bg-base-100 border border-secondary overflow-x-auto focus:outline-none focus:border-secondary focus:ring-0 dark:text-secondary dark:bg-neutral focus:border-base-300" name="email" required="" placeholder="输入搜索关键词" aria-label="输入搜索关键词"  aria-label="subcribe newsletter">
+                  <input type="text" name="{{form.keywords_field_name}}" value="{{ search.keywords | escape_once }}" class="flex-shrink flex-grow max-w-full shadow-xl leading-5 w-px flex-1 relative py-3 px-5 rounded-s-full text-base-content bg-base-100 border border-secondary overflow-x-auto focus:outline-none focus:border-secondary focus:ring-0 dark:text-secondary dark:bg-neutral focus:border-base-300" name="email" required="" placeholder="{{ 'generic.search_keywords_placeholder' | t }}" aria-label="{{ 'generic.search_keywords_placeholder' | t }}">
                   <div class="flex -me-px">
                     <button class="flex items-center py-3 px-5 -ms-1 rounded-e-full leading-5 text-secondary-content shadow-xl bg-secondary border border-secondary hover:text-primary-content hover:bg-secondary hover:ring-0 hover:border-secondary focus:bg-secondary focus:border-secondary focus:outline-none focus:ring-0" type="submit">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 text-neutral-content mr-1">
                         <path d="M15.98 1.804a1 1 0 0 0-1.96 0l-.24 1.192a1 1 0 0 1-.784.785l-1.192.238a1 1 0 0 0 0 1.962l1.192.238a1 1 0 0 1 .785.785l.238 1.192a1 1 0 0 0 1.962 0l.238-1.192a1 1 0 0 1 .785-.785l1.192-.238a1 1 0 0 0 0-1.962l-1.192-.238a1 1 0 0 1-.785-.785l-.238-1.192ZM6.949 5.684a1 1 0 0 0-1.898 0l-.683 2.051a1 1 0 0 1-.633.633l-2.051.683a1 1 0 0 0 0 1.898l2.051.684a1 1 0 0 1 .633.632l.683 2.051a1 1 0 0 0 1.898 0l.683-2.051a1 1 0 0 1 .633-.633l2.051-.683a1 1 0 0 0 0-1.898l-2.051-.683a1 1 0 0 1-.633-.633L6.95 5.684ZM13.949 13.684a1 1 0 0 0-1.898 0l-.184.551a1 1 0 0 1-.632.633l-.551.183a1 1 0 0 0 0 1.898l.551.183a1 1 0 0 1 .633.633l.183.551a1 1 0 0 0 1.898 0l.184-.551a1 1 0 0 1 .632-.633l.551-.183a1 1 0 0 0 0-1.898l-.551-.184a1 1 0 0 1-.633-.632l-.183-.551Z" />
                       </svg>
-                      AI 搜索</button>
+                      {{ 'generic.ai_search' | t }}</button>
                   </div>
                 </div>
               {% endform_tag %}
@@ -91,10 +94,10 @@
         <!-- section header -->
         <header class="text-center mx-auto mb-12 lg:px-20">
           <h2 class="text-2xl md:text-3xl leading-normal mb-2 font-bold text-base-content text-base-content">
-            {{ service_page.settings.title |  default: '服务项目' }} </h2>
+            {{ service_page.settings.title |  default: default_services_title }} </h2>
           <hr class="block w-12 h-0.5 mx-auto my-5 bg-primary border-primary">
           <p class="text-base-content/70 leading-relaxed font-light text-xl mx-auto pb-2">
-            {{ service_page.settings.description |  default: '我们是一家创意公司，服务于各行各业的本地和国际企业，从小型到大型企业。' }}
+            {{ service_page.settings.description |  default: default_services_description }}
           </p>
         </header><!-- end section header -->
 
@@ -120,7 +123,7 @@
                     <p class="text-base-content/70 mb-0">
                       {{ item.settings.description }}</p>
                     <p class="mt-2">
-                      <a href="{{ item.path }}" class="text-info hover:text-primary">了解详情 &gt;&gt; </a>
+                      <a href="{{ item.path }}" class="text-info hover:text-primary">{{ 'generic.learn_details_link' | t }} </a>
                     </p>
                   </div>
                 </div>
@@ -152,7 +155,7 @@
               <a href="{{ about_page.path }}" class="py-3 px-5 -ms-1 rounded-md leading-5 text-primary-content bg-primary border border-primary hover:text-primary-content hover:bg-primary hover:ring-0 hover:border-primary focus:bg-primary focus:border-primary focus:outline-none focus:ring-0 me-3">
                 <!-- <i class="fas fa-paper-plane me-1"></i> -->
                 <svg xmlns="http://www.w3.org/2000/svg" width="1.5rem" height="1.5rem" class="inline-block me-2" fill="currentColor" viewBox="0 0 512 512"><path d="M53.12,199.94l400-151.39a8,8,0,0,1,10.33,10.33l-151.39,400a8,8,0,0,1-15-.34L229.66,292.45a16,16,0,0,0-10.11-10.11L53.46,215A8,8,0,0,1,53.12,199.94Z" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/><line x1="460" y1="52" x2="227" y2="285" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:32px"/></svg>
-                了解详情
+                {{ 'generic.learn_details' | t }}
               </a>
             </div>
           </div><!-- end content -->
@@ -198,7 +201,7 @@
                 <!-- Main content -->
                 <div class="lg:grow" data-aos="fade-down" data-aos-delay="200">
                     <!-- Section title -->
-                    <h4 class="h4 sm:text-xl lg:text-2xl font-black font-red-hat-display mb-8">最新内容</h4>
+                    <h4 class="h4 sm:text-xl lg:text-2xl font-black font-red-hat-display mb-8">{{ 'generic.latest_content' | t }}</h4>
 
                     <!-- Articles container -->
                     <div class="grid gap-12 sm:grid-cols-2 sm:gap-x-6 md:gap-y-8 items-start">
@@ -239,7 +242,7 @@
 
                     <!-- Popular posts -->
                     <div class="mb-8">
-                        <h4 class="md:text-2xl text-xl font-black tracking-tight font-red-hat-display mb-5">热门推荐 🎉</h4>
+                        <h4 class="md:text-2xl text-xl font-black tracking-tight font-red-hat-display mb-5">{{ 'generic.hot_recommendations' | t }}</h4>
                         <ul class="-my-3">
                             {% for item in hot_pages %}
                                 <li class="flex py-3 border-b border-base-300">
@@ -251,7 +254,7 @@
                                             </h3>
                                         </a>
                                         <div class="text-sm text-base-content/70">
-                                            发布于：<span class="text-base-content/70"> {{ item.published_at | date: '%Y-%m-%d' }}</span>
+                                            {{ 'generic.published_at_colon' | t }}<span class="text-base-content/70"> {{ item.published_at | date: '%Y-%m-%d' }}</span>
                                         </div>
                                     </article>
                                 </li>
@@ -268,19 +271,19 @@
 
 {% schema %}
     {
-        "name": "Index.Marketing",
-        "description": "市场营销类首页模板",
+        "name": "t:settings_schema.templates_schema.index.marketing.name",
+        "description": "t:settings_schema.templates_schema.index.marketing.description",
         "thumb_url": "images/theme/${lang}/index-marketing.jpg",
         "preview_image_urls": [
         "images/theme/${lang}/index-marketing.jpg"
         ],
         "sub_page_templates": ["channel"],
         "settings": [
-          {"id": "title","type": "html", "rows": "10", "placeholder": "","label": "首页标题（50 字以内）", "default": "您的新一代 <span class='text-warning'>Digital Content Marketing</span> 营销服务", "to_markdown": true},
-          {"id": "description","type": "textarea","label": "首页描述（200 字以内）", "to_markdown": true},
-          {"id": "cta_title","type": "text","placeholder": "","label": "首页CTA行动号召（50 字以内）", "to_markdown": true},
-          {"id": "hero_image_url","type": "image_picker","ratio": "4:3","width": 400, "label": "首页封面图", "to_markdown": true},
-          {"id": "html_content","type": "html", "label": "HTML 内容", "to_markdown": true}
+          {"id": "title","type": "html", "rows": "10", "placeholder": "","label": "t:settings_schema.templates_schema.index.marketing.title_label", "default": "Your next-generation <span class='text-warning'>Digital Content Marketing</span> services", "to_markdown": true},
+          {"id": "description","type": "textarea","label": "t:settings_schema.templates_schema.index.marketing.description_label", "to_markdown": true},
+          {"id": "cta_title","type": "text","placeholder": "","label": "t:settings_schema.templates_schema.index.marketing.cta_title_label", "to_markdown": true},
+          {"id": "hero_image_url","type": "image_picker","ratio": "4:3","width": 400, "label": "t:settings_schema.templates_schema.index.marketing.hero_image_label", "to_markdown": true},
+          {"id": "html_content","type": "html", "label": "t:settings_schema.templates_schema.index.marketing.html_content_label", "to_markdown": true}
         ]
     }
 {% endschema %}

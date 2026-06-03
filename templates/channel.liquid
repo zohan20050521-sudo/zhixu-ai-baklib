@@ -1,14 +1,57 @@
 {% assign pages = page.children_in_list | order_by: '-created_at' %}
-{% assign channels = site.pages['/'].children_in_list %}
+{% query sub_channels from page.children_in_list %}
+  {
+    "where": {
+      "template_name_eq": "channel"
+    },
+    "order_by": ["-created_at"],
+    "limit": 10,
+    "offset": 0
+  }
+{% endquery %}
 
 <main id="content">
   <!-- =========={ HERO }==========  -->
   {% render 'hero/hero_title', item: page %}
+  
+  <!-- sub channels start -->
+  {% assign sub_channels_count = sub_channels | size %}
+  {% if sub_channels_count > 0 %}
+    {% assign active_sub_channel = false %}
+    {% for item in sub_channels %}
+      {% if page.id == item.id %}
+        {% assign active_sub_channel = true %}
+      {% endif %}
+    {% endfor %}
+
+    <div class="relative z-10 -mt-24 pb-2">
+      <div class="container xl:max-w-6xl mx-auto px-4 rounded-lg">
+        <nav role="tablist" aria-label="Sub-channels" class="tabs tabs-boxed w-full sm:w-auto sm:inline-flex flex-nowrap overflow-x-auto">
+          <a
+            role="tab"
+            href="{{ page.path }}"
+            class="tab whitespace-nowrap{% unless active_sub_channel %} tab-active{% endunless %}"
+            data-turbo-frame="_top"
+            {% unless active_sub_channel %}aria-current="page"{% endunless %}
+          >{{ page.link_text }}</a>
+          {% for item in sub_channels %}
+            <a
+              role="tab"
+              href="{{ item.path }}"
+              class="tab whitespace-nowrap{% if page.id == item.id %} tab-active{% endif %}"
+              data-turbo-frame="_top"
+              {% if page.id == item.id %}aria-current="page"{% endif %}
+            >{{ item.link_text }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </div>
+  {% endif %}
 
   <!-- article start -->
   <div class="relative pb-16">
     <div class="container xl:max-w-6xl mx-auto px-4">
-      <div class="bg-base-100 rounded-lg shadow-lg py-10 md:py-6 lg:py-12 px-12 -mt-24">
+      <div class="bg-base-100 rounded-lg shadow-lg py-10 md:py-6 lg:py-12 px-12 -mt-12">
         <div class="flex flex-wrap flex-row -mx-4 md:mt-2">
           <div class="flex-shrink w-full max-w-full">
             {% paginate_tag pages, per: 12 %}
@@ -49,38 +92,44 @@
           <!-- sidebar -->
         </div>
       </div>
+      <div class="py-4 w-full max-w-full">
+        {% render 'breadcrumb', breadcrumb: page.breadcrumb, page: page %}
+      </div>
     </div>
   </div><!-- End Blog -->
 </main>
 
 {% schema %}
   {
-    "name": "栏目-Card卡片式列表",
-    "description": "卡片列表栏目模板",
+    "name": "t:settings_schema.templates_schema.channel.card.name",
+    "description": "t:settings_schema.templates_schema.channel.card.description",
     "thumb_url": "images/theme/${lang}/channel-grid.png",
     "preview_image_urls": [
       "images/theme/${lang}/channel-grid.png"
     ],
-    "sub_page_templates": ["page"],
+    "sub_page_templates": ["page","channel"],
     "settings": [
       {
         "id": "title",
         "type": "text",
         "placeholder": "",
         "label": "t:settings_schema.page.settings.title.label",
-        "info": "t:settings_schema.page.settings.title.info"
+        "info": "t:settings_schema.page.settings.title.info",
+        "to_markdown": true
       },
       {
         "id": "description",
         "type": "textarea",
-        "label": "t:settings_schema.page.settings.description.label"
+        "label": "t:settings_schema.page.settings.description.label",
+        "to_markdown": true
       },
       {
         "id": "thumb_image_url",
         "type": "image_picker",
         "ratio": "6:2",
         "width": 400,
-        "label": "t:settings_schema.page.settings.thumb_image_url.label"
+        "label": "t:settings_schema.page.settings.thumb_image_url.label",
+        "to_markdown": true
       }
     ]
   }

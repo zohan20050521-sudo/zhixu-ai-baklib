@@ -29,8 +29,8 @@
 <!--/ article-->
 {% schema %}
   {
-    "name": "Page-带侧边栏导航",
-    "description": "page.side: 与上一级栏目关联的侧边栏导航页面",
+    "name": "t:settings_schema.templates_schema.page.side.name",
+    "description": "t:settings_schema.templates_schema.page.side.description",
     "thumb_url": "images/theme/${lang}/channel-side.png",
     "preview_image_urls": [
       "images/theme/${lang}/channel-side.png"
@@ -40,19 +40,19 @@
       {
         "id": "title",
         "type": "text",
-        "label": "标题",
+        "label": "t:settings_schema.page.settings.title.label",
         "to_markdown": true
       },
       {
         "id": "description",
         "type": "textarea",
-        "label": "摘要",
+        "label": "t:settings_schema.page.settings.description.label",
         "to_markdown": true
       },
       {
         "id": "content",
         "type": "richtext",
-        "label": "内容",
+        "label": "t:settings_schema.page.settings.content.label",
         "to_markdown": true
       },
       {
@@ -60,7 +60,7 @@
         "type": "image_picker",
         "ratio": "3:3",
         "width": 100,
-        "label": "ICON图标",
+        "label": "t:settings_schema.templates_schema.page.side.icon_label",
         "to_markdown": true
       },
       {
