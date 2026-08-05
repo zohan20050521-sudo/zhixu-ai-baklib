@@ -1,43 +1,5 @@
 {% assign cta_title = page.settings.cta_title | default: '让团队的下一次提问，从答案开始。' %}
 {% assign cta_description = page.settings.cta_description | default: '从一个真实场景开始，体验知识被连接、理解和复用的完整过程。' %}
-{% assign faq_question_1 = page.settings.faq_question_1 | default: '现有文档需要重新搬进知序 AI 吗？' %}
-{% assign faq_answer_1 = page.settings.faq_answer_1 | default: '不需要。知序 AI 通过连接器读取并同步现有知识，原始内容仍保留在团队正在使用的平台中。' %}
-{% assign faq_question_2 = page.settings.faq_question_2 | default: 'AI 会不会看到员工无权访问的内容？' %}
-{% assign faq_answer_2 = page.settings.faq_answer_2 | default: '不会。检索前会校验当前用户权限，答案只使用该用户有权访问的知识，并保留访问记录。' %}
-{% assign faq_question_3 = page.settings.faq_question_3 | default: '回答不准确时，团队可以怎样改进？' %}
-{% assign faq_answer_3 = page.settings.faq_answer_3 | default: '运营人员可以查看答案来源、用户反馈与无答案问题，修订原文或补充知识后，系统会自动更新索引。' %}
-{% assign faq_question_4 = page.settings.faq_question_4 | default: '适合从哪个场景开始试用？' %}
-{% assign faq_answer_4 = page.settings.faq_answer_4 | default: '建议选择资料相对集中、重复咨询较多的场景，例如客服政策、员工入职或项目交付规范，更容易快速验证价值。' %}
-
-<section id="faq" class="zx-section zx-faq" aria-labelledby="zx-faq-title">
-  <div class="zx-shell zx-faq__layout">
-    <header class="zx-faq__heading" data-aos="fade-up">
-      <span class="zx-section-heading__eyebrow">常见问题</span>
-      <h2 id="zx-faq-title">开始之前，你可能还想了解</h2>
-      <p>知序 AI 可以从一个团队、一个空间或一类高频问题开始验证。</p>
-      <a href="#workspace">查看产品演示 {% render 'icon', name: 'arrow-right', class: 'zx-inline-icon' %}</a>
-    </header>
-
-    <div class="zx-faq__list" data-aos="fade-up" data-aos-delay="80">
-      <details open>
-        <summary><span>{{ faq_question_1 | escape }}</span>{% render 'icon', name: 'chevron-down', class: 'zx-faq__icon' %}</summary>
-        <p>{{ faq_answer_1 | escape }}</p>
-      </details>
-      <details>
-        <summary><span>{{ faq_question_2 | escape }}</span>{% render 'icon', name: 'chevron-down', class: 'zx-faq__icon' %}</summary>
-        <p>{{ faq_answer_2 | escape }}</p>
-      </details>
-      <details>
-        <summary><span>{{ faq_question_3 | escape }}</span>{% render 'icon', name: 'chevron-down', class: 'zx-faq__icon' %}</summary>
-        <p>{{ faq_answer_3 | escape }}</p>
-      </details>
-      <details>
-        <summary><span>{{ faq_question_4 | escape }}</span>{% render 'icon', name: 'chevron-down', class: 'zx-faq__icon' %}</summary>
-        <p>{{ faq_answer_4 | escape }}</p>
-      </details>
-    </div>
-  </div>
-</section>
 
 <section id="contact" class="zx-cta" aria-labelledby="zx-cta-title">
   <div class="zx-shell zx-cta__inner" data-aos="fade-up">

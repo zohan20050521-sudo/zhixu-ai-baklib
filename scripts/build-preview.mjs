@@ -3,7 +3,7 @@ import { dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
 
 const projectRoot = join(dirname(fileURLToPath(import.meta.url)), "..")
-const snippets = ["hero", "proof", "features", "workflow", "use_cases", "trust", "about", "faq_cta"]
+const snippets = ["hero", "proof", "features", "workflow", "use_cases", "trust", "faq", "about", "faq_cta"]
 const values = {
   brand_name: "知序 AI",
   hero_eyebrow: "团队知识助手 · 全新上线",
