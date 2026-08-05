@@ -6,6 +6,8 @@ site:
   settings:
     brand_name: "知序 AI"
     slogan: "把散落的知识，变成随时可用的答案。"
+    learn_more_title: "了解更多"
+    learn_more_url: "/about"
     request_title: "体验产品"
     request_url: "#workspace"
     is_show_author: true

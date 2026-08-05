@@ -225,6 +225,19 @@
         "default": "把散落的知识，变成随时可用的答案。"
       },
       {
+        "id": "learn_more_title",
+        "type": "text",
+        "label": "了解更多文字",
+        "default": "了解更多"
+      },
+      {
+        "id": "learn_more_url",
+        "type": "text",
+        "label": "了解更多链接",
+        "default": "/about",
+        "info": "可填写站内路径或 https:// 开头的外部 URL"
+      },
+      {
         "id": "request_title",
         "type": "text",
         "label": "导航按钮文字",

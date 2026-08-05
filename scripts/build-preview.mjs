@@ -52,7 +52,7 @@ const header = `
     <nav class="zx-header__nav" aria-label="主导航">
       <a href="#features">产品能力</a><a href="#workflow">工作方式</a><a href="#use-cases">使用场景</a><a href="#trust">安全可信</a><a href="#faq">常见问题</a>
     </nav>
-    <div class="zx-header__actions"><a class="zx-header__login" href="#faq">了解更多</a><a class="zx-button zx-button--header" href="#workspace">体验产品<i data-lucide="arrow-right" class="zx-button__icon"></i></a></div>
+    <div class="zx-header__actions"><a class="zx-header__login" href="/about">了解更多</a><a class="zx-button zx-button--header" href="#workspace">体验产品<i data-lucide="arrow-right" class="zx-button__icon"></i></a></div>
     <button class="zx-header__toggle" type="button" aria-controls="zx-mobile-menu" :aria-expanded="open.toString()" @click="open = !open" title="打开导航">
       <span class="sr-only">打开或关闭导航</span><span x-show="!open"><i data-lucide="menu" class="zx-header__toggle-icon"></i></span><span x-show="open" x-cloak><i data-lucide="x" class="zx-header__toggle-icon"></i></span>
     </button>
