@@ -1541,11 +1541,6 @@ swiper@^11.0.6:
   resolved "https://registry.yarnpkg.com/swiper/-/swiper-11.2.1.tgz#0f3fcafa30301a1c76e3ef9e85979ac2daeefc18"
   integrity sha512-62G69+iQRIfUqTmJkWpZDcX891Ra8O9050ckt1/JI2H+0483g+gq0m7gINecDqMtDh2zt5dK+uzBRxGhGOOvQA==
 
-tailwindcss-highlights@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/tailwindcss-highlights/-/tailwindcss-highlights-1.0.0.tgz#70cc760c0b6549c3ee07a9544559bf7f758e9049"
-  integrity sha512-sA7QU493tb2gNMsVm1bV5UrqmFbdNg+mkPUF8xy8xxekQtj1GgOcL3uyqs8DQAoeMyVM1Hz/hHSvyI4ORvar3g==
-
 tailwindcss@4.3.0, tailwindcss@^4.1.4:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-4.3.0.tgz#0a874e044a859cf6de413f3a59e76a9bedf05264"
@@ -1637,6 +1632,11 @@ video-worker@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/video-worker/-/video-worker-2.2.0.tgz#14705255eded77034786d5610dc3784bf211c5ae"
   integrity sha512-bjdpCArfD/kvt3HBU2sJUEEFq+6HjIufKXL2NojWswInxalJwR5yh/cgaGismHS8PAe5hx+W0GfrFqlxJTfI/w==
+
+viewerjs@^1.11.7:
+  version "1.11.8"
+  resolved "https://registry.yarnpkg.com/viewerjs/-/viewerjs-1.11.8.tgz#2bffccf150b0b3a05f5bf777d7d14431293e4955"
+  integrity sha512-PLO477UwNThzMek7EQhr7+YONfbgFKj+E6J/+Vr+USzY6cN1WNGQcft0mlIepQXATquvDmH1dOx7aokNyOx/vw==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"

@@ -2,7 +2,14 @@
 @import "aos/dist/aos.css";
 @import "swiper/swiper-bundle.css";
 @import "jarallax/dist/jarallax.min.css";
+@import "viewerjs/dist/viewer.css";
 @import "./custom.css";
+@import "./zhixu/base.css";
+@import "./zhixu/hero.css";
+@import "./zhixu/capabilities.css";
+@import "./zhixu/scenes.css";
+@import "./zhixu/faq-cta.css";
+@import "./zhixu/responsive.css";
 
 /**
  * daisyUI theme strategy: themes: false

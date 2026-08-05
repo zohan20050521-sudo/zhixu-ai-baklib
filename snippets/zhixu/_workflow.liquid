@@ -1,0 +1,54 @@
+<section id="workflow" class="zx-workflow" aria-labelledby="zx-workflow-title">
+  <div class="zx-shell zx-workflow__layout">
+    <div class="zx-workflow__copy" data-aos="fade-up">
+      <span class="zx-section-heading__eyebrow zx-section-heading__eyebrow--dark">工作方式</span>
+      <h2 id="zx-workflow-title">让知识真正进入工作流，只需要三步</h2>
+      <p class="zx-workflow__intro">不改变团队原本的协作习惯，从连接现有资料开始，逐步建立可被 AI 使用的知识底座。</p>
+
+      <ol class="zx-steps">
+        <li>
+          <span class="zx-step__number">01</span>
+          <div><h3>连接</h3><p>授权现有知识源，保留目录、成员和访问权限。</p></div>
+        </li>
+        <li>
+          <span class="zx-step__number">02</span>
+          <div><h3>理解</h3><p>自动解析内容关系，建立语义索引并持续增量同步。</p></div>
+        </li>
+        <li>
+          <span class="zx-step__number">03</span>
+          <div><h3>使用</h3><p>在网页、企业 IM 或业务系统中获得有依据的答案。</p></div>
+        </li>
+      </ol>
+    </div>
+
+    <div class="zx-flow-map" data-aos="fade-up" data-aos-delay="100" aria-label="知识连接流程示意">
+      <div class="zx-flow-map__header">
+        <span>知识连接器</span>
+        <span class="zx-live-status"><i></i> 运行正常</span>
+      </div>
+      <div class="zx-flow-map__canvas">
+        <div class="zx-flow-node zx-flow-node--source zx-flow-node--one">
+          <span class="zx-flow-node__icon">{% render 'icon', name: 'layers', class: 'zx-flow-node__lucide' %}</span>
+          <div><strong>产品文档</strong><small>128 篇 · 刚刚同步</small></div>
+        </div>
+        <div class="zx-flow-node zx-flow-node--source zx-flow-node--two">
+          <span class="zx-flow-node__icon zx-flow-node__icon--coral">{% render 'icon', name: 'messages-square', class: 'zx-flow-node__lucide' %}</span>
+          <div><strong>团队问答</strong><small>346 条 · 5 分钟前</small></div>
+        </div>
+        <div class="zx-flow-node zx-flow-node--source zx-flow-node--three">
+          <span class="zx-flow-node__icon zx-flow-node__icon--yellow">{% render 'icon', name: 'layout-grid', class: 'zx-flow-node__lucide' %}</span>
+          <div><strong>项目空间</strong><small>24 个 · 已继承权限</small></div>
+        </div>
+        <div class="zx-flow-lines" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="zx-flow-node zx-flow-node--core">
+          <span class="zx-flow-node__core-mark"><i></i><i></i><b></b></span>
+          <div><strong>知序 AI</strong><small>统一理解与检索</small></div>
+        </div>
+        <div class="zx-flow-map__result">
+          {% render 'icon', name: 'circle-check', class: 'zx-flow-result__icon' %}
+          <span><strong>498 篇内容已就绪</strong><small>权限校验通过 · 语义索引完成</small></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

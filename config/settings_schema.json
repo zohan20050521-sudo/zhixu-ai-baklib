@@ -1,70 +1,62 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "www",
-    "theme_label": "t:theme_label",
-    "theme_description": "t:theme_description",
-    "theme_version": "2.0.0",
+    "theme_name": "zhixu-ai",
+    "theme_label": "知序 AI",
+    "theme_description": "面向团队知识管理与可信问答的 AI 产品官网",
+    "theme_version": "1.0.0",
     "theme_syntax_version": "v2",
     "theme_scope": "cms",
-    "theme_author": "Baklib",
-    "theme_documentation_url": "https://help.baklib.cn/themes/www",
-    "theme_support_url": "https://help.baklib.cn/themes/www/settings",
-    "theme_thumb_url": "images/theme/thumb.png",
+    "theme_author": "知序 AI",
+    "theme_documentation_url": "https://dev.baklib.cn/guide/git",
+    "theme_support_url": "https://dev.baklib.cn/guide/git",
+    "theme_thumb_url": "images/theme/zhixu-home.png",
     "theme_preview_images": [
-      "images/theme/${lang}/cover.png",
-      "images/theme/${lang}/index.png",
-      "images/theme/${lang}/project1.jpg",
-      "images/theme/${lang}/project2.jpg",
-      "images/theme/${lang}/project3.jpg"
+      "images/theme/zhixu-home.png"
     ],
     "theme_languages": [
       {
         "name": "中文简体",
         "value": "zh-CN"
-      },
-      {
-        "name": "English",
-        "value": "en"
       }
     ],
     "recommendations": {
       "color_schemas": {
         "baklib": {
-          "name": "t:recommendations.baklib.name",
+          "name": "知序清新",
           "colors": {
             "--theme-color-base-100": "#FFFFFF",
-            "--theme-color-base-200": "#F8FAFC",
-            "--theme-color-base-300": "#E2E8F0",
-            "--theme-color-base-content": "#1E293B",
-            "--theme-color-primary": "#2563EB",
+            "--theme-color-base-200": "#F4F7F5",
+            "--theme-color-base-300": "#DFE6E2",
+            "--theme-color-base-content": "#17231E",
+            "--theme-color-primary": "#207A52",
             "--theme-color-primary-content": "#FFFFFF",
-            "--theme-color-secondary": "#475569",
+            "--theme-color-secondary": "#ED705F",
             "--theme-color-secondary-content": "#FFFFFF",
-            "--theme-color-accent": "#0F172A",
-            "--theme-color-accent-content": "#F8FAFC",
-            "--theme-color-neutral": "#1E293B",
-            "--theme-color-neutral-content": "#F8FAFC",
-            "--theme-color-info": "#3B82F6",
+            "--theme-color-accent": "#E7AD38",
+            "--theme-color-accent-content": "#17231E",
+            "--theme-color-neutral": "#13231C",
+            "--theme-color-neutral-content": "#F4F7F5",
+            "--theme-color-info": "#3374E6",
             "--theme-color-info-content": "#FFFFFF",
-            "--theme-color-success": "#16A34A",
+            "--theme-color-success": "#2A9A69",
             "--theme-color-success-content": "#FFFFFF",
-            "--theme-color-warning": "#F59E0B",
-            "--theme-color-warning-content": "#1F2937",
-            "--theme-color-error": "#DC2626",
+            "--theme-color-warning": "#E7AD38",
+            "--theme-color-warning-content": "#17231E",
+            "--theme-color-error": "#D9564A",
             "--theme-color-error-content": "#FFFFFF",
-            "--theme-color-base-100-dark": "#0F172A",
-            "--theme-color-base-200-dark": "#1E293B",
-            "--theme-color-base-300-dark": "#334155",
-            "--theme-color-base-content-dark": "#F1F5F9",
-            "--theme-color-primary-dark": "#3B82F6",
-            "--theme-color-primary-content-dark": "#FFFFFF",
-            "--theme-color-secondary-dark": "#94A3B8",
-            "--theme-color-secondary-content-dark": "#0F172A",
-            "--theme-color-accent-dark": "#60A5FA",
-            "--theme-color-accent-content-dark": "#0F172A",
-            "--theme-color-neutral-dark": "#020617",
-            "--theme-color-neutral-content-dark": "#F8FAFC",
+            "--theme-color-base-100-dark": "#0D1813",
+            "--theme-color-base-200-dark": "#13231C",
+            "--theme-color-base-300-dark": "#1D3329",
+            "--theme-color-base-content-dark": "#E8F1EC",
+            "--theme-color-primary-dark": "#55B783",
+            "--theme-color-primary-content-dark": "#0D1813",
+            "--theme-color-secondary-dark": "#F18B7D",
+            "--theme-color-secondary-content-dark": "#0D1813",
+            "--theme-color-accent-dark": "#F0C565",
+            "--theme-color-accent-content-dark": "#0D1813",
+            "--theme-color-neutral-dark": "#09110D",
+            "--theme-color-neutral-content-dark": "#E8F1EC",
             "--theme-color-info-dark": "#38BDF8",
             "--theme-color-info-content-dark": "#082F49",
             "--theme-color-success-dark": "#22C55E",
@@ -221,23 +213,29 @@
         "info": "展示在页脚导航栏"
       },
       {
+        "id": "brand_name",
+        "type": "text",
+        "label": "产品品牌名",
+        "default": "知序 AI"
+      },
+      {
         "id": "slogan",
         "type": "text",
         "label": "公司一句话口号",
-        "default": "我们是一家创意公司，服务于各行各业的本地和国际企业，从小型到大型企业。"
+        "default": "把散落的知识，变成随时可用的答案。"
       },
       {
         "id": "request_title",
         "type": "text",
         "label": "导航按钮文字",
-        "default": "联系我们"
+        "default": "体验产品"
       },
       {
         "id": "request_url",
         "type": "text",
         "label": "导航按钮链接",
-        "default": "https://help.baklib.cn/themes/www",
-        "info": "请填写https://开头的 URL 地址；设置以后会在文章页底部显示'Submit a request'链接"
+        "default": "#workspace",
+        "info": "可填写站内锚点、站内路径或 https:// 开头的外部 URL"
       },
       {
         "id": "is_show_author",
@@ -322,7 +320,7 @@
         "label": "页头导航菜单设置",
         "rows": 10,
         "info": "格式：menu_name[slug{sub_menu[slug|sub_menu[slug，每行一个分栏。",
-        "default": "首页[/\n新闻资讯[/news\n服务项目[/services\n产品中心[/products\n视频资源[/videos\n关于我们[/about"
+        "default": "产品能力[/#features\n工作方式[/#workflow\n使用场景[/#use-cases\n安全可信[/#trust\n常见问题[/#faq"
       },
       {
         "id": "footer_menu",
@@ -330,19 +328,19 @@
         "label": "页脚菜单设置",
         "rows": 10,
         "info": "格式：menu_name[slug]{sub_menu[slug|sub_menu[slug，每行一个分栏。",
-        "default": "快捷导航[/about{公司介绍[/about|服务项目[/services|网站地图[/s/sitemap\nVideos[/videos{Catalog1[/products/pro1|Catalog2[/products/pro2\nNews[/news{Catalog1[/products/pro1|Catalog2[/products/pro2"
+        "default": "产品[/#features{核心能力[/#features|工作方式[/#workflow|安全可信[/#trust\n场景[/#use-cases{客户支持[/#use-cases|员工入职[/#use-cases|项目协作[/#use-cases\n资源[/#faq{常见问题[/#faq|产品动态[/updates|关于知序[/about"
       },
       {
         "id": "company_info",
         "type": "html",
         "label": "页脚公司信息",
-        "default": "Tailwind template designer, we build web templates, themes and other goodies, putting a lot of love in every pixel and design."
+        "default": "把散落的知识，变成随时可用的答案。为团队提供可信、可追溯的 AI 知识助手。"
       },
       {
         "id": "copyright_info",
         "type": "html",
         "label": "页脚版权信息",
-        "default": "Copyright © Baklib Inc. | All rights reserved."
+        "default": "© 2026 知序 AI · 保留所有权利"
       }
     ]
   }

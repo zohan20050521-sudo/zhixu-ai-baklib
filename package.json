@@ -1,12 +1,13 @@
 {
-  "name": "www",
-  "version": "2.0.0",
+  "name": "zhixu-ai-baklib",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "build": "npm-run-all --parallel build:css build:js",
     "build:css": "npx @tailwindcss/cli -i ./src/stylesheets/application.css -o ./assets/stylesheets/application.css",
     "build:js": "npx esbuild ./src/javascripts/application.js --bundle --minify --outfile=./assets/javascripts/application.js",
-    "dev": "npm-run-all --parallel 'build:css --watch' 'build:js --watch'"
+    "dev": "npm-run-all --parallel 'build:css --watch' 'build:js --watch'",
+    "preview:build": "node scripts/build-preview.mjs"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.4",
@@ -27,7 +28,7 @@
     "lucide": "^1.17.0",
     "stimulus-dropdown": "^2.1.0",
     "swiper": "^11.0.6",
-    "tailwindcss-highlights": "^1.0.0",
-    "typed.js": "^2.1.0"
+    "typed.js": "^2.1.0",
+    "viewerjs": "^1.11.7"
   }
 }

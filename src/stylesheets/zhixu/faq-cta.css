@@ -1,0 +1,146 @@
+.zx-faq {
+  background: #f6f8f7;
+}
+
+.zx-faq__layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(500px, 1.28fr);
+  align-items: start;
+  gap: 100px;
+}
+
+.zx-faq__heading h2 {
+  max-width: 390px;
+}
+
+.zx-faq__heading > p {
+  max-width: 390px;
+  margin: 20px 0 0;
+  color: var(--zx-muted);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.zx-faq__heading > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 26px;
+  color: var(--zx-green);
+  font-size: 13px;
+  font-weight: 680;
+  text-decoration: none;
+}
+
+.zx-inline-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.zx-faq__list {
+  border-top: 1px solid #d9e2dd;
+}
+
+.zx-faq__list details {
+  border-bottom: 1px solid #d9e2dd;
+}
+
+.zx-faq__list summary {
+  display: flex;
+  min-height: 72px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  color: var(--zx-ink);
+  font-size: 15px;
+  font-weight: 670;
+  cursor: pointer;
+  list-style: none;
+}
+
+.zx-faq__list summary::-webkit-details-marker {
+  display: none;
+}
+
+.zx-faq__list summary:focus-visible {
+  outline: 3px solid rgba(32, 122, 82, 0.2);
+  outline-offset: 3px;
+}
+
+.zx-faq__icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  color: #7d8a83;
+  transition: transform 180ms ease;
+}
+
+.zx-faq__list details[open] .zx-faq__icon {
+  transform: rotate(180deg);
+}
+
+.zx-faq__list details > p {
+  max-width: 650px;
+  margin: -2px 42px 24px 0;
+  color: var(--zx-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.zx-cta {
+  color: #fff;
+  background: #173126;
+}
+
+.zx-cta__inner {
+  display: grid;
+  min-height: 330px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 70px;
+}
+
+.zx-cta__eyebrow {
+  color: #75d3a0;
+}
+
+.zx-cta h2 {
+  max-width: 680px;
+  color: #fff;
+}
+
+.zx-cta p {
+  max-width: 610px;
+  margin: 18px 0 0;
+  color: #a7bdb2;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.zx-cta__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.zx-button--light {
+  color: var(--zx-ink);
+  background: #fff;
+}
+
+.zx-button--light:hover {
+  color: var(--zx-green-dark);
+  background: #f3f7f5;
+}
+
+.zx-button--ghost {
+  color: #d9e7e0;
+  border-color: #4d685b;
+  background: transparent;
+}
+
+.zx-button--ghost:hover {
+  color: #fff;
+  border-color: #769487;
+  background: #203d31;
+}

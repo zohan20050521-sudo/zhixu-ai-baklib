@@ -1,64 +1,53 @@
-{% assign footer_menus = site.settings.footer_menu | newline_to_br | split: '<br />' %}
-<!-- =========={ FOOTER }==========  -->
-<footer class="bg-neutral text-neutral-content">
-    <div class="container xl:max-w-6xl mx-auto px-4 pt-16 pb-5 lg:pb-16">
-        <div class="grid grid-cols-2 md:grid-cols-5 gag-4 xl:gap-8">
-            <!-- left widget -->
-            <div class="col-span-5 sm:col-span-2">
-                <!-- Footer Content -->
-                <div class="leading-relaxed">
-                    <h4 class="font-semibold text-xl mb-4 text-primary-content opacity-40">{{ 'snippets.footer.about_us' | t }}</h4>
-                    {% if site.settings.footer_logo_url %}
-                        <img src="{{ site.settings.footer_logo_url }}" alt="{{ site.name }}" class="h-12 md:h-24 mb-2">
-                    {% endif %}
-                    <p class="mb-3">{{ site.settings.company_info }}</p>
-                </div>
-            </div>
-            <!-- custom 3 widget -->
-            {% for menu_line in footer_menus %}
-            {%  assign p_menu_arr = menu_line | split: '{' %}
-            {%  assign parent_menu = p_menu_arr[0] | split: '[' %}
-            {%  assign sub_menus = p_menu_arr[1] | split: '|' %}
-            {%  assign sub_menus_count =  sub_menus | size %}
+{% assign brand_name = site.settings.brand_name | default: '知序 AI' %}
+{% capture default_footer_menu %}
+产品[/#features{核心能力[/#features|工作方式[/#workflow|安全可信[/#trust
+场景[/#use-cases{客户支持[/#use-cases|员工入职[/#use-cases|项目协作[/#use-cases
+资源[/#faq{常见问题[/#faq|产品动态[/updates|关于知序[/about
+{% endcapture %}
+{% assign footer_menu_text = site.settings.footer_menu | default: default_footer_menu %}
+{% assign footer_menus = footer_menu_text | newline_to_br | split: '<br />' %}
 
-            {% if sub_menus_count > 0 %}
-                <div class="hidden sm:flex flex-col" x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false">
-                    <a class="font-semibold text-xl mb-4 text-primary-content opacity-40" href="{{ parent_menu[1] | default: 'javascript:void(0);' }}" :aria-expanded="open">{{ parent_menu[0] }}</a>
-                    <!-- 2nd level menu -->
-                    <ul class="">
-                    {% for second_menu in sub_menus %}
-                        {%  assign second_menu_arr = second_menu | split: '[' %}
-                        <li>
-                            <a class="text-sm" href="{{ second_menu_arr[1] | default: '#'}}">
-                                <span class="whitespace-nowrap">{{ second_menu_arr[0] }}</span>
-                            </a>
-                        </li>
-                    {% endfor %}
-                    </ul>
-                </div>
-            {% else %}
-                <div class="">
-                    <a class="" href="{{ parent_menu[1] | default: '#'}}">{{ parent_menu[0] }}</a>
-                </div>
-            {% endif %}
-            {% endfor %}
-        </div>
+<footer class="zx-footer">
+  <div class="zx-shell">
+    <div class="zx-footer__main">
+      <div class="zx-footer__brand">
+        <a class="zx-brand zx-brand--footer" href="/" aria-label="{{ brand_name | escape }} 首页">
+          <span class="zx-brand__mark" aria-hidden="true"><i></i><i></i><b></b></span>
+          <span class="zx-brand__name">{{ brand_name | escape }}</span>
+        </a>
+        <p>{{ site.settings.company_info | default: '把散落的知识，变成随时可用的答案。为团队提供可信、可追溯的 AI 知识助手。' }}</p>
+        <span class="zx-footer__status"><i></i> 服务状态正常</span>
+      </div>
 
-        <!-- copyright  -->
-        <div class="container xl:max-w-6xl mx-auto px-4">
-            <div class="flex flex-wrap lg:flex-row -mx-4 border-t border-primary/30 border-opacity-10 py-9">
-            <div class="w-full text-center">
-                {{ site.settings.copyright_info }}
+      <nav class="zx-footer__nav" aria-label="页脚导航">
+        {% for menu_line in footer_menus %}
+          {% assign menu_content = menu_line | strip %}
+          {% if menu_content != blank %}
+            {% assign parent_and_children = menu_content | split: '{' %}
+            {% assign parent_menu = parent_and_children[0] | split: '[' %}
+            {% assign child_menus = parent_and_children[1] | split: '|' %}
+            <div class="zx-footer__column">
+              <a class="zx-footer__column-title" href="{{ parent_menu[1] | default: '/' }}">{{ parent_menu[0] | strip }}</a>
+              {% for child_menu in child_menus %}
+                {% assign child_menu_content = child_menu | strip %}
+                {% if child_menu_content != blank %}
+                  {% assign child = child_menu_content | split: '[' %}
+                  <a href="{{ child[1] | default: '#' }}">{{ child[0] | strip }}</a>
+                {% endif %}
+              {% endfor %}
             </div>
-            </div>
-        </div>
+          {% endif %}
+        {% endfor %}
+      </nav>
     </div>
-</footer>
 
-<!-- =========={ SCROLL TO TOP }==========  -->
-<a href="#" class="back-top fixed p-4 rounded bg-base-200 border border-base-300 text-base-content/70 end-4 bottom-4 hidden" aria-label="{{ 'generic.scroll_to_top' | t }}">
-    <svg width="1rem" height="1rem" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" d="M8 3.5a.5.5 0 01.5.5v9a.5.5 0 01-1 0V4a.5.5 0 01.5-.5z" clip-rule="evenodd"></path>
-        <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 01.708 0l3 3a.5.5 0 01-.708.708L8 3.707 5.354 6.354a.5.5 0 11-.708-.708l3-3z" clip-rule="evenodd"></path>
-    </svg>
-</a>
+    <div class="zx-footer__bottom">
+      <p>{{ site.settings.copyright_info | default: '© 2026 知序 AI · 保留所有权利' }}</p>
+      <div class="zx-footer__legal"><a href="#trust">隐私与安全</a><a href="#faq">使用帮助</a></div>
+    </div>
+  </div>
+
+  <button class="zx-back-top" type="button" data-zhixu-back-top aria-label="返回页面顶部" title="返回顶部">
+    {% render 'icon', name: 'arrow-right', class: 'zx-back-top__icon' %}
+  </button>
+</footer>

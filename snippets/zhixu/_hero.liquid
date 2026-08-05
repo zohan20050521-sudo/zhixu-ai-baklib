@@ -1,0 +1,119 @@
+{% assign brand_name = site.settings.brand_name | default: '知序 AI' %}
+{% assign hero_eyebrow = page.settings.hero_eyebrow | default: '团队知识助手 · 全新上线' %}
+{% assign hero_title = page.settings.hero_title | default: '把散落的知识，变成随时可用的答案。' %}
+{% assign hero_description = page.settings.hero_description | default: '连接团队文档、项目资料与业务系统。知序 AI 理解上下文、保留引用来源，让每个人都能快速找到可信答案。' %}
+{% assign primary_action_label = page.settings.primary_action_label | default: '体验产品演示' %}
+{% assign secondary_action_label = page.settings.secondary_action_label | default: '了解产品能力' %}
+
+<section class="zx-hero" aria-labelledby="zx-hero-title">
+  <div class="zx-shell zx-hero__layout">
+    <div class="zx-hero__copy" data-aos="fade-up">
+      <div class="zx-eyebrow">
+        <span class="zx-eyebrow__dot" aria-hidden="true"></span>
+        {{ hero_eyebrow | escape }}
+      </div>
+      <h1 id="zx-hero-title" class="zx-hero__title">
+        <span class="zx-hero__brand">{{ brand_name | escape }}</span>
+        <span>{{ hero_title | escape }}</span>
+      </h1>
+      <p class="zx-hero__description">{{ hero_description | escape }}</p>
+      <div class="zx-hero__actions">
+        <a class="zx-button zx-button--primary" href="#workspace">
+          {{ primary_action_label | escape }}
+          {% render 'icon', name: 'arrow-right', class: 'zx-button__icon' %}
+        </a>
+        <a class="zx-button zx-button--secondary" href="#features">
+          {{ secondary_action_label | escape }}
+        </a>
+      </div>
+      <ul class="zx-hero__notes" aria-label="产品特点">
+        <li>{% render 'icon', name: 'check', class: 'zx-note-icon' %} 10 分钟接入首个知识源</li>
+        <li>{% render 'icon', name: 'check', class: 'zx-note-icon' %} 回答附带原文引用</li>
+      </ul>
+    </div>
+
+    <div id="workspace" class="zx-demo" data-zhixu-demo data-aos="fade-up" data-aos-delay="100">
+      <div class="zx-demo__modes" role="tablist" aria-label="切换产品演示场景">
+        <button class="zx-demo__mode is-active" type="button" role="tab" aria-selected="true" data-zhixu-mode="support">客户支持</button>
+        <button class="zx-demo__mode" type="button" role="tab" aria-selected="false" data-zhixu-mode="onboarding">员工入职</button>
+        <button class="zx-demo__mode" type="button" role="tab" aria-selected="false" data-zhixu-mode="project">项目复盘</button>
+      </div>
+
+      <div class="zx-workspace" role="tabpanel" aria-label="知序 AI 产品界面演示">
+        <div class="zx-workspace__topbar">
+          <div class="zx-workspace__identity">
+            <span class="zx-mini-mark" aria-hidden="true"><i></i><i></i><b></b></span>
+            <strong>知序工作台</strong>
+          </div>
+          <div class="zx-workspace__search">
+            {% render 'icon', name: 'search', class: 'zx-workspace__search-icon' %}
+            <span>搜索全部知识</span>
+            <kbd>⌘ K</kbd>
+          </div>
+          <span class="zx-workspace__avatar" aria-label="当前用户：林夏">林</span>
+        </div>
+
+        <div class="zx-workspace__body">
+          <aside class="zx-workspace__sidebar" aria-label="工作台导航">
+            <span class="zx-sidebar__label">工作空间</span>
+            <span class="zx-sidebar__item is-active">{% render 'icon', name: 'sparkles', class: 'zx-sidebar__icon' %} AI 问答</span>
+            <span class="zx-sidebar__item">{% render 'icon', name: 'search', class: 'zx-sidebar__icon' %} 全局搜索</span>
+            <span class="zx-sidebar__item">{% render 'icon', name: 'database', class: 'zx-sidebar__icon' %} 知识库</span>
+            <span class="zx-sidebar__label zx-sidebar__label--spaced">最近访问</span>
+            <span class="zx-sidebar__doc"><i class="is-green"></i> 客服知识中心</span>
+            <span class="zx-sidebar__doc"><i class="is-coral"></i> 新人入职指南</span>
+            <span class="zx-sidebar__doc"><i class="is-yellow"></i> Orion 项目</span>
+          </aside>
+
+          <div class="zx-workspace__conversation">
+            <div class="zx-conversation__header">
+              <div>
+                <span class="zx-conversation__overline">新对话</span>
+                <strong data-zhixu-topic>客户支持助手</strong>
+              </div>
+              <span class="zx-live-status"><i></i> 知识已同步</span>
+            </div>
+
+            <div class="zx-question">
+              <span class="zx-question__avatar">林</span>
+              <p data-zhixu-question>企业版可以设置多少个独立知识空间？</p>
+            </div>
+
+            <div class="zx-answer">
+              <div class="zx-answer__avatar">{% render 'icon', name: 'sparkles', class: 'zx-answer__avatar-icon' %}</div>
+              <div class="zx-answer__content">
+                <div class="zx-answer__label">知序 AI</div>
+                <p data-zhixu-answer aria-live="polite">企业版支持创建不限数量的独立知识空间，并可按部门、项目或客户设置成员权限。跨空间检索仅返回当前成员有权访问的内容。</p>
+                <div class="zx-answer__sources">
+                  <span>{% render 'icon', name: 'layers', class: 'zx-source-icon' %}<b data-zhixu-source-a>企业版功能说明</b><small>第 3 节</small></span>
+                  <span>{% render 'icon', name: 'shield', class: 'zx-source-icon' %}<b data-zhixu-source-b>空间权限指南</b><small>已更新</small></span>
+                </div>
+                <div class="zx-answer__meta">
+                  <span>基于 6 条相关内容生成</span>
+                  <span class="zx-answer__quality">{% render 'icon', name: 'circle-check', class: 'zx-quality-icon' %} 高可信</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="zx-composer" aria-hidden="true">
+              <span>继续追问...</span>
+              <span class="zx-composer__send">
+                {% render 'icon', name: 'send-horizontal', class: 'zx-composer__icon' %}
+              </span>
+            </div>
+          </div>
+
+          <aside class="zx-workspace__context" aria-label="答案来源概览">
+            <span class="zx-context__label">本次参考</span>
+            <div class="zx-context__score"><strong>92%</strong><span>答案置信度</span></div>
+            <div class="zx-context__bar"><i></i></div>
+            <span class="zx-context__label zx-context__label--spaced">知识来源</span>
+            <div class="zx-context__source"><i class="is-green"></i><span>产品手册<small>3 条引用</small></span></div>
+            <div class="zx-context__source"><i class="is-coral"></i><span>服务规范<small>2 条引用</small></span></div>
+            <div class="zx-context__source"><i class="is-yellow"></i><span>团队问答<small>1 条引用</small></span></div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

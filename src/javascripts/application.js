@@ -14,6 +14,7 @@ import CopyPageController from "../controllers/copy_page_controller"
 import PageToolsController from "../controllers/page_tools_controller"
 
 import "./lucide_init"
+import "./zhixu"
 
 window.Alpine = Alpine
 Alpine.plugin(collapse)

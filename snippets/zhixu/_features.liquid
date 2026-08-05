@@ -1,0 +1,52 @@
+{% assign features_eyebrow = page.settings.features_eyebrow | default: '核心能力' %}
+{% assign features_title = page.settings.features_title | default: '不是多一个搜索框，而是多一位懂业务的同事' %}
+{% assign features_description = page.settings.features_description | default: '从知识接入到答案生成，每一步都围绕准确、可信与可持续运营设计。' %}
+
+<section id="features" class="zx-section zx-features" aria-labelledby="zx-features-title">
+  <div class="zx-shell">
+    <header class="zx-section-heading" data-aos="fade-up">
+      <span class="zx-section-heading__eyebrow">{{ features_eyebrow | escape }}</span>
+      <h2 id="zx-features-title">{{ features_title | escape }}</h2>
+      <p>{{ features_description | escape }}</p>
+    </header>
+
+    <div class="zx-feature-grid">
+      <article class="zx-feature" data-aos="fade-up">
+        <span class="zx-feature__icon zx-feature__icon--green">{% render 'icon', name: 'search', class: 'zx-feature__lucide' %}</span>
+        <h3>理解语义，而不只匹配关键词</h3>
+        <p>识别问题背后的意图与业务上下文，即使表达不完整，也能找到真正相关的内容。</p>
+        <span class="zx-feature__detail">混合检索 · 上下文理解</span>
+      </article>
+      <article class="zx-feature" data-aos="fade-up" data-aos-delay="50">
+        <span class="zx-feature__icon zx-feature__icon--coral">{% render 'icon', name: 'circle-check', class: 'zx-feature__lucide' %}</span>
+        <h3>每个结论，都能回到原文</h3>
+        <p>答案自动标注引用位置、文档版本与更新时间，重要信息不再凭感觉判断。</p>
+        <span class="zx-feature__detail">逐句引用 · 版本追踪</span>
+      </article>
+      <article class="zx-feature" data-aos="fade-up" data-aos-delay="100">
+        <span class="zx-feature__icon zx-feature__icon--yellow">{% render 'icon', name: 'database', class: 'zx-feature__lucide' %}</span>
+        <h3>连接分散在各处的知识</h3>
+        <p>统一接入文档、网页、表格与业务资料，内容变化后自动同步，无需重复搬运。</p>
+        <span class="zx-feature__detail">多源接入 · 增量同步</span>
+      </article>
+      <article class="zx-feature" data-aos="fade-up">
+        <span class="zx-feature__icon zx-feature__icon--ink">{% render 'icon', name: 'shield', class: 'zx-feature__lucide' %}</span>
+        <h3>权限边界跟着知识一起走</h3>
+        <p>沿用原有成员与空间权限，用户只能检索自己有权查看的内容，避免答案越界。</p>
+        <span class="zx-feature__detail">权限继承 · 访问审计</span>
+      </article>
+      <article class="zx-feature" data-aos="fade-up" data-aos-delay="50">
+        <span class="zx-feature__icon zx-feature__icon--green">{% render 'icon', name: 'sparkles', class: 'zx-feature__lucide' %}</span>
+        <h3>把零散内容整理成知识</h3>
+        <p>自动提炼主题、标签与摘要，发现重复、过期和缺失内容，帮助知识库保持清晰。</p>
+        <span class="zx-feature__detail">智能分类 · 内容治理</span>
+      </article>
+      <article class="zx-feature" data-aos="fade-up" data-aos-delay="100">
+        <span class="zx-feature__icon zx-feature__icon--coral">{% render 'icon', name: 'trending-up', class: 'zx-feature__lucide' %}</span>
+        <h3>从每次反馈里持续变准</h3>
+        <p>记录高频问题、无答案问题与用户评价，让运营团队知道下一份知识该补在哪里。</p>
+        <span class="zx-feature__detail">质量分析 · 闭环优化</span>
+      </article>
+    </div>
+  </div>
+</section>
