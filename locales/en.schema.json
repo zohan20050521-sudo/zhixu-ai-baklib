@@ -60,8 +60,26 @@
         "thumb_image_url":{
           "label": "Thumb image URL"
         },
+        "background_cover_image":{
+          "label": "Background cover image"
+        },
         "content":{
           "label": "Page Content"
+        }
+      }
+    },
+    "templates_schema": {
+      "channel": {
+        "side": {
+          "name": "Channel - Sidebar List",
+          "description": "Article list channel template with sidebar"
+        }
+      },
+      "page": {
+        "side": {
+          "name": "Page - Sidebar Navigation",
+          "description": "Sidebar navigation page linked to parent channel",
+          "icon_label": "Icon image"
         }
       }
     }
