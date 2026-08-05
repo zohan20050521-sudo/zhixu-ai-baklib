@@ -234,7 +234,7 @@
         "id": "learn_more_url",
         "type": "text",
         "label": "了解更多链接",
-        "default": "/about",
+        "default": "/#about",
         "info": "可填写站内路径或 https:// 开头的外部 URL"
       },
       {

@@ -1,0 +1,76 @@
+{% assign about_page = site.pages['/about'] %}
+{% assign about_content_page = about_page.children_in_list | first %}
+{% assign about_title = about_page.settings.title | default: '关于知序 AI' %}
+{% assign about_description = about_page.settings.description | default: '知序 AI 让团队知识被找到、被理解、被验证，并在真实工作场景中持续产生价值。' %}
+{% assign about_content = about_page.settings.content | default: about_content_page.settings.content %}
+{% assign about_content = about_content | default: '<p>知序 AI 是一款面向团队的知识助手，目标是让散落在文档、项目和业务系统中的信息，成为每个人随时可用的答案。</p><p>产品坚持权限清晰、来源透明和持续治理三项原则，让 AI 带来的效率建立在可信基础上。</p><p>我们从客户支持、员工入职和项目协作等真实场景出发，帮助团队减少重复咨询、降低知识查找成本，并让重要经验得到持续复用。</p>' %}
+
+<section id="about" class="zx-about" aria-labelledby="zx-about-title">
+  <div class="zx-shell">
+    <header class="zx-about__header" data-aos="fade-up">
+      <div>
+        <span class="zx-section-heading__eyebrow">品牌理念</span>
+        <h2 id="zx-about-title">{{ about_title | escape }}</h2>
+      </div>
+      <p>{{ about_description | escape }}</p>
+    </header>
+
+    <div class="zx-about__layout">
+      <figure class="zx-about__map" data-aos="fade-up">
+        <figcaption>
+          <span>知识价值链</span>
+          <span class="zx-about__status"><i></i> 持续更新</span>
+        </figcaption>
+
+        <div class="zx-about__pipeline" aria-label="从散落知识到可信答案的过程">
+          <div class="zx-about__stage">
+            <span class="zx-about__stage-icon zx-about__stage-icon--coral">
+              {% render 'icon', name: 'files', class: 'zx-about__icon' %}
+            </span>
+            <strong>散落知识</strong>
+            <small>文档 · 项目 · 业务系统</small>
+          </div>
+          <div class="zx-about__connector"><i></i><span>连接</span></div>
+          <div class="zx-about__stage zx-about__stage--core">
+            <span class="zx-brand__mark" aria-hidden="true"><i></i><i></i><b></b></span>
+            <strong>知序 AI</strong>
+            <small>理解语境与权限</small>
+          </div>
+          <div class="zx-about__connector"><i></i><span>验证</span></div>
+          <div class="zx-about__stage">
+            <span class="zx-about__stage-icon zx-about__stage-icon--yellow">
+              {% render 'icon', name: 'badge-check', class: 'zx-about__icon' %}
+            </span>
+            <strong>可信答案</strong>
+            <small>有依据 · 可追溯 · 可复用</small>
+          </div>
+        </div>
+
+        <div class="zx-about__map-footer">
+          <span><i class="is-green"></i> 权限边界保留</span>
+          <span><i class="is-coral"></i> 原文引用可查</span>
+          <span><i class="is-yellow"></i> 内容持续治理</span>
+        </div>
+      </figure>
+
+      <div class="zx-about__story" data-aos="fade-up" data-aos-delay="80">
+        <span class="zx-about__story-label">WHY ZHIXU</span>
+        <div class="zx-about__content ProseMirror">{{ about_content }}</div>
+        <ul class="zx-about__principles" aria-label="知序 AI 产品原则">
+          <li>
+            {% render 'icon', name: 'lock-keyhole', class: 'zx-about__principle-icon' %}
+            <span><strong>权限清晰</strong><small>不改变原有访问边界</small></span>
+          </li>
+          <li>
+            {% render 'icon', name: 'scan-search', class: 'zx-about__principle-icon' %}
+            <span><strong>来源透明</strong><small>重要结论回到原文</small></span>
+          </li>
+          <li>
+            {% render 'icon', name: 'refresh-cw', class: 'zx-about__principle-icon' %}
+            <span><strong>持续治理</strong><small>在真实反馈中变得更准</small></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

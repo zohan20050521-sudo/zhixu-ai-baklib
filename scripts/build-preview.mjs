@@ -3,7 +3,7 @@ import { dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
 
 const projectRoot = join(dirname(fileURLToPath(import.meta.url)), "..")
-const snippets = ["hero", "proof", "features", "workflow", "use_cases", "trust", "faq_cta"]
+const snippets = ["hero", "proof", "features", "workflow", "use_cases", "trust", "about", "faq_cta"]
 const values = {
   brand_name: "知序 AI",
   hero_eyebrow: "团队知识助手 · 全新上线",
@@ -14,6 +14,9 @@ const values = {
   features_eyebrow: "核心能力",
   features_title: "不是多一个搜索框，而是多一位懂业务的同事",
   features_description: "从知识接入到答案生成，每一步都围绕准确、可信与可持续运营设计。",
+  about_title: "关于知序 AI",
+  about_description: "知序 AI 让团队知识被找到、被理解、被验证，并在真实工作场景中持续产生价值。",
+  about_content: "<p>知序 AI 是一款面向团队的知识助手，目标是让散落在文档、项目和业务系统中的信息，成为每个人随时可用的答案。</p><p>产品坚持权限清晰、来源透明和持续治理三项原则，让 AI 带来的效率建立在可信基础上。</p><p>我们从客户支持、员工入职和项目协作等真实场景出发，帮助团队减少重复咨询、降低知识查找成本，并让重要经验得到持续复用。</p>",
   faq_question_1: "现有文档需要重新搬进知序 AI 吗？",
   faq_answer_1: "不需要。知序 AI 通过连接器读取并同步现有知识，原始内容仍保留在团队正在使用的平台中。",
   faq_question_2: "AI 会不会看到员工无权访问的内容？",
@@ -33,6 +36,7 @@ function renderSnippet(source) {
       /\{%\s*render\s+'icon',\s*name:\s*'([^']+)',\s*class:\s*'([^']+)'\s*%\}/g,
       '<i data-lucide="$1" class="$2" aria-hidden="true"></i>',
     )
+    .replace(/\{\{\s*about_content\s*\}\}/g, values.about_content)
     .replace(/\{\{\s*(\w+)\s*\|\s*escape\s*\}\}/g, (_, key) => values[key] ?? "")
 }
 
@@ -52,7 +56,7 @@ const header = `
     <nav class="zx-header__nav" aria-label="主导航">
       <a href="#features">产品能力</a><a href="#workflow">工作方式</a><a href="#use-cases">使用场景</a><a href="#trust">安全可信</a><a href="#faq">常见问题</a>
     </nav>
-    <div class="zx-header__actions"><a class="zx-header__login" href="/about">了解更多</a><a class="zx-button zx-button--header" href="#workspace">体验产品<i data-lucide="arrow-right" class="zx-button__icon"></i></a></div>
+    <div class="zx-header__actions"><a class="zx-header__login" href="#about">了解更多</a><a class="zx-button zx-button--header" href="#workspace">体验产品<i data-lucide="arrow-right" class="zx-button__icon"></i></a></div>
     <button class="zx-header__toggle" type="button" aria-controls="zx-mobile-menu" :aria-expanded="open.toString()" @click="open = !open" title="打开导航">
       <span class="sr-only">打开或关闭导航</span><span x-show="!open"><i data-lucide="menu" class="zx-header__toggle-icon"></i></span><span x-show="open" x-cloak><i data-lucide="x" class="zx-header__toggle-icon"></i></span>
     </button>
@@ -65,6 +69,7 @@ const header = `
       <a href="#use-cases" @click="open = false"><span>使用场景</span><i data-lucide="chevron-right" class="zx-mobile-menu__icon"></i></a>
       <a href="#trust" @click="open = false"><span>安全可信</span><i data-lucide="chevron-right" class="zx-mobile-menu__icon"></i></a>
       <a href="#faq" @click="open = false"><span>常见问题</span><i data-lucide="chevron-right" class="zx-mobile-menu__icon"></i></a>
+      <a href="#about" @click="open = false"><span>了解更多</span><i data-lucide="chevron-right" class="zx-mobile-menu__icon"></i></a>
       <a class="zx-mobile-menu__cta" href="#workspace" @click="open = false">体验产品<i data-lucide="arrow-right" class="zx-button__icon"></i></a>
     </nav>
   </div>
@@ -78,7 +83,7 @@ const footer = `
       <nav class="zx-footer__nav" aria-label="页脚导航">
         <div class="zx-footer__column"><a class="zx-footer__column-title" href="#features">产品</a><a href="#features">核心能力</a><a href="#workflow">工作方式</a><a href="#trust">安全可信</a></div>
         <div class="zx-footer__column"><a class="zx-footer__column-title" href="#use-cases">场景</a><a href="#use-cases">客户支持</a><a href="#use-cases">员工入职</a><a href="#use-cases">项目协作</a></div>
-        <div class="zx-footer__column"><a class="zx-footer__column-title" href="#faq">资源</a><a href="#faq">常见问题</a><a href="#">产品动态</a><a href="#">关于知序</a></div>
+        <div class="zx-footer__column"><a class="zx-footer__column-title" href="#faq">资源</a><a href="#faq">常见问题</a><a href="#">产品动态</a><a href="#about">关于知序</a></div>
       </nav>
     </div>
     <div class="zx-footer__bottom"><p>© 2026 知序 AI · 保留所有权利</p><div class="zx-footer__legal"><a href="#trust">隐私与安全</a><a href="#faq">使用帮助</a></div></div>

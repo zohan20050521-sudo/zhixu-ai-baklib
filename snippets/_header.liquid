@@ -1,6 +1,6 @@
 {% assign brand_name = site.settings.brand_name | default: '知序 AI' %}
 {% assign learn_more_title = site.settings.learn_more_title | default: '了解更多' %}
-{% assign learn_more_url = site.settings.learn_more_url | default: '/about' %}
+{% assign learn_more_url = site.settings.learn_more_url | default: '/#about' %}
 {% assign request_title = site.settings.request_title | default: '体验产品' %}
 {% assign request_url = site.settings.request_url | default: '#workspace' %}
 {% capture default_header_menu %}
@@ -60,6 +60,10 @@
           </a>
         {% endif %}
       {% endfor %}
+      <a href="{{ learn_more_url }}" @click="open = false"{% if learn_more_url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>
+        <span>{{ learn_more_title | escape }}</span>
+        {% render 'icon', name: 'chevron-right', class: 'zx-mobile-menu__icon' %}
+      </a>
       <a class="zx-mobile-menu__cta" href="{{ request_url }}" @click="open = false"{% if request_url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>
         {{ request_title | escape }}
         {% render 'icon', name: 'arrow-right', class: 'zx-button__icon' %}

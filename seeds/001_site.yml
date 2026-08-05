@@ -7,7 +7,7 @@ site:
     brand_name: "知序 AI"
     slogan: "把散落的知识，变成随时可用的答案。"
     learn_more_title: "了解更多"
-    learn_more_url: "/about"
+    learn_more_url: "/#about"
     request_title: "体验产品"
     request_url: "#workspace"
     is_show_author: true
@@ -36,4 +36,4 @@ site:
     footer_menu: |
       产品[/#features{核心能力[/#features|工作方式[/#workflow|安全可信[/#trust
       场景[/#use-cases{客户支持[/#use-cases|员工入职[/#use-cases|项目协作[/#use-cases
-      资源[/#faq{常见问题[/#faq|产品动态[/updates|关于知序[/about
+      资源[/#faq{常见问题[/#faq|产品动态[/updates|关于知序[/#about

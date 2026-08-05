@@ -1,0 +1,371 @@
+.zx-about {
+  padding: 108px 0;
+  border-top: 1px solid #dfe7e2;
+  border-bottom: 1px solid #dfe7e2;
+  background: #f1f5f2;
+}
+
+.zx-about__header {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 0.72fr);
+  align-items: end;
+  gap: 88px;
+  margin-bottom: 48px;
+}
+
+.zx-about__header h2 {
+  margin: 0;
+  color: var(--zx-ink);
+  font-size: 38px;
+  font-weight: 760;
+  line-height: 1.24;
+}
+
+.zx-about__header > p {
+  margin: 0 0 4px;
+  color: var(--zx-muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.zx-about__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+  align-items: stretch;
+  gap: 54px;
+}
+
+.zx-about__map {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #2f493d;
+  border-radius: 8px;
+  color: #edf6f1;
+  background: #14261e;
+  box-shadow: 0 24px 54px rgba(18, 43, 32, 0.17);
+}
+
+.zx-about__map figcaption {
+  display: flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-bottom: 1px solid #30473d;
+  color: #dbe8e1;
+  font-size: 12px;
+  font-weight: 680;
+}
+
+.zx-about__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #9eb4a9;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.zx-about__status i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #62cc91;
+  box-shadow: 0 0 0 4px rgba(98, 204, 145, 0.11);
+}
+
+.zx-about__pipeline {
+  display: grid;
+  min-height: 264px;
+  grid-template-columns: minmax(110px, 1fr) 58px minmax(110px, 1fr) 58px minmax(110px, 1fr);
+  align-items: center;
+  padding: 30px 22px;
+}
+
+.zx-about__stage {
+  display: flex;
+  min-width: 0;
+  min-height: 142px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 10px;
+  border: 1px solid #365044;
+  border-radius: 7px;
+  text-align: center;
+  background: #1c3329;
+}
+
+.zx-about__stage--core {
+  border-color: #438162;
+  background: #204936;
+  box-shadow: 0 16px 34px rgba(2, 14, 8, 0.22);
+}
+
+.zx-about__stage .zx-brand__mark {
+  width: 42px;
+  height: 42px;
+  margin-bottom: 16px;
+}
+
+.zx-about__stage-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 16px;
+  place-items: center;
+  border-radius: 7px;
+}
+
+.zx-about__stage-icon--coral {
+  color: #ffd8d1;
+  background: #70463e;
+}
+
+.zx-about__stage-icon--yellow {
+  color: #ffe7ae;
+  background: #65542f;
+}
+
+.zx-about__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.zx-about__stage strong {
+  color: #f3f8f5;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.zx-about__stage small {
+  margin-top: 7px;
+  color: #91a89d;
+  font-size: 8px;
+  line-height: 1.55;
+}
+
+.zx-about__connector {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  color: #81998d;
+  font-size: 8px;
+  font-weight: 650;
+}
+
+.zx-about__connector i {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: #4e6c5d;
+}
+
+.zx-about__connector i::after {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  width: 7px;
+  height: 7px;
+  border-top: 1px solid #6a8b7a;
+  border-right: 1px solid #6a8b7a;
+  content: "";
+  transform: rotate(45deg);
+}
+
+.zx-about__map-footer {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid #30473d;
+}
+
+.zx-about__map-footer span {
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: #9fb3a9;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.zx-about__map-footer span + span {
+  border-left: 1px solid #30473d;
+}
+
+.zx-about__map-footer i {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  border-radius: 2px;
+}
+
+.zx-about__story {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.zx-about__story-label {
+  color: var(--zx-coral);
+  font-size: 11px;
+  font-weight: 780;
+}
+
+.zx-about__content {
+  margin-top: 18px;
+  color: #4c5b54;
+  font-size: 15px;
+  line-height: 1.85;
+}
+
+.zx-about__content p {
+  margin: 0;
+}
+
+.zx-about__content p + p {
+  margin-top: 13px;
+}
+
+.zx-about__principles {
+  display: grid;
+  margin: 28px 0 0;
+  padding: 0;
+  border-top: 1px solid #d2ddd7;
+  list-style: none;
+}
+
+.zx-about__principles li {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  align-items: center;
+  gap: 12px;
+  min-height: 62px;
+  border-bottom: 1px solid #d2ddd7;
+}
+
+.zx-about__principle-icon {
+  width: 19px;
+  height: 19px;
+  color: var(--zx-green);
+}
+
+.zx-about__principles span {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.zx-about__principles strong {
+  color: var(--zx-ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.zx-about__principles small {
+  color: #7c8982;
+  font-size: 11px;
+  text-align: right;
+}
+
+@media (max-width: 1020px) {
+  .zx-about__header,
+  .zx-about__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .zx-about__header {
+    gap: 20px;
+  }
+
+  .zx-about__header > p {
+    max-width: 680px;
+  }
+
+  .zx-about__layout {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .zx-about {
+    padding: 72px 0;
+  }
+
+  .zx-about__header {
+    margin-bottom: 34px;
+  }
+
+  .zx-about__header h2 {
+    font-size: 29px;
+    line-height: 1.3;
+  }
+
+  .zx-about__header > p,
+  .zx-about__content {
+    font-size: 14px;
+  }
+
+  .zx-about__pipeline {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 22px;
+  }
+
+  .zx-about__stage {
+    min-height: 112px;
+  }
+
+  .zx-about__connector {
+    height: 45px;
+    justify-content: center;
+  }
+
+  .zx-about__connector i {
+    width: 1px;
+    height: 22px;
+  }
+
+  .zx-about__connector i::after {
+    top: auto;
+    right: -3px;
+    bottom: 0;
+    transform: rotate(135deg);
+  }
+
+  .zx-about__connector span {
+    display: none;
+  }
+
+  .zx-about__map-footer {
+    grid-template-columns: 1fr;
+    padding: 8px 18px;
+  }
+
+  .zx-about__map-footer span {
+    min-height: 34px;
+    justify-content: flex-start;
+  }
+
+  .zx-about__map-footer span + span {
+    border-top: 1px solid #30473d;
+    border-left: 0;
+  }
+
+  .zx-about__principles span {
+    display: block;
+  }
+
+  .zx-about__principles small {
+    display: block;
+    margin-top: 3px;
+    text-align: left;
+  }
+}
