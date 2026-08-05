@@ -5,6 +5,7 @@
     <meta name="author" content="Baklib">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% meta_tags %}
+    <link rel="icon" type="image/png" sizes="36x36" href="{{ 'images/img/favicon.png' | asset_url }}">
     {% render 'theme_runtime_colors' %}
     {{ 'stylesheets/application.css' | asset_url | stylesheet_tag: data-turbo-track: 'reload' }}
     {{ 'javascripts/application.js' | asset_url | script_tag: defer: true, data-turbo-track: 'reload' }}
