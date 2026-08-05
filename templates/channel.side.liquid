@@ -2,6 +2,9 @@
 {% assign pages = page.children_in_list %}
 {% assign first_child_page = pages | first %}
 
+{% if page.path == '/about' %}
+  {% render 'zhixu/about' %}
+{% else %}
 <!-- Start Hero -->
 {% render 'hero/hero_title', item: page %}
 
@@ -24,6 +27,7 @@
       </div>
   </section>
 </main>
+{% endif %}
 
 {% schema %}
   {

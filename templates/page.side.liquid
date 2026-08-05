@@ -1,5 +1,8 @@
 {% assign pages = page.parent.children_in_list %}
 
+{% if page.path == '/about' %}
+  {% render 'zhixu/about' %}
+{% else %}
 {% render 'hero/hero_title', item: page %}
 
 <!--内容版块 -->
@@ -25,6 +28,7 @@
       </div>
   </div>
 </section>
+{% endif %}
 
 <!--/ article-->
 {% schema %}
